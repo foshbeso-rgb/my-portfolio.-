@@ -2,53 +2,39 @@
 <html lang="ar" id="html-root" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
     <style>
-        :root { --main: #2c3e50; --gold: #c5a059; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 20px; }
-        .page { max-width: 850px; margin: auto; background: white; padding: 40px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
-        .lang-btn { text-align: center; margin-bottom: 20px; }
-        button { padding: 8px 16px; cursor: pointer; background: var(--main); color: white; border: none; border-radius: 4px; }
-        .header { text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 20px; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; }
-        h2 { color: var(--main); font-size: 16px; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 5px; }
-        .item { margin-bottom: 12px; font-size: 14px; }
+        :root { --accent: #C5A059; --text: #333; }
+        body { font-family: 'Segoe UI', sans-serif; background: #fff; padding: 40px; color: var(--text); }
+        .page { max-width: 700px; margin: auto; }
+        .lang-btn { text-align: center; margin-bottom: 30px; }
+        button { padding: 8px 20px; background: #333; color: white; border: none; cursor: pointer; }
+        .header { text-align: center; margin-bottom: 40px; }
+        h1 { margin: 0; color: #000; }
+        h2 { border-bottom: 2px solid var(--accent); color: var(--accent); margin-top: 30px; padding-bottom: 5px; text-transform: uppercase; }
+        .row { display: flex; justify-content: space-between; margin-bottom: 5px; }
         [lang="ar"] .en { display: none; } [lang="en"] .ar { display: none; }
     </style>
 </head>
 <body lang="ar">
 <div class="page">
     <div class="lang-btn"><button onclick="switchLang('ar')">العربية</button> <button onclick="switchLang('en')">English</button></div>
-    
+
     <div class="header">
         <h1><span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span></h1>
-        <p><span class="ar">35 عاماً - دار السلام، القاهرة - إعفاء نهائي</span><span class="en">35 Years - Dar El Salam, Cairo - Final Exemption</span></p>
+        <p>01010169726 | foshbeso@gmail.com</p>
     </div>
 
-    <div class="grid">
-        <div class="sidebar">
-            <h2><span class="ar">اللغات</span><span class="en">Languages</span></h2>
-            <div class="item">• <span class="ar">العربية (اللغة الأم)</span><span class="en">Arabic (Native)</span></div>
-            <div class="item">• <span class="ar">الإنجليزية (جيد)</span><span class="en">English (Good)</span></div>
-            
-            <h2><span class="ar">المهارات الشخصية</span><span class="en">Soft Skills</span></h2>
-            <div class="item">• <span class="ar">العمل الجماعي والقيادة</span><span class="en">Teamwork & Leadership</span></div>
-            <div class="item">• <span class="ar">مهارات التواصل الفعال</span><span class="en">Effective Communication</span></div>
-            <div class="item">• <span class="ar">حل المشكلات والضغط</span><span class="en">Problem Solving & Stress Mgt</span></div>
-        </div>
-        
-        <div class="main">
-            <h2><span class="ar">المهارات التقنية والبرمجية</span><span class="en">Technical & Software Skills</span></h2>
-            <div class="item">• <b><span class="ar">برمجيات:</span><span class="en">Software:</span></b> Full-Stack (Flutter, Python, Django, Flask)</div>
-            <div class="item">• <b><span class="ar">قواعد بيانات:</span><span class="en">Databases:</span></b> Oracle DB Administration, SQL</div>
-            <div class="item">• <b><span class="ar">إدارة مكتب:</span><span class="en">Office Mgt:</span></b> MS Office (Excel, Word), Data Entry</div>
-            
-            <h2><span class="ar">الخبرات والتدريبات</span><span class="en">Experience & Training</span></h2>
-            <div class="item">• <b><span class="ar">كاتب فورمان</span><span class="en">Foreman Clerk</span></b> - <span class="ar">النيل للغاز</span> (Nile Gas)</div>
-            <div class="item">• <b><span class="ar">تسويق إلكتروني</span><span class="en">Digital Marketing</span></b> - <span class="ar">الأكاديمية الدولية</span></div>
-            <div class="item">• <b><span class="ar">إدارة مشروعات (CTC) - قواعد بيانات (It Shark)</span><span class="en">Project Mgmt (CTC) - Database (It Shark)</span></b></div>
-        </div>
-    </div>
+    <h2><span class="ar">الخبرة العملية</span><span class="en">Professional Experience</span></h2>
+    <div class="row"><b><span class="ar">كاتب فورمان - النيل للغاز</span><span class="en">Foreman Clerk - Nile Gas</span></b><span>2014-2015</span></div>
+    <div class="row"><b><span class="ar">مساعد طباخ - الشيف سرحان</span><span class="en">Assistant Chef - Chef Sarhan</span></b><span>2017-2019</span></div>
+    <div class="row"><b><span class="ar">تسويق وخدمة عملاء - الأكاديمية الدولية</span><span class="en">Marketing & CS - Int. Academy</span></b><span>2016</span></div>
+
+    <h2><span class="ar">المهارات والتقنيات</span><span class="en">Skills & Expertise</span></h2>
+    <p>Full-Stack (Flutter, Python, Django) | Oracle Database | MS Office | Data Entry</p>
+
+    <h2><span class="ar">التعليم والتدريب</span><span class="en">Education & Training</span></h2>
+    <p><b><span class="ar">دبلوم إلكترونيات (2010)</span><span class="en">Electronics Diploma (2010)</span></b></p>
+    <p>Project Mgmt (CTC) | Mini-MBA (Int. Academy) | Database (It Shark)</p>
 </div>
 
 <script>
