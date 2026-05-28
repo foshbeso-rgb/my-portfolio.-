@@ -1,71 +1,88 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" id="html-root">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
+    <title>السيرة الذاتية - فؤاد عباس فؤاد</title>
     <style>
-        body { font-family: sans-serif; padding: 40px; background: #fff; }
-        .cv { max-width: 800px; margin: auto; border: 1px solid #ddd; padding: 40px; border-radius: 10px; }
-        .header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
-        .lang-btns { text-align: center; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
-        h2 { color: #c5a059; border-bottom: 1px solid #ddd; padding-bottom: 5px; font-size: 1.2em; }
-        .item { margin-bottom: 15px; line-height: 1.6; }
-        button { padding: 8px 15px; cursor: pointer; }
+        :root { --gold: #c5a059; --dark: #2c3e50; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f4f4f4; padding: 20px; }
+        .cv-card { max-width: 900px; margin: auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-top: 8px solid var(--gold); }
+        .lang-switch { text-align: center; margin-bottom: 25px; }
+        button { padding: 8px 20px; cursor: pointer; border: 1px solid var(--gold); background: #fff; border-radius: 5px; margin: 0 5px; font-weight: bold; }
+        h1 { color: var(--dark); text-align: center; margin-bottom: 5px; }
+        .contact { text-align: center; color: #666; margin-bottom: 30px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        h2 { color: var(--gold); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; font-size: 1.3em; }
+        .item { margin-bottom: 10px; font-size: 0.95em; color: #333; line-height: 1.6; }
     </style>
 </head>
 <body>
 
-<div class="cv">
-    <div class="lang-btns">
-        <button onclick="window.location.reload()">English</button>
-        <button>العربية</button>
+<div class="cv-card">
+    <div class="lang-switch">
+        <button onclick="updatePage('ar')">العربية</button>
+        <button onclick="updatePage('en')">English</button>
     </div>
 
-    <div class="header">
-        <h1>فؤاد عباس فؤاد</h1>
-        <p>foshbeso@gmail.com | 01010169726</p>
-    </div>
+    <h1 id="name">فؤاد عباس فؤاد</h1>
+    <p class="contact">foshbeso@gmail.com | 01010169726</p>
 
     <div class="grid">
-        <!-- الجهة اليسرى: التدريبات والمهارات -->
         <div>
-            <h2>التدريبات والشهادات</h2>
-            <div class="item">
-                • Oracle DB Administration<br>
-                • Three-year industrial professional diploma<br>
-                • CTC (إدارة مشروعات)<br>
-                • It Shark (قواعد بيانات)<br>
-                • Mini-MBA | مراسل (أخبار العالم)
-            </div>
-            <h2>المهارات واللغات</h2>
-            <div class="item">
-                • <b>المهارات التقنية:</b> Flutter, Python, Django, SQL<br>
-                • <b>مهارات حياتية:</b> إدخال بيانات، سكرتارية، علاقات عامة، MS Office (ممتاز)<br>
-                • <b>اللغات:</b> الإنجليزية (جيد)<br>
-                • <b>إضافي:</b> رخصة دراجات نارية، متاح للعمل خارج القاهرة
-            </div>
+            <h2 id="exp-title">الخبرات المهنية</h2>
+            <div id="exp-list" class="item"></div>
+            <h2 id="edu-title">التعليم</h2>
+            <div id="edu-list" class="item"></div>
         </div>
-
-        <!-- الجهة اليمنى: الخبرات والتعليم -->
         <div>
-            <h2>الخبرات المهنية</h2>
-            <div class="item">
-                • <b>External Sales & Marketing Officer:</b> طيبة للتجارة (2015-2020)<br>
-                • <b>Marketing Specialist:</b> It Academy (2017-2018)<br>
-                • <b>مساعد طباخ:</b> الشيف سرحان (2017-2019)<br>
-                • <b>تسويق وخدمة عملاء:</b> الأكاديمية الدولية (2016)<br>
-                • <b>مبيعات خارجية:</b> طيبة للسمعيات (2016)<br>
-                • <b>كاتب فورمان:</b> النيل للغاز (2014-2015)
-            </div>
-            <h2>التعليم</h2>
-            <div class="item">
-                • دبلوم صناعي - إلكترونيات (2010)<br>
-                • ثانوية فنية نظام 3 سنوات
-            </div>
+            <h2 id="certs-title">التدريبات والشهادات</h2>
+            <div id="certs-list" class="item"></div>
+            <h2 id="skills-title">المهارات واللغات</h2>
+            <div id="skills-list" class="item"></div>
         </div>
     </div>
 </div>
 
+<script>
+const data = {
+    ar: { 
+        name: "فؤاد عباس فؤاد", 
+        exp: "الخبرات المهنية", 
+        expList: "• <b>External Sales & Marketing Officer:</b> طيبة للتجارة (2015-2020)<br>• <b>Marketing Specialist:</b> It Academy (2017-2018)<br>• <b>مساعد طباخ:</b> الشيف سرحان (2017-2019)<br>• <b>تسويق وخدمة عملاء:</b> الأكاديمية الدولية (2016)<br>• <b>مبيعات خارجية:</b> طيبة للسمعيات (2016)<br>• <b>كاتب فورمان:</b> النيل للغاز (2014-2015)", 
+        edu: "التعليم", 
+        eduList: "• دبلوم صناعي - إلكترونيات (2010)<br>• ثانوية فنية نظام 3 سنوات", 
+        certs: "التدريبات والشهادات", 
+        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (إدارة مشروعات)<br>• It Shark (قواعد بيانات)<br>• Mini-MBA | مراسل (أخبار العالم)", 
+        skills: "المهارات واللغات", 
+        skillsList: "• <b>المهارات التقنية:</b> Flutter, Python, Django, SQL<br>• <b>مهارات حياتية:</b> إدخال بيانات، سكرتارية، علاقات عامة، MS Office (ممتاز)<br>• <b>اللغات:</b> الإنجليزية (جيد)<br>• <b>إضافي:</b> رخصة دراجات نارية، متاح للعمل خارج القاهرة" 
+    },
+    en: { 
+        name: "Fouad Abbas Fouad", 
+        exp: "Professional Experience", 
+        expList: "• <b>External Sales & Marketing Officer:</b> Taiba Trading (2015-2020)<br>• <b>Marketing Specialist:</b> It Academy (2017-2018)<br>• <b>Assistant Chef:</b> Chef Sarhan (2017-2019)<br>• <b>Marketing & CS:</b> Int. Academy (2016)<br>• <b>Outdoor Sales:</b> Taiba Audio (2016)<br>• <b>Foreman Clerk:</b> Nile Gas (2014-2015)", 
+        edu: "Education", 
+        eduList: "• Industrial Diploma - Electronics (2010)<br>• 3-Year Technical High School", 
+        certs: "Training & Certificates", 
+        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (Project Management)<br>• It Shark (Databases)<br>• Mini-MBA | Journalist (Akhbar El Alam)", 
+        skills: "Skills & Languages", 
+        skillsList: "• <b>Technical:</b> Flutter, Python, Django, SQL<br>• <b>Soft Skills:</b> Data Entry, Secretary, PR, MS Office (Expert)<br>• <b>Languages:</b> English (Good)<br>• <b>Relocation:</b> Willing to relocate, Motorcycle License" 
+    }
+};
+
+function updatePage(lang) {
+    document.getElementById('html-root').lang = lang;
+    document.getElementById('html-root').dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    document.getElementById('name').innerHTML = data[lang].name;
+    document.getElementById('exp-title').innerHTML = data[lang].exp;
+    document.getElementById('exp-list').innerHTML = data[lang].expList;
+    document.getElementById('edu-title').innerHTML = data[lang].edu;
+    document.getElementById('edu-list').innerHTML = data[lang].eduList;
+    document.getElementById('certs-title').innerHTML = data[lang].certs;
+    document.getElementById('certs-list').innerHTML = data[lang].certsList;
+    document.getElementById('skills-title').innerHTML = data[lang].skills;
+    document.getElementById('skills-list').innerHTML = data[lang].skillsList;
+}
+updatePage('ar');
+</script>
 </body>
 </html>
