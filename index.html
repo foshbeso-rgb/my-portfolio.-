@@ -5,40 +5,53 @@
     <style>
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; line-height: 1.6; }
         .controls { text-align: center; margin-bottom: 20px; }
-        .btn { padding: 10px 20px; cursor: pointer; background: #2c3e50; border: none; color: white; border-radius: 4px; font-weight: bold; }
-        .cv-card { max-width: 900px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
-        .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 30px; }
-        .main-content { flex: 1; padding: 30px; }
-        .name { font-size: 1.8em; color: #2c3e50; font-weight: bold; margin-bottom: 10px; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
-        h2 { color: #c5a059; font-size: 1.2em; margin-top: 20px; border-bottom: 2px solid #c5a059; }
+        .btn { padding: 10px 20px; cursor: pointer; background: #2c3e50; border: none; color: white; border-radius: 4px; font-weight: bold; margin: 5px; }
+        .cv-card { max-width: 950px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
+        .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 40px; }
+        .main-content { flex: 1; padding: 40px; }
+        .name { font-size: 2em; color: #2c3e50; font-weight: bold; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
+        h2 { color: #c5a059; font-size: 1.3em; margin-top: 25px; border-bottom: 2px solid #c5a059; }
         .job-title { font-weight: bold; color: #2c3e50; display: block; margin-top: 15px; }
-        .job-desc { font-size: 0.85em; color: #333; }
+        .job-desc { font-size: 0.9em; color: #333; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <div class="controls">
-    <!-- تم إعطاء الزر id="langBtn" ليتغير نصّه أيضاً -->
     <button class="btn" id="langBtn" onclick="toggleLang()">تبديل اللغة / Switch Language</button>
+    <button class="btn" onclick="window.print()">طباعة / Print PDF</button>
 </div>
 
 <div class="cv-card">
     <div class="sidebar">
-        <h2 id="t1">معلومات الاتصال</h2>
-        <p id="t2">الهاتف: 01010169726<br>البريد: foshbeso@gmail.com</p>
-        <h2 id="t3">التعليم</h2>
-        <p id="t4">ثانوية فنية نظام 3 سنوات (إلكترونيات) - 2010</p>
-        <h2 id="t5">المهارات التقنية</h2>
-        <p id="t6">Python, Django, Flask, Flutter, Hardware, SSD, BIOS</p>
+        <h2 id="t1">معلومات الاتصال والبيانات</h2>
+        <p id="t2">الهاتف: 01010169726<br>البريد: foshbeso@gmail.com<br>العنوان: دار السلام، القاهرة<br>مصري | غير متزوج | إعفاء نهائي</p>
+        <h2 id="t3">التعليم والتدريب</h2>
+        <p id="t4"><b>ثانوية فنية (إلكترونيات) - 2010</b><br>تدريبات: Oracle DB, CTC, It Shark</p>
+        <h2 id="t5">المهارات واللغات</h2>
+        <ul id="t6">
+            <li>برمجيات: Python, Django, Flask, Flutter</li>
+            <li>إدارة أنظمة: Hardware, SSD, BIOS</li>
+            <li>إدخال بيانات وسكرتارية (MS Office)</li>
+            <li>اللغات: العربية (الأم)، الإنجليزية (جيد)</li>
+        </ul>
     </div>
     <div class="main-content">
         <h1 class="name" id="name">فؤاد عباس فؤاد</h1>
-        <p id="sum">مختص تسويق ومبيعات بخلفية تقنية في تطوير البرمجيات، أمتلك مهارات قوية في حل المشكلات التقنية.</p>
+        <p id="sum">مختص في التسويق والمبيعات بخلفية تقنية في تطوير البرمجيات، أمتلك مهارات قوية في حل المشكلات التقنية وتطوير الأنظمة، أسعى لتوظيف خبراتي المتنوعة للمساهمة في نجاح المؤسسات الطموحة.</p>
+        
         <h2 id="t7">الخبرات المهنية</h2>
         <span class="job-title" id="t8">External Sales & Marketing Officer - طيبة للتجارة</span>
-        <p class="job-desc" id="t9">• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء.</p>
-        <h2 id="t10">المشاريع التقنية</h2>
-        <p class="job-desc" id="t11">• نظام Jarvis: مساعد ذكي بالتحكم الصوتي.<br>• منصة التجارة الإلكترونية: تطبيق لبيع الأثاث.</p>
+        <p class="job-desc" id="t9">• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء وبناء علاقات استراتيجية قوية.</p>
+
+        <span class="job-title" id="t10">Marketing Specialist - It Academy</span>
+        <p class="job-desc" id="t11">• طورت حملات تسويقية رقمية مبتكرة ساهمت في تعزيز التواجد التنافسي للمؤسسة.</p>
+
+        <h2 id="t12">أدوار وظيفية وداعمة للعمليات</h2>
+        <p class="job-desc" id="t13">• مساعد طباخ (الشيف سرحان): تميزت بالسرعة والدقة في العمل الجماعي (2017-2019).<br>• تسويق وخدمة عملاء (الأكاديمية الدولية): تحسين تجربة المستفيدين (2016).<br>• كاتب فورمان (النيل للغاز): التوثيق التقني والرقابة على سير العمليات الفنية (2014-2015).</p>
+
+        <h2 id="t14">المشاريع التقنية</h2>
+        <p class="job-desc" id="t15">• نظام "Jarvis" الذكي: تصميم وبرمجة مساعد صوتي ونظام أمان تقني متطور.<br>• منصة التجارة الإلكترونية: بناء تطبيق متكامل لبيع الأثاث.<br>• محفظة الأعمال (GitHub CV): تطوير ونشر سيرة ذاتية تقنية تفاعلية.</p>
     </div>
 </div>
 
@@ -46,32 +59,51 @@
     const translations = {
         "ar": {
             "langBtn": "تبديل اللغة / Switch Language",
-            "t1": "معلومات الاتصال", "t2": "الهاتف: 01010169726<br>البريد: foshbeso@gmail.com",
-            "t3": "التعليم", "t4": "ثانوية فنية نظام 3 سنوات (إلكترونيات) - 2010",
-            "t5": "المهارات التقنية", "t6": "Python, Django, Flask, Flutter, Hardware, SSD, BIOS",
-            "name": "فؤاد عباس فؤاد", "sum": "مختص تسويق ومبيعات بخلفية تقنية في تطوير البرمجيات، أمتلك مهارات قوية في حل المشكلات التقنية.",
-            "t7": "الخبرات المهنية", "t8": "External Sales & Marketing Officer - طيبة للتجارة", "t9": "• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء.",
-            "t10": "المشاريع التقنية", "t11": "• نظام Jarvis: مساعد ذكي بالتحكم الصوتي.<br>• منصة التجارة الإلكترونية: تطبيق لبيع الأثاث."
+            "t1": "معلومات الاتصال والبيانات",
+            "t2": "الهاتف: 01010169726<br>البريد: foshbeso@gmail.com<br>العنوان: دار السلام، القاهرة<br>مصري | غير متزوج | إعفاء نهائي",
+            "t3": "التعليم والتدريب",
+            "t4": "<b>ثانوية فنية (إلكترونيات) - 2010</b><br>تدريبات: Oracle DB, CTC, It Shark",
+            "t5": "المهارات واللغات",
+            "t6": "<li>برمجيات: Python, Django, Flask, Flutter</li><li>إدارة أنظمة: Hardware, SSD, BIOS</li><li>إدخال بيانات وسكرتارية (MS Office)</li><li>اللغات: العربية (الأم)، الإنجليزية (جيد)</li>",
+            "name": "فؤاد عباس فؤاد",
+            "sum": "مختص في التسويق والمبيعات بخلفية تقنية في تطوير البرمجيات، أمتلك مهارات قوية في حل المشكلات التقنية وتطوير الأنظمة، أسعى لتوظيف خبراتي المتنوعة للمساهمة في نجاح المؤسسات الطموحة.",
+            "t7": "الخبرات المهنية",
+            "t8": "External Sales & Marketing Officer - طيبة للتجارة",
+            "t9": "• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء وبناء علاقات استراتيجية قوية.",
+            "t10": "Marketing Specialist - It Academy",
+            "t11": "• طورت حملات تسويقية رقمية مبتكرة ساهمت في تعزيز التواجد التنافسي للمؤسسة.",
+            "t12": "أدوار وظيفية وداعمة للعمليات",
+            "t13": "• مساعد طباخ (الشيف سرحان): تميزت بالسرعة والدقة في العمل الجماعي (2017-2019).<br>• تسويق وخدمة عملاء (الأكاديمية الدولية): تحسين تجربة المستفيدين (2016).<br>• كاتب فورمان (النيل للغاز): التوثيق التقني والرقابة على سير العمليات الفنية (2014-2015).",
+            "t14": "المشاريع التقنية",
+            "t15": "• نظام \"Jarvis\" الذكي: تصميم وبرمجة مساعد صوتي ونظام أمان تقني متطور.<br>• منصة التجارة الإلكترونية: بناء تطبيق متكامل لبيع الأثاث.<br>• محفظة الأعمال (GitHub CV): تطوير ونشر سيرة ذاتية تقنية تفاعلية."
         },
         "en": {
             "langBtn": "Switch Language / تبديل اللغة",
-            "t1": "Contact Information", "t2": "Phone: 01010169726<br>Email: foshbeso@gmail.com",
-            "t3": "Education", "t4": "3-year Technical Diploma (Electronics) - 2010",
-            "t5": "Technical Skills", "t6": "Python, Django, Flask, Flutter, Hardware, SSD, BIOS",
-            "name": "Fouad Abbas Fouad", "sum": "Marketing and sales specialist with a technical background in software development.",
-            "t7": "Professional Experience", "t8": "External Sales & Marketing Officer - Taiba Trading", "t9": "• Achieved significant growth in market share through customer needs analysis.",
-            "t10": "Technical Projects", "t11": "• Jarvis System: AI voice-controlled assistant.<br>• E-commerce platform: Furniture selling application."
+            "t1": "Contact Information",
+            "t2": "Phone: 01010169726<br>Email: foshbeso@gmail.com<br>Address: Dar El-Salam, Cairo<br>Egyptian | Single | Military Service Exempted",
+            "t3": "Education & Training",
+            "t4": "<b>Technical Diploma (Electronics) - 2010</b><br>Trainings: Oracle DB, CTC, It Shark",
+            "t5": "Skills & Languages",
+            "t6": "<li>Software: Python, Django, Flask, Flutter</li><li>Systems Admin: Hardware, SSD, BIOS</li><li>Data Entry & Secretarial (MS Office)</li><li>Languages: Arabic (Native), English (Good)</li>",
+            "name": "Fouad Abbas Fouad",
+            "sum": "Marketing and sales specialist with a technical background in software development. Possess strong problem-solving skills and system development capabilities, aiming to contribute to ambitious organizations.",
+            "t7": "Professional Experience",
+            "t8": "External Sales & Marketing Officer - Taiba Trading",
+            "t9": "• Achieved significant growth in market share through customer needs analysis and building strategic relationships.",
+            "t10": "Marketing Specialist - It Academy",
+            "t11": "• Developed innovative digital marketing campaigns that enhanced the institution's competitive presence.",
+            "t12": "Operational Support Roles",
+            "t13": "• Assistant Chef (Chef Sarhan): Demonstrated speed and precision in teamwork (2017-2019).<br>• Marketing & Customer Service (International Academy): Improved user experience (2016).<br>• Foreman Clerk (Nile Gas): Managed technical documentation and operational monitoring (2014-2015).",
+            "t14": "Technical Projects",
+            "t15": "• Jarvis Smart System: Designed and programmed a voice-controlled AI assistant.<br>• E-commerce Platform: Built a comprehensive furniture sales application.<br>• GitHub CV: Developed and deployed an interactive technical portfolio."
         }
     };
 
     function toggleLang() {
         const html = document.getElementById('cv-html');
         const lang = (html.lang === "ar") ? "en" : "ar";
-        
         html.lang = lang;
         html.dir = (lang === "ar") ? "rtl" : "ltr";
-
-        // تحديث النصوص بناءً على القائمة بدون أي رسائل تنبيه
         for (let id in translations[lang]) {
             document.getElementById(id).innerHTML = translations[lang][id];
         }
