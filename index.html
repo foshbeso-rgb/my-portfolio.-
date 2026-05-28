@@ -3,94 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f8f9fa; padding: 40px; color: #333; }
-        .cv-wrapper { max-width: 900px; margin: auto; background: #fff; padding: 50px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-top: 10px solid #c5a059; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .cv-wrapper { max-width: 900px; margin: auto; background: #fff; padding: 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
         
-        .header { text-align: center; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-        .header h1 { color: #2c3e50; font-size: 2em; margin-bottom: 10px; }
-        .contact-info { color: #666; font-size: 0.95em; }
-        
-        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        
-        h2 { color: #c5a059; font-size: 1.3em; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 20px; text-transform: uppercase; }
-        
-        .section-item { margin-bottom: 20px; }
+        /* تصميم احترافي عالمي لمعلومات الاتصال */
+        .contact-header { background-color: #2c3e50; color: #fff; padding: 40px; text-align: center; }
+        .name { font-size: 2.5em; margin: 0; color: #c5a059; }
+        .job-title { font-size: 1.2em; margin: 10px 0; color: #ecf0f1; }
+        .contact-details { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px; font-size: 0.95em; color: #bdc3c7; }
+        .contact-details span { display: flex; align-items: center; gap: 5px; }
+
+        .main-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 40px; }
+        h2 { color: #c5a059; font-size: 1.2em; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 20px; text-transform: uppercase; }
         .title { font-weight: bold; color: #2c3e50; display: block; }
         .date { font-size: 0.85em; color: #999; margin-bottom: 5px; display: block; }
-        .desc { font-size: 0.9em; line-height: 1.6; }
-        
         ul { padding-right: 20px; margin: 0; }
-        li { margin-bottom: 8px; font-size: 0.9em; }
+        li { margin-bottom: 10px; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
 <div class="cv-wrapper">
-    <div class="header">
-        <h1>فؤاد عباس فؤاد</h1>
-        <div class="contact-info">
-            foshbeso@gmail.com | 01010169726 | دار السلام، القاهرة | 1991<br>
-            الحالة الاجتماعية: غير متزوج | الجنسية: مصر | الموقف من الخدمة العسكرية: إعفاء نهائي
+    <!-- Header احترافي -->
+    <div class="contact-header">
+        <h1 class="name">فؤاد عباس فؤاد</h1>
+        <div class="job-title">مختص ضيافة | مطور برمجيات Full-Stack</div>
+        <div class="contact-details">
+            <span>📍 القاهرة، دار السلام</span>
+            <span>📧 foshbeso@gmail.com</span>
+            <span>📱 01010169726</span>
+            <span>🆔 مصري | غير متزوج | إعفاء نهائي</span>
         </div>
     </div>
 
     <div class="main-grid">
-        <!-- الجهة اليمنى: الخبرة والتعليم -->
+        <!-- الجهة اليمنى: الخبرات -->
         <div>
             <h2>الخبرات المهنية</h2>
             <div class="section-item">
                 <span class="title">External Sales & Marketing Officer</span>
-                <span class="date">طيبة للتجارة | 2015 - نوفمبر 2020</span>
+                <span class="date">طيبة للتجارة | 2015 - 2020</span>
             </div>
-            <div class="section-item">
+            <div class="section-item" style="margin-top:15px;">
                 <span class="title">Marketing Specialist</span>
-                <span class="date">It Academy | 2017 - مايو 2018</span>
-                <p class="desc">تحليل اتجاهات السوق، تحديد المنافسين، وتطوير استراتيجيات تحسين التواجد التسويقي.</p>
-            </div>
-            
-            <div class="section-item">
-                <span class="title" style="margin-bottom:10px;">خبرات وظيفية أخرى:</span>
-                <ul>
-                    <li>مساعد طباخ (الشيف سرحان): 2017-2019</li>
-                    <li>تسويق وخدمة عملاء (الأكاديمية الدولية): 2016</li>
-                    <li>مبيعات خارجية (طيبة للسمعيات): 2016</li>
-                    <li>تسويق إلكتروني وإعلانات (الأكاديمية الدولية): 2016</li>
-                    <li>كاتب فورمان (النيل للغاز): 2014-2015</li>
-                </ul>
-            </div>
-
-            <h2>التعليم</h2>
-            <div class="section-item">
-                <span class="title">ثانوية فنية نظام 3 سنوات</span>
-                <span class="date">تخصص إلكترونيات | 2010</span>
+                <span class="date">It Academy | 2017 - 2018</span>
+                <p style="font-size: 0.9em;">تحليل اتجاهات السوق، تحديد المنافسين، وتطوير استراتيجيات تحسين التواجد التسويقي.</p>
             </div>
         </div>
 
-        <!-- الجهة اليسرى: التدريبات والمهارات -->
+        <!-- الجهة اليسرى: المهارات والتعليم -->
         <div>
-            <h2>التدريبات والشهادات</h2>
+            <h2>المهارات والشهادات</h2>
             <ul>
-                <li>Oracle DB Administration (2017)</li>
-                <li>إدارة مشروعات / رخصة دولية للحاسب (سي تي سي اكاديمي)</li>
-                <li>إدارة أعمال مصغر (الأكاديمية الدولية - 2016)</li>
-                <li>مراسل تحت التمرين (أخبار العالم - 2013)</li>
-                <li>قواعد البيانات (It Shark - 2017)</li>
-                <li>دبلوم مهني صناعي (ثلاث سنوات)</li>
+                <li><b>تقني:</b> Python, Django, Flutter, SQL, MS Office (ممتاز)</li>
+                <li><b>إداري:</b> مبيعات، تسويق، إدارة أعمال، سكرتارية</li>
+                <li><b>شهادات:</b> Oracle DB, CTC (إدارة مشروعات), It Shark</li>
+                <li><b>اللغات:</b> الإنجليزية (جيد)</li>
             </ul>
-
-            <h2>المهارات والإضافات</h2>
-            <div class="section-item">
-                <span class="title">المهارات التقنية:</span>
-                MS Office (ممتاز)، إدخال بيانات، سكرتارية، حاسب آلي.
-            </div>
-            <div class="section-item">
-                <span class="title">اللغات:</span>
-                الإنجليزية (مستوى جيد).
-            </div>
-            <div class="section-item">
-                <span class="title">إضافات:</span>
-                سائق دراجات نارية، متاح للعمل خارج القاهرة ومتاح للمحافظات (مع توفير سكن).
-            </div>
         </div>
     </div>
 </div>
