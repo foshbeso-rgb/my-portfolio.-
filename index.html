@@ -6,67 +6,74 @@
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; }
         .cv-card { max-width: 900px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
         
+        /* القائمة الجانبية (Dark Sidebar) */
         .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 30px; }
         .sidebar h2 { color: #c5a059; font-size: 1.1em; border-bottom: 2px solid #c5a059; padding-bottom: 5px; margin-top: 25px; }
         .sidebar p, .sidebar li { font-size: 0.85em; color: #fff; margin-bottom: 8px; }
+        .sidebar a { color: #c5a059; text-decoration: none; display: block; margin-top: 5px; font-weight: bold; }
 
+        /* المحتوى الرئيسي */
         .main-content { flex: 1; padding: 30px; }
-        .name { font-size: 1.8em; color: #2c3e50; font-weight: bold; margin-bottom: 20px; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
+        .name { font-size: 1.8em; color: #2c3e50; font-weight: bold; margin-bottom: 10px; }
+        .summary { font-size: 0.95em; color: #555; margin-bottom: 25px; font-style: italic; border-bottom: 3px solid #c5a059; padding-bottom: 15px; }
         h2 { color: #c5a059; font-size: 1.2em; margin-top: 20px; }
         .job-title { font-weight: bold; color: #2c3e50; display: block; margin-top: 15px; }
         .job-date { font-size: 0.85em; color: #777; margin-bottom: 5px; display: block; }
-        .job-desc { font-size: 0.85em; color: #333; font-style: italic; }
+        .job-desc { font-size: 0.85em; color: #333; }
     </style>
 </head>
 <body>
 
 <div class="cv-card">
     <div class="sidebar">
-        <h2>معلومات الاتصال والبيانات</h2>
+        <h2>معلومات الاتصال</h2>
         <p><b>الهاتف:</b> 01010169726<br><b>البريد:</b> foshbeso@gmail.com<br><b>العنوان:</b> دار السلام، القاهرة</p>
-        <p>مصري | غير متزوج | إعفاء نهائي من الخدمة العسكرية</p>
-
-        <h2>اللغات</h2>
-        <ul>
-            <li>العربية: اللغة الأم</li>
-            <li>الإنجليزية: مستوى جيد (مع تركيز على مصطلحات قطاع الضيافة)</li>
-        </ul>
+        <a href="#">رابط LinkedIn الخاص بك</a>
+        <a href="#">رابط GitHub (مشاريع Jarvis)</a>
+        <p style="margin-top: 15px;">مصري | غير متزوج | إعفاء نهائي</p>
 
         <h2>التعليم</h2>
-        <p><b>ثانوية فنية نظام 3 سنوات</b> (تخصص إلكترونيات) - 2010</p>
-        <p><b>تدريبات معتمدة:</b> Oracle DB Administration, CTC (إدارة مشروعات), It Shark (قواعد بيانات)</p>
+        <p><b>ثانوية فنية نظام 3 سنوات</b> (إلكترونيات) - 2010</p>
+        <p><b>تدريبات:</b> Oracle DB, CTC, It Shark</p>
 
-        <h2>المهارات التقنية والشخصية</h2>
+        <h2>المهارات التقنية واللغات</h2>
         <ul>
-            <li>تطوير برمجيات: Python, Django, Flask, Flutter</li>
+            <li>تطوير: Python, Django, Flask, Flutter</li>
             <li>إدارة أنظمة: Hardware, SSD, BIOS</li>
-            <li>إدخال بيانات، سكرتارية، MS Office (ممتاز)</li>
-            <li>سائق دراجات نارية، مرونة في التنقل للعمل</li>
+            <li>إدخال بيانات وسكرتارية (MS Office)</li>
+            <li>اللغات: العربية (الأم)، الإنجليزية (جيد)</li>
+        </ul>
+
+        <h2>المهارات الشخصية</h2>
+        <ul>
+            <li>حل المشكلات التقنية | العمل تحت ضغط</li>
+            <li>سائق دراجات نارية | مرونة في التنقل للعمل</li>
         </ul>
     </div>
 
     <div class="main-content">
         <h1 class="name">فؤاد عباس فؤاد</h1>
+        <p class="summary">مختص في التسويق والمبيعات بخلفية تقنية في تطوير البرمجيات، أمتلك مهارات قوية في حل المشكلات التقنية وتطوير الأنظمة، أسعى لتوظيف خبراتي المتنوعة للمساهمة في نجاح المؤسسات الطموحة.</p>
         
-        <h2>الخبرات المهنية المعززة</h2>
+        <h2>الخبرات المهنية</h2>
         <span class="job-title">External Sales & Marketing Officer - طيبة للتجارة</span>
         <span class="job-date">2015 - نوفمبر 2020</span>
-        <p class="job-desc">• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء وبناء علاقات استراتيجية قوية.</p>
+        <p class="job-desc">• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء وبناء علاقات استراتيجية.</p>
 
         <span class="job-title">Marketing Specialist - It Academy</span>
         <span class="job-date">2017 - مايو 2018</span>
-        <p class="job-desc">• طورت حملات تسويقية رقمية متكاملة ساهمت في رفع معدلات التحويل وتعزيز التواجد التنافسي للمؤسسة.</p>
+        <p class="job-desc">• طورت حملات تسويقية رقمية مبتكرة ساهمت في تعزيز التواجد التنافسي للمؤسسة.</p>
 
         <span class="job-title">أدوار وظيفية وداعمة للعمليات:</span>
-        <p class="job-desc">• مساعد طباخ (الشيف سرحان): تميزت بالسرعة والدقة في العمل الجماعي تحت ضغط بيئة الفنادق (2017-2019).</p>
-        <p class="job-desc">• تسويق وخدمة عملاء (الأكاديمية الدولية): ساهمت في تحسين تجربة المستفيدين ورفع جودة الخدمات المقدمة (2016).</p>
-        <p class="job-desc">• كاتب فورمان (النيل للغاز): توليت مسؤولية التوثيق التقني والرقابة على سير العمليات الفنية (2014-2015).</p>
+        <p class="job-desc">• مساعد طباخ (الشيف سرحان): تميزت بالدقة والعمل الجماعي (2017-2019).<br>
+        • تسويق وخدمة عملاء (الأكاديمية الدولية): تحسين تجربة المستفيدين (2016).<br>
+        • كاتب فورمان (النيل للغاز): التوثيق التقني والرقابة على العمليات (2014-2015).</p>
 
         <h2>المشاريع التقنية</h2>
-        <p style="font-size: 0.85em;">
+        <p class="job-desc">
             • <b>نظام "Jarvis" الذكي:</b> تصميم وبرمجة مساعد صوتي ونظام أمان تقني متطور باستخدام Python.<br>
             • <b>منصة التجارة الإلكترونية:</b> بناء تطبيق متكامل لبيع الأثاث يدعم واجهة مستخدم احترافية.<br>
-            • <b>محفظة الأعمال (GitHub CV):</b> تطوير ونشر سيرة ذاتية تقنية تفاعلية تعكس مهارات التطوير البرمجي.
+            • <b>محفظة الأعمال (GitHub):</b> سيرة ذاتية تفاعلية تعكس مهارات التطوير البرمجي.
         </p>
     </div>
 </div>
