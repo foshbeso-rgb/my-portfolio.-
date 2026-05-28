@@ -1,66 +1,69 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" id="html-root">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
+    <title>السيرة الذاتية الاحترافية | فؤاد عباس فؤاد</title>
     <style>
-        :root { --accent: #C5A059; --dark: #1a1a1a; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 40px; color: #333; }
-        .page { max-width: 900px; margin: auto; background: white; padding: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; }
-        .lang-switch { text-align: center; margin-bottom: 30px; }
-        button { padding: 10px 25px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 4px; font-weight: bold; }
-        .container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
-        h2 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 5px; margin-top: 30px; font-size: 1.2em; }
-        .item { margin-bottom: 15px; line-height: 1.6; }
+        :root { --primary: #2c3e50; --accent: #c0392b; --text: #333; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; background: #f9f9f9; padding: 20px; color: var(--text); }
+        .cv-container { max-width: 900px; margin: auto; background: white; padding: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        header { border-bottom: 3px solid var(--primary); padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { margin: 0; color: var(--primary); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        h2 { color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 5px; margin-top: 25px; font-size: 1.2rem; }
+        .section-item { margin-bottom: 15px; }
+        .label { font-weight: bold; color: #555; }
+        .badge { display: inline-block; background: #eee; padding: 2px 8px; border-radius: 4px; margin: 2px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-<div class="page">
-    <div class="lang-switch">
-        <button onclick="updatePage('ar')">العربية</button>
-        <button onclick="updatePage('en')">English</button>
+
+<div class="cv-container">
+    <header>
+        <h1>فؤاد عباس فؤاد</h1>
+        <p>35 عاماً | دار السلام، القاهرة | foshbeso@gmail.com | 01010169726</p>
+    </header>
+
+    <div class="grid">
+        <!-- العمود الأيمن -->
+        <div>
+            <h2>الخبرات المهنية</h2>
+            <div class="section-item"><b>مساعد طباخ - الشيف سرحان</b> (2017-2019)</div>
+            <div class="section-item"><b>تسويق وخدمة عملاء - الأكاديمية الدولية</b> (2016)</div>
+            <div class="section-item"><b>مبيعات خارجية - طيبة للسمعيات</b> (2016)</div>
+            <div class="section-item"><b>تسويق إلكتروني - الأكاديمية الدولية</b> (2016)</div>
+            <div class="section-item"><b>كاتب فورمان - النيل للغاز</b> (2014-2015)</div>
+
+            <h2>التعليم</h2>
+            <div class="section-item">ثانوية فنية نظام 3 سنوات - دبلوم صناعي (2010)</div>
+        </div>
+
+        <!-- العمود الأيسر -->
+        <div>
+            <h2>المهارات التقنية والبرمجية</h2>
+            <div class="section-item"><span class="label">Full-Stack:</span> Flutter, Python, Django, Flask</div>
+            <div class="section-item"><span class="label">Database:</span> Oracle DB, SQL</div>
+            <div class="section-item"><span class="label">Systems:</span> MS Office (ممتاز), Data Entry</div>
+            
+            <h2>المجالات الإدارية</h2>
+            <div>
+                <span class="badge">إدخال بيانات</span> <span class="badge">أعمال المكتب</span> 
+                <span class="badge">سكرتارية</span> <span class="badge">علاقات عامة</span>
+            </div>
+
+            <h2>التدريبات والمشاريع</h2>
+            <div class="section-item">• <b>Jarvis:</b> مساعد صوتي ذكي.</div>
+            <div class="section-item">• <b>E-commerce:</b> منصة تجارة إلكترونية.</div>
+            <div class="section-item">• CTC (إدارة مشروعات) | It Shark (قواعد بيانات)</div>
+            <div class="section-item">• مراسل (أخبار العالم)</div>
+        </div>
     </div>
 
-    <div style="text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px;">
-        <h1 id="name">فؤاد عباس فؤاد</h1>
-        <p>01010169726 | foshbeso@gmail.com</p>
-    </div>
-
-    <div class="container">
-        <div>
-            <h2 id="exp-title">الخبرات المهنية</h2>
-            <div id="exp-list" class="item"></div>
-            <h2 id="edu-title">التعليم والتدريب</h2>
-            <div id="edu-list" class="item"></div>
-        </div>
-        <div>
-            <h2 id="skills-title">المهارات التقنية</h2>
-            <div id="skills-list" class="item"></div>
-            <h2 id="projects-title">المشاريع</h2>
-            <div id="projects-list" class="item"></div>
-        </div>
+    <div style="margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
+        <h2>معلومات إضافية</h2>
+        <p><b>الجنسية:</b> مصري | <b>الخدمة العسكرية:</b> إعفاء نهائي | <b>الرخصة:</b> سائق دراجات نارية | <b>التنقل:</b> متاح للعمل خارج القاهرة.</p>
     </div>
 </div>
 
-<script>
-const data = {
-    ar: { name: "فؤاد عباس فؤاد", exp: "الخبرات المهنية", expList: "• كاتب فورمان - النيل للغاز (2014-2015)<br>• مساعد طباخ - الشيف سرحان (2017-2019)<br>• تسويق وخدمة عملاء - الأكاديمية الدولية (2016)<br>• مبيعات خارجية - طيبة للسمعيات (2016)<br>• تسويق إلكتروني - الأكاديمية الدولية (2016)", edu: "التعليم والتدريب", eduList: "• دبلوم صناعي - إلكترونيات (2010)<br>• CTC (إدارة مشروعات)<br>• It Shark (قواعد بيانات)<br>• Mini-MBA | مراسل (أخبار العالم)", skills: "المهارات التقنية", skillsList: "• Full-Stack: Flutter, Python, Django, Flask<br>• Database: Oracle DB, SQL<br>• Systems: MS Office (Expert), Data Entry", projects: "المشاريع", projectsList: "• Jarvis: مساعد صوتي ذكي.<br>• E-commerce: منصة تجارة إلكترونية." },
-    en: { name: "Fouad Abbas Fouad", exp: "Professional Experience", expList: "• Foreman Clerk - Nile Gas (2014-2015)<br>• Assistant Chef - Chef Sarhan (2017-2019)<br>• Marketing & CS - Int. Academy (2016)<br>• Outdoor Sales - Taiba Audio (2016)<br>• Digital Marketing - Int. Academy (2016)", edu: "Education & Training", eduList: "• Industrial Diploma - Electronics (2010)<br>• CTC (Project Mgmt)<br>• It Shark (DB)<br>• Mini-MBA | Journalist (Akhbar El Alam)", skills: "Technical Skills", skillsList: "• Full-Stack: Flutter, Python, Django, Flask<br>• Database: Oracle DB, SQL<br>• Systems: MS Office (Expert), Data Entry", projects: "Projects", projectsList: "• Jarvis: AI Voice Assistant.<br>• E-commerce: Full-stack Platform." }
-};
-
-function updatePage(lang) {
-    document.getElementById('html-root').lang = lang;
-    document.getElementById('html-root').dir = (lang === 'ar') ? 'rtl' : 'ltr';
-    document.getElementById('name').innerHTML = data[lang].name;
-    document.getElementById('exp-title').innerHTML = data[lang].exp;
-    document.getElementById('exp-list').innerHTML = data[lang].expList;
-    document.getElementById('edu-title').innerHTML = data[lang].edu;
-    document.getElementById('edu-list').innerHTML = data[lang].eduList;
-    document.getElementById('skills-title').innerHTML = data[lang].skills;
-    document.getElementById('skills-list').innerHTML = data[lang].skillsList;
-    document.getElementById('projects-title').innerHTML = data[lang].projects;
-    document.getElementById('projects-list').innerHTML = data[lang].projectsList;
-}
-</script>
 </body>
 </html>
