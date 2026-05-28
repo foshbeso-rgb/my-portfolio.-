@@ -6,19 +6,20 @@
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; line-height: 1.6; }
         .controls { text-align: center; margin-bottom: 20px; }
         .btn { padding: 10px 20px; cursor: pointer; background: #2c3e50; border: none; color: white; border-radius: 4px; font-weight: bold; }
-        .cv-card { max-width: 950px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
-        .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 40px; }
-        .main-content { flex: 1; padding: 40px; }
-        .name { font-size: 1.8em; color: #2c3e50; font-weight: bold; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
-        h2 { color: #c5a059; font-size: 1.2em; margin-top: 25px; border-bottom: 2px solid #c5a059; }
+        .cv-card { max-width: 900px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
+        .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 30px; }
+        .main-content { flex: 1; padding: 30px; }
+        .name { font-size: 1.8em; color: #2c3e50; font-weight: bold; margin-bottom: 10px; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
+        h2 { color: #c5a059; font-size: 1.2em; margin-top: 20px; border-bottom: 2px solid #c5a059; }
         .job-title { font-weight: bold; color: #2c3e50; display: block; margin-top: 15px; }
-        .job-desc { font-size: 0.9em; color: #333; margin-bottom: 10px; }
+        .job-desc { font-size: 0.85em; color: #333; }
     </style>
 </head>
 <body>
 
 <div class="controls">
-    <button class="btn" onclick="toggleLang()">Switch Language / تبديل اللغة</button>
+    <!-- تم إعطاء الزر id="langBtn" ليتغير نصّه أيضاً -->
+    <button class="btn" id="langBtn" onclick="toggleLang()">تبديل اللغة / Switch Language</button>
 </div>
 
 <div class="cv-card">
@@ -36,40 +37,41 @@
         <h2 id="t7">الخبرات المهنية</h2>
         <span class="job-title" id="t8">External Sales & Marketing Officer - طيبة للتجارة</span>
         <p class="job-desc" id="t9">• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء.</p>
-        <span class="job-title" id="t10">Marketing Specialist - It Academy</span>
-        <p class="job-desc" id="t11">• طورت حملات تسويقية رقمية ساهمت في تعزيز التواجد التنافسي للمؤسسة.</p>
-        <h2 id="t12">المشاريع التقنية</h2>
-        <p class="job-desc" id="t13">• نظام Jarvis: مساعد ذكي بالتحكم الصوتي.<br>• منصة التجارة الإلكترونية: تطبيق لبيع الأثاث.<br>• سيرة ذاتية تفاعلية (GitHub CV).</p>
+        <h2 id="t10">المشاريع التقنية</h2>
+        <p class="job-desc" id="t11">• نظام Jarvis: مساعد ذكي بالتحكم الصوتي.<br>• منصة التجارة الإلكترونية: تطبيق لبيع الأثاث.</p>
     </div>
 </div>
 
 <script>
     const translations = {
         "ar": {
+            "langBtn": "تبديل اللغة / Switch Language",
             "t1": "معلومات الاتصال", "t2": "الهاتف: 01010169726<br>البريد: foshbeso@gmail.com",
             "t3": "التعليم", "t4": "ثانوية فنية نظام 3 سنوات (إلكترونيات) - 2010",
             "t5": "المهارات التقنية", "t6": "Python, Django, Flask, Flutter, Hardware, SSD, BIOS",
             "name": "فؤاد عباس فؤاد", "sum": "مختص تسويق ومبيعات بخلفية تقنية في تطوير البرمجيات، أمتلك مهارات قوية في حل المشكلات التقنية.",
             "t7": "الخبرات المهنية", "t8": "External Sales & Marketing Officer - طيبة للتجارة", "t9": "• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء.",
-            "t10": "Marketing Specialist - It Academy", "t11": "• طورت حملات تسويقية رقمية ساهمت في تعزيز التواجد التنافسي للمؤسسة.",
-            "t12": "المشاريع التقنية", "t13": "• نظام Jarvis: مساعد ذكي بالتحكم الصوتي.<br>• منصة التجارة الإلكترونية: تطبيق لبيع الأثاث.<br>• سيرة ذاتية تفاعلية (GitHub CV)."
+            "t10": "المشاريع التقنية", "t11": "• نظام Jarvis: مساعد ذكي بالتحكم الصوتي.<br>• منصة التجارة الإلكترونية: تطبيق لبيع الأثاث."
         },
         "en": {
+            "langBtn": "Switch Language / تبديل اللغة",
             "t1": "Contact Information", "t2": "Phone: 01010169726<br>Email: foshbeso@gmail.com",
             "t3": "Education", "t4": "3-year Technical Diploma (Electronics) - 2010",
             "t5": "Technical Skills", "t6": "Python, Django, Flask, Flutter, Hardware, SSD, BIOS",
             "name": "Fouad Abbas Fouad", "sum": "Marketing and sales specialist with a technical background in software development.",
             "t7": "Professional Experience", "t8": "External Sales & Marketing Officer - Taiba Trading", "t9": "• Achieved significant growth in market share through customer needs analysis.",
-            "t10": "Marketing Specialist - It Academy", "t11": "• Developed digital marketing campaigns that enhanced the organization's competitiveness.",
-            "t12": "Technical Projects", "t13": "• Jarvis System: AI voice-controlled assistant.<br>• E-commerce platform: Furniture selling application.<br>• Interactive CV (GitHub CV)."
+            "t10": "Technical Projects", "t11": "• Jarvis System: AI voice-controlled assistant.<br>• E-commerce platform: Furniture selling application."
         }
     };
 
     function toggleLang() {
         const html = document.getElementById('cv-html');
         const lang = (html.lang === "ar") ? "en" : "ar";
+        
         html.lang = lang;
         html.dir = (lang === "ar") ? "rtl" : "ltr";
+
+        // تحديث النصوص بناءً على القائمة بدون أي رسائل تنبيه
         for (let id in translations[lang]) {
             document.getElementById(id).innerHTML = translations[lang][id];
         }
