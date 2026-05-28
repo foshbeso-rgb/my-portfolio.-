@@ -1,97 +1,70 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" id="html-root">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية الاحترافية | فؤاد عباس فؤاد</title>
     <style>
-        :root { --gold: #c5a059; --dark: #2c3e50; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 20px; }
-        .cv-card { max-width: 950px; margin: auto; background: white; padding: 50px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        h2 { color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 10px; margin-top: 30px; }
-        .job-card { margin-bottom: 25px; border-right: 3px solid var(--gold); padding-right: 15px; }
-        .job-title { font-weight: bold; color: var(--dark); font-size: 1.1em; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        button { padding: 8px 20px; cursor: pointer; border: 1px solid var(--gold); background: white; border-radius: 5px; }
+        body { font-family: sans-serif; padding: 40px; background: #fff; }
+        .cv { max-width: 800px; margin: auto; border: 1px solid #ddd; padding: 40px; border-radius: 10px; }
+        .header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+        .lang-btns { text-align: center; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+        h2 { color: #c5a059; border-bottom: 1px solid #ddd; padding-bottom: 5px; font-size: 1.2em; }
+        .item { margin-bottom: 15px; line-height: 1.6; }
+        button { padding: 8px 15px; cursor: pointer; }
     </style>
 </head>
 <body>
 
-<div class="cv-card">
-    <div style="text-align:center;">
-        <h1 id="name">فؤاد عباس فؤاد</h1>
+<div class="cv">
+    <div class="lang-btns">
+        <button onclick="window.location.reload()">English</button>
+        <button>العربية</button>
+    </div>
+
+    <div class="header">
+        <h1>فؤاد عباس فؤاد</h1>
         <p>foshbeso@gmail.com | 01010169726</p>
-        <button onclick="updatePage('ar')">العربية</button>
-        <button onclick="updatePage('en')">English</button>
     </div>
 
     <div class="grid">
+        <!-- الجهة اليسرى: التدريبات والمهارات -->
         <div>
-            <h2 id="exp-title">الخبرات المهنية</h2>
-            <div id="exp-list"></div>
+            <h2>التدريبات والشهادات</h2>
+            <div class="item">
+                • Oracle DB Administration<br>
+                • Three-year industrial professional diploma<br>
+                • CTC (إدارة مشروعات)<br>
+                • It Shark (قواعد بيانات)<br>
+                • Mini-MBA | مراسل (أخبار العالم)
+            </div>
+            <h2>المهارات واللغات</h2>
+            <div class="item">
+                • <b>المهارات التقنية:</b> Flutter, Python, Django, SQL<br>
+                • <b>مهارات حياتية:</b> إدخال بيانات، سكرتارية، علاقات عامة، MS Office (ممتاز)<br>
+                • <b>اللغات:</b> الإنجليزية (جيد)<br>
+                • <b>إضافي:</b> رخصة دراجات نارية، متاح للعمل خارج القاهرة
+            </div>
         </div>
+
+        <!-- الجهة اليمنى: الخبرات والتعليم -->
         <div>
-            <h2 id="certs-title">التدريبات والمهارات</h2>
-            <div id="certs-list"></div>
+            <h2>الخبرات المهنية</h2>
+            <div class="item">
+                • <b>External Sales & Marketing Officer:</b> طيبة للتجارة (2015-2020)<br>
+                • <b>Marketing Specialist:</b> It Academy (2017-2018)<br>
+                • <b>مساعد طباخ:</b> الشيف سرحان (2017-2019)<br>
+                • <b>تسويق وخدمة عملاء:</b> الأكاديمية الدولية (2016)<br>
+                • <b>مبيعات خارجية:</b> طيبة للسمعيات (2016)<br>
+                • <b>كاتب فورمان:</b> النيل للغاز (2014-2015)
+            </div>
+            <h2>التعليم</h2>
+            <div class="item">
+                • دبلوم صناعي - إلكترونيات (2010)<br>
+                • ثانوية فنية نظام 3 سنوات
+            </div>
         </div>
     </div>
 </div>
 
-<script>
-const data = {
-    ar: {
-        name: "فؤاد عباس فؤاد",
-        exp: "الخبرات المهنية",
-        expList: `
-            <div class="job-card">
-                <div class="job-title">External Sales & Marketing Officer - طيبة للتجارة</div>
-                <small>2015 - 2020</small>
-                <p>تطوير استراتيجيات البيع الخارجي، تحليل اتجاهات السوق لزيادة الحصة البيعية، وبناء علاقات استراتيجية مع العملاء.</p>
-            </div>
-            <div class="job-card">
-                <div class="job-title">Marketing Specialist - It Academy</div>
-                <small>2017 - 2018</small>
-                <p>تنفيذ حملات تسويقية رقمية، إدارة المحتوى، وتحليل أداء الحملات لتعزيز الوعي بالعلامة التجارية.</p>
-            </div>
-            <div class="job-card">
-                <div class="job-title">كاتب فورمان - النيل للغاز</div>
-                <small>2014 - 2015</small>
-                <p>إدارة التوثيق الفني، متابعة الجداول الزمنية للعمليات، وضمان دقة البيانات التقنية للمشاريع.</p>
-            </div>`,
-        certs: "التدريبات والمهارات",
-        certsList: "• <b>التقنية:</b> Oracle DB, Python, Flutter, Django<br>• <b>الشهادات:</b> Mini-MBA, CTC Project Mgmt<br>• <b>حياتية:</b> قيادة فرق عمل، إدارة الوقت، MS Office (Expert)<br>• <b>لغات:</b> الإنجليزية (جيد جداً)"
-    },
-    en: {
-        name: "Fouad Abbas Fouad",
-        exp: "Professional Experience",
-        expList: `
-            <div class="job-card">
-                <div class="job-title">External Sales & Marketing Officer - Taiba Trading</div>
-                <small>2015 - 2020</small>
-                <p>Developing outdoor sales strategies, conducting market analysis to boost sales volume, and managing key client relationships.</p>
-            </div>
-            <div class="job-card">
-                <div class="job-title">Marketing Specialist - It Academy</div>
-                <small>2017 - 2018</small>
-                <p>Executing digital marketing campaigns, managing content performance, and driving brand awareness and engagement.</p>
-            </div>
-            <div class="job-card">
-                <div class="job-title">Foreman Clerk - Nile Gas</div>
-                <small>2014 - 2015</small>
-                <p>Overseeing technical documentation, monitoring project timelines, and ensuring data accuracy across operations.</p>
-            </div>`,
-        certs: "Training & Skills",
-        certsList: "• <b>Technical:</b> Oracle DB, Python, Flutter, Django<br>• <b>Certifications:</b> Mini-MBA, CTC Project Mgmt<br>• <b>Soft Skills:</b> Leadership, Time Mgmt, MS Office (Expert)<br>• <b>Languages:</b> English (Very Good)"
-    }
-};
-
-function updatePage(lang) {
-    document.getElementById('name').innerText = data[lang].name;
-    document.getElementById('exp-title').innerText = data[lang].exp;
-    document.getElementById('exp-list').innerHTML = data[lang].expList;
-    document.getElementById('certs-title').innerText = data[lang].certs;
-    document.getElementById('certs-list').innerHTML = data[lang].certsList;
-}
-updatePage('ar');
-</script>
 </body>
 </html>
