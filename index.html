@@ -1,64 +1,20 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root { --gold: #C5A059; --dark: #050505; --accent: #2ecc71; }
-        body { background: var(--dark); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 80px; }
-        
-        .hero { height: 280px; background: linear-gradient(rgba(0,0,0,0.8), #050505), url('https://images.unsplash.com/photo-1510009489794-352fba39fab0?q=80&w=2070'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-bottom: 3px solid var(--gold); }
-        .hero h1 { font-size: 28px; color: var(--gold); margin: 0; }
-        .hero p { font-size: 14px; color: #ccc; margin-top: 5px; }
-
-        .container { padding: 20px; max-width: 700px; margin: auto; }
-        .card { background: #111; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #222; }
-        .card h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; }
-        
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .info-item { font-size: 14px; margin-bottom: 10px; }
-        .info-item b { color: #888; }
-
-        .skill-tag { display: inline-block; background: #222; color: #fff; padding: 5px 12px; border-radius: 20px; font-size: 12px; margin: 3px; }
-    </style>
-</head>
-<body>
-
-    <div class="hero">
-        <h1>فؤاد عباس فؤاد</h1>
-        <p>محترف عمليات فندقية | مطور برمجيات Full-Stack</p>
+<!-- أضف هذا الجزء تحت قسم Header مباشرة -->
+<div class="container" style="max-width: 700px; margin: 20px auto; background: #111; border-radius: 15px; padding: 20px; border: 1px solid #333;">
+    <h3 style="color: var(--gold); margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;">
+        <i class="fas fa-user-circle"></i> الملف الشخصي
+    </h3>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; color: #ccc; font-size: 14px;">
+        <div><b>الاسم:</b> فؤاد عباس فؤاد</div>
+        <div><b>تاريخ الميلاد:</b> 10 نوفمبر 1991</div>
+        <div><b>العمل الحالي:</b> Four Seasons Resort</div>
+        <div><b>المؤهل:</b> MIS - Al-Jazira Higher Institute</div>
     </div>
-
-    <div class="container">
-        <!-- البيانات الشخصية -->
-        <div class="card">
-            <h3><i class="fas fa-user"></i> البيانات الشخصية</h3>
-            <div class="info-grid">
-                <div class="info-item"><b>تاريخ الميلاد:</b> 1991/11/10</div>
-                <div class="info-item"><b>المهنة الحالية:</b> Four Seasons Resort</div>
-                <div class="info-item"><b>مقر العمل:</b> شرم الشيخ</div>
-                <div class="info-item"><b>التعليم:</b> MIS - Al-Jazira Institute</div>
-            </div>
-        </div>
-
-        <!-- المهارات -->
-        <div class="card">
-            <h3><i class="fas fa-code"></i> المهارات التقنية</h3>
-            <div class="skill-tag">Flutter & Dart</div>
-            <div class="skill-tag">Python (Django/Flask)</div>
-            <div class="skill-tag">System Administration</div>
-            <div class="skill-tag">Hardware Maintenance</div>
-            <div class="skill-tag">Project Management</div>
-        </div>
-
-        <!-- المشاريع -->
-        <div class="card">
-            <h3><i class="fas fa-project-diagram"></i> المشاريع المميزة</h3>
-            <p><strong>COMMANDER FOUAD:</strong> نظام تشغيل وأتمتة للخدمات الفندقية[cite: 2].</p>
-            <p><strong>تطبيقات برمجية:</strong> خبرة في بناء تطبيقات ويب وموبايل متكاملة[cite: 2].</p>
+    <div style="margin-top: 15px;">
+        <b style="color: #888;">المهارات:</b>
+        <div style="margin-top: 5px;">
+            <span style="background: #222; padding: 3px 8px; border-radius: 5px; font-size: 12px;">Flutter</span>
+            <span style="background: #222; padding: 3px 8px; border-radius: 5px; font-size: 12px;">Python</span>
+            <span style="background: #222; padding: 3px 8px; border-radius: 5px; font-size: 12px;">System Admin</span>
         </div>
     </div>
-
-</body>
-</html>
+</div>
