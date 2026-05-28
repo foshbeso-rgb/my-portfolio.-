@@ -2,64 +2,71 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <title>السيرة الذاتية الاحترافية | فؤاد عباس فؤاد</title>
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; padding: 20px; background-color: #f9f9f9; }
-        .cv-container { width: 900px; background: white; border: 1px solid #ddd; padding: 40px; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { margin: 0; color: #333; }
-        .personal-info { margin-bottom: 20px; color: #555; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f4f4; padding: 20px; line-height: 1.6; color: #333; }
+        .cv-card { max-width: 900px; margin: auto; background: white; padding: 50px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-right: 15px solid #c5a059; }
+        .header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { color: #2c3e50; margin: 0; }
+        .contact { color: #7f8c8d; margin-top: 10px; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        h2 { color: #c5a059; font-size: 1.2em; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        .item { margin-bottom: 20px; font-size: 0.9em; line-height: 1.5; }
-        .job-entry { margin-bottom: 15px; }
-        .job-title { font-weight: bold; color: #333; }
+        h2 { color: #c5a059; font-size: 1.25em; border-bottom: 2px solid #c5a059; padding-bottom: 5px; margin-bottom: 15px; }
+        .job-title { font-weight: bold; color: #2c3e50; }
+        .skills-list { list-style: none; padding: 0; }
+        .skills-list li { margin-bottom: 8px; }
+        .meta { font-size: 0.85em; color: #888; }
     </style>
 </head>
 <body>
 
-<div class="cv-container">
+<div class="cv-card">
     <div class="header">
         <h1>فؤاد عباس فؤاد عباس</h1>
-        <div class="personal-info">
-            الجنسية: مصر | تاريخ الميلاد: 10 نوفمبر 1991 | foshbeso@gmail.com
-        </div>
+        <div class="contact">foshbeso@gmail.com | 01010169726 | مصر | 10 نوفمبر 1991</div>
     </div>
 
     <div class="grid">
-        <!-- جهة الخبرات والتعليم -->
+        <!-- الجهة اليمنى: الخبرات والتعليم -->
         <div>
             <h2>الخبرات المهنية</h2>
-            <div class="item">
-                <div class="job-entry"><span class="job-title">External Sales and Marketing Officer:</span> طيبة للتجارة (2015 - نوفمبر 2020)</div>
-                <div class="job-entry"><span class="job-title">Marketing Specialist:</span> It Academy (2017 - مايو 2018)<br>Analyzed market trends and consumer behavior to drive revenue, identified competitors, and developed strategies for better positioning.</div>
-            </div>
+            <div class="job-title">External Sales & Marketing Officer</div>
+            <div class="meta">طيبة للتجارة | 2015 - نوفمبر 2020</div>
+            <p>إدارة استراتيجيات المبيعات الخارجية، تحليل اتجاهات السوق، وبناء علاقات استراتيجية مع العملاء.</p>
+
+            <div class="job-title">Marketing Specialist</div>
+            <div class="meta">It Academy | 2017 - مايو 2018</div>
+            <p>تحليل سلوك المستهلك، تطوير خطط تسويقية لتعزيز الحصة السوقية، ومواجهة المنافسين.</p>
+            
+            <div class="job-title">أدوار إضافية</div>
+            <p>مساعد طباخ (الشيف سرحان)، تسويق وخدمة عملاء (الأكاديمية الدولية)، مبيعات خارجية (طيبة للسمعيات)، كاتب فورمان (النيل للغاز).</p>
 
             <h2>التعليم</h2>
-            <div class="item">
-                • دبلوم فني صناعي - مدرسة رضوانية (2010)
-            </div>
+            <p><b>دبلوم فني صناعي</b> - مدرسة رضوانية (2010)</p>
         </div>
 
-        <!-- جهة التدريبات والمهارات واللغات -->
+        <!-- الجهة اليسرى: المهارات والتدريبات -->
         <div>
-            <h2>التدريب والشهادات</h2>
-            <div class="item">
-                • Oracle DB Administration (يونيو 2017)<br>
-                • Three-year industrial professional diploma
-            </div>
+            <h2>المهارات التقنية والبرمجية</h2>
+            <ul class="skills-list">
+                <li>• **Full-Stack:** Flutter, Python, Django, SQL, Flask</li>
+                <li>• **إدارة الأنظمة:** صيانة Hardware, BIOS Configuration, SSD Optimization</li>
+            </ul>
 
-            <h2>المهارات</h2>
-            <div class="item">
-                • <b>Sales:</b> مستوى جيد<br>
-                • <b>Management:</b> مستوى جيد<br>
-                • <b>Marketing:</b> مستوى جيد<br>
-                • <b>Scholarship of Teaching and Learning Skill:</b> مستوى جيد
-            </div>
+            <h2>التدريبات والشهادات</h2>
+            <ul class="skills-list">
+                <li>• Oracle DB Administration (2017)</li>
+                <li>• CTC (إدارة مشروعات) & It Shark (قواعد بيانات)</li>
+                <li>• Mini-MBA | مراسل (أخبار العالم)</li>
+                <li>• Three-year industrial professional diploma</li>
+            </ul>
 
-            <h2>اللغات</h2>
-            <div class="item">
-                • <b>الإنجليزية:</b> مستوى متوسط
-            </div>
+            <h2>المهارات الشخصية واللغات</h2>
+            <ul class="skills-list">
+                <li>• **Sales, Marketing & Management:** مستوى جيد</li>
+                <li>• **Scholarship of Teaching and Learning Skill**</li>
+                <li>• **اللغات:** الإنجليزية (متوسط)</li>
+                <li>• **إضافي:** رخصة دراجات نارية، مرونة في التنقل للعمل.</li>
+            </ul>
         </div>
     </div>
 </div>
