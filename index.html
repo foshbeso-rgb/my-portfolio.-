@@ -3,73 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; color: #333; }
-        .cv-container { max-width: 950px; margin: auto; background: white; padding: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-radius: 8px; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #eef2f3; padding: 40px; color: #333; }
+        .cv-container { max-width: 900px; margin: auto; background: white; padding: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 12px; display: flex; overflow: hidden; }
         
-        /* الهيكل الجديد: العنوان والجانب الشخصي */
-        .header-section { border-bottom: 2px solid #c5a059; padding-bottom: 20px; margin-bottom: 30px; }
-        .name { font-size: 2.2em; color: #2c3e50; font-weight: bold; margin: 0; }
+        /* الجانب الشخصي */
+        .sidebar { background: #2c3e50; color: #fff; width: 320px; padding: 40px; display: flex; flex-direction: column; }
+        .sidebar h2 { color: #c5a059; border-bottom: 2px solid #c5a059; padding-bottom: 10px; font-size: 1.2em; margin-top: 0; }
+        .info-block { margin-bottom: 25px; }
+        .info-label { color: #c5a059; font-size: 0.8em; text-transform: uppercase; margin-bottom: 5px; }
+        .info-val { font-size: 0.95em; }
         
-        .main-content { display: grid; grid-template-columns: 300px 1fr; gap: 40px; }
-        
-        /* القسم الجانبي للبيانات الشخصية */
-        .sidebar { background: #f9f9f9; padding: 20px; border-radius: 6px; }
-        h2 { color: #c5a059; font-size: 1.1em; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 0; }
-        .info-item { margin-bottom: 15px; font-size: 0.9em; }
-        
-        /* قسم الخبرات */
-        .experience .job-title { font-weight: bold; color: #2c3e50; display: block; margin-top: 15px; }
+        /* قسم البيانات الشخصية في الأسفل */
+        .bottom-info { margin-top: auto; padding-top: 20px; border-top: 1px solid #444; font-size: 0.85em; color: #bdc3c7; }
+
+        /* الجانب المهني */
+        .main-content { flex: 1; padding: 40px; }
+        .name { font-size: 2.5em; color: #2c3e50; font-weight: bold; margin-bottom: 30px; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
+        h2 { color: #c5a059; margin-top: 30px; font-size: 1.3em; }
+        .job { margin-bottom: 20px; }
+        .job-title { font-weight: bold; color: #2c3e50; }
     </style>
 </head>
 <body>
 
 <div class="cv-container">
-    <div class="header-section">
-        <h1 class="name">فؤاد عباس فؤاد</h1>
+    <!-- الجانب الشخصي -->
+    <div class="sidebar">
+        <h2>معلومات الاتصال</h2>
+        <div class="info-block">
+            <div class="info-label">البريد الإلكتروني</div>
+            <div class="info-val">foshbeso@gmail.com</div>
+        </div>
+        <div class="info-block">
+            <div class="info-label">الهاتف</div>
+            <div class="info-val">01010169726</div>
+        </div>
+        
+        <h2>المهارات</h2>
+        <div class="info-val">• MS Office (ممتاز)<br>• إدخال بيانات وسكرتارية<br>• لغات: الإنجليزية (جيد)<br>• سائق دراجات نارية</div>
+
+        <!-- البيانات الشخصية في الأسفل -->
+        <div class="bottom-info">
+            مصري | غير متزوج | إعفاء نهائي
+        </div>
     </div>
 
+    <!-- الجانب المهني -->
     <div class="main-content">
-        <!-- القائمة الجانبية (البيانات الشخصية) -->
-        <div class="sidebar">
-            <h2>الملف الشخصي</h2>
-            <div class="info-item"><b>البريد:</b> foshbeso@gmail.com</div>
-            <div class="info-item"><b>الهاتف:</b> 01010169726</div>
-            <div class="info-item"><b>الميلاد:</b> 10 نوفمبر 1991</div>
-            <div class="info-item"><b>العنوان:</b> دار السلام، القاهرة</div>
-            <div class="info-item"><b>الحالة:</b> غير متزوج</div>
-            <div class="info-item"><b>الجنسية:</b> مصري</div>
-            <div class="info-item"><b>الخدمة العسكرية:</b> إعفاء نهائي</div>
-            
-            <h2>المهارات واللغات</h2>
-            <div class="info-item">• <b>التقنية:</b> MS Office (ممتاز)، إدخال بيانات، حاسب آلي.</div>
-            <div class="info-item">• <b>اللغات:</b> الإنجليزية (مستوى جيد).</div>
-            <div class="info-item">• <b>إضافات:</b> سائق دراجات نارية، مرونة في التنقل للعمل.</div>
+        <h1 class="name">فؤاد عباس فؤاد</h1>
+        
+        <h2>الخبرات المهنية</h2>
+        <div class="job">
+            <div class="job-title">External Sales & Marketing Officer - طيبة للتجارة</div>
+            <div style="font-size: 0.85em; color: #777;">2015 - نوفمبر 2020</div>
+        </div>
+        <div class="job">
+            <div class="job-title">Marketing Specialist - It Academy</div>
+            <div style="font-size: 0.85em; color: #777;">2017 - مايو 2018</div>
+            <p style="font-size: 0.9em;">تحليل اتجاهات السوق وتطوير استراتيجيات التواجد الرقمي.</p>
         </div>
 
-        <!-- المحتوى الرئيسي (الخبرات والتدريب) -->
-        <div class="experience">
-            <h2>الخبرات المهنية</h2>
-            <div class="job-title">External Sales & Marketing Officer (طيبة للتجارة)</div>
-            <div style="font-size: 0.85em; color: #888;">2015 - نوفمبر 2020</div>
-            
-            <div class="job-title">Marketing Specialist (It Academy)</div>
-            <div style="font-size: 0.85em; color: #888;">2017 - مايو 2018</div>
-            <p style="font-size: 0.9em;">تحليل اتجاهات السوق، تحديد المنافسين، وتطوير استراتيجيات تحسين التواجد التسويقي.</p>
-
-            <div class="job-title" style="margin-top: 20px;">أدوار وظيفية أخرى:</div>
-            <ul style="font-size: 0.9em; padding-right: 20px;">
-                <li>مساعد طباخ (الشيف سرحان): 2017-2019</li>
-                <li>تسويق وخدمة عملاء (الأكاديمية الدولية): 2016</li>
-                <li>مبيعات خارجية (طيبة للسمعيات): 2016</li>
-                <li>كاتب فورمان (النيل للغاز): 2014-2015</li>
-            </ul>
-
-            <h2>التدريبات والتعليم</h2>
-            <ul style="font-size: 0.9em; padding-right: 20px;">
-                <li>Oracle DB Administration (2017)</li>
-                <li>إدارة مشروعات / رخصة دولية للحاسب</li>
-                <li>ثانوية فنية (إلكترونيات) - 2010</li>
-            </ul>
+        <h2>التعليم والتدريب</h2>
+        <div class="job">
+            • Oracle DB Administration (2017)<br>
+            • ثانوية فنية نظام 3 سنوات (2010)
         </div>
     </div>
 </div>
