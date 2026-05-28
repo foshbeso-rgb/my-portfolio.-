@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        /* (احتفظ بنفس التنسيق السابق الذي يعمل معك جيداً) */
+        /* التنسيقات ثابتة كما هي */
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; line-height: 1.6; }
         .controls { text-align: center; margin-bottom: 20px; }
-        .btn { padding: 10px 20px; cursor: pointer; background: #2c3e50; border: none; color: white; border-radius: 4px; font-weight: bold; margin: 5px; }
-        .cv-card { max-width: 950px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
-        .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 40px; }
-        .main-content { flex: 1; padding: 40px; }
+        .btn { padding: 10px 20px; cursor: pointer; background: #2c3e50; border: none; color: white; border-radius: 4px; font-weight: bold; }
+        .cv-card { max-width: 900px; margin: auto; background: white; display: flex; overflow: hidden; }
+        .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 30px; }
+        .main-content { flex: 1; padding: 30px; }
     </style>
 </head>
 <body>
@@ -20,28 +20,28 @@
 
 <div class="cv-card">
     <div class="sidebar">
-        <h2 id="s1">معلومات الاتصال</h2>
-        <p id="s2">الهاتف: 01010169726<br>البريد: foshbeso@gmail.com</p>
+        <h2 id="t1">معلومات الاتصال</h2>
+        <p id="t2">الهاتف: 01010169726<br>البريد: foshbeso@gmail.com</p>
     </div>
     <div class="main-content">
         <h1 id="name">فؤاد عباس فؤاد</h1>
-        <p id="sum">مختص في التسويق والمبيعات بخلفية تقنية في تطوير البرمجيات.</p>
+        <p id="sum">مختص في التسويق والمبيعات بخلفية تقنية.</p>
     </div>
 </div>
 
 <script>
     const translations = {
         "ar": {
-            "s1": "معلومات الاتصال",
-            "s2": "الهاتف: 01010169726<br>البريد: foshbeso@gmail.com",
+            "t1": "معلومات الاتصال",
+            "t2": "الهاتف: 01010169726<br>البريد: foshbeso@gmail.com",
             "name": "فؤاد عباس فؤاد",
-            "sum": "مختص في التسويق والمبيعات بخلفية تقنية في تطوير البرمجيات."
+            "sum": "مختص في التسويق والمبيعات بخلفية تقنية."
         },
         "en": {
-            "s1": "Contact Information",
-            "s2": "Phone: 01010169726<br>Email: foshbeso@gmail.com",
+            "t1": "Contact Information",
+            "t2": "Phone: 01010169726<br>Email: foshbeso@gmail.com",
             "name": "Fouad Abbas Fouad",
-            "sum": "Marketing and sales specialist with a technical background in software development."
+            "sum": "Marketing and sales specialist with a technical background."
         }
     };
 
@@ -52,9 +52,9 @@
         html.lang = lang;
         html.dir = (lang === "ar") ? "rtl" : "ltr";
 
-        // تحديث كل عنصر بناءً على الـ ID الخاص به
-        for (let key in translations[lang]) {
-            document.getElementById(key).innerHTML = translations[lang][key];
+        // تحديث النصوص مباشرة بدون رسائل تنبيه
+        for (let id in translations[lang]) {
+            document.getElementById(id).innerHTML = translations[lang][id];
         }
     }
 </script>
