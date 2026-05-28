@@ -2,17 +2,17 @@
 <html lang="ar" id="html-root" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
     <style>
-        :root { --main-color: #2c3e50; --accent: #c5a059; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; padding: 20px; }
-        .page { max-width: 800px; margin: auto; background: white; color: #333; padding: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        .header { border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; }
-        h2 { color: var(--main-color); font-size: 18px; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid #ccc; }
-        .item { margin-bottom: 15px; }
-        .date { font-weight: bold; color: var(--accent); display: block; font-size: 0.9em; }
+        :root { --main: #2c3e50; --gold: #c5a059; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 20px; }
+        .page { max-width: 850px; margin: auto; background: white; padding: 40px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
         .lang-btn { text-align: center; margin-bottom: 20px; }
-        button { padding: 10px 20px; cursor: pointer; background: var(--main-color); color: white; border: none; border-radius: 5px; }
+        button { padding: 8px 16px; cursor: pointer; background: var(--main); color: white; border: none; border-radius: 4px; }
+        .header { text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 20px; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; }
+        h2 { color: var(--main); font-size: 16px; text-transform: uppercase; border-bottom: 1px solid var(--gold); padding-bottom: 5px; }
+        .item { margin-bottom: 12px; font-size: 14px; }
         [lang="ar"] .en { display: none; } [lang="en"] .ar { display: none; }
     </style>
 </head>
@@ -21,30 +21,36 @@
     <div class="lang-btn"><button onclick="switchLang('ar')">العربية</button> <button onclick="switchLang('en')">English</button></div>
     
     <div class="header">
-        <h1 style="color: var(--main-color); margin: 0;">
-            <span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span>
-        </h1>
-        <p><span class="ar">سكرتارية | تكنولوجيا المعلومات | إدارة</span><span class="en">Secretariat | IT | Management</span></p>
+        <h1><span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span></h1>
+        <p><span class="ar">35 عاماً - دار السلام، القاهرة</span><span class="en">35 Years Old - Dar El Salam, Cairo</span></p>
     </div>
 
     <div class="grid">
         <div class="sidebar">
-            <h2><span class="ar">اتصل</span><span class="en">Contact</span></h2>
-            <p>01140248506<br>foshbeso@gmail.com</p>
+            <h2><span class="ar">الاتصال</span><span class="en">Contact</span></h2>
+            <div class="item">01010169726</div>
+            <div class="item">foshbeso@gmail.com</div>
+            
             <h2><span class="ar">التعليم</span><span class="en">Education</span></h2>
-            <p><b><span class="ar">بكالوريوس نظم معلومات إدارية</span><span class="en">Bachelor of MIS</span></b><br>الجزيرة أكاديمي (2015)</p>
+            <div class="item"><b><span class="ar">دبلوم إلكترونيات (2010)</span><span class="en">Electronics Diploma (2010)</span></b></div>
+            
+            <h2><span class="ar">المهارات</span><span class="en">Skills</span></h2>
+            <div class="item">• MS Office, الحاسب الآلي</div>
+            <div class="item">• اللغة الإنجليزية (جيد)</div>
+            <div class="item">• قيادة دراجات نارية</div>
         </div>
         
         <div class="main">
-            <h2><span class="ar">الخبرة العملية</span><span class="en">Experience</span></h2>
-            <div class="item">
-                <span class="date">2014 - 2015</span>
-                <b><span class="ar">كاتب - شركة النيل للغاز</span><span class="en">Clerk - Nile Gas</span></b>
-                <p><span class="ar">عمل إداري متخصص في توزيع الغاز الطبيعي.</span><span class="en">Administrative work specialized in natural gas distribution.</span></p>
-            </div>
+            <h2><span class="ar">الخبرات</span><span class="en">Experience</span></h2>
+            <div class="item"><b><span class="ar">كاتب فورمان - النيل للغاز</span><span class="en">Foreman Clerk - Nile Gas</span></b></div>
+            <div class="item"><b><span class="ar">مساعد طباخ - الشيف سرحان</span><span class="en">Assistant Chef - Chef Sarhan</span></b></div>
+            <div class="item"><b><span class="ar">تسويق وخدمة عملاء - الأكاديمية الدولية</span><span class="en">Marketing & CS - Int. Academy</span></b></div>
+            <div class="item"><b><span class="ar">Sales Outdoor - طيبة للسمعيات</span><span class="en">Sales Outdoor - Taiba Audio</span></b></div>
             
-            <h2><span class="ar">المهارات</span><span class="en">Skills</span></h2>
-            <p>Full-Stack (Flutter/Python), Oracle DB, ICDL, Customer Service, Office Management.</p>
+            <h2><span class="ar">التدريبات</span><span class="en">Training</span></h2>
+            <div class="item">• <span class="ar">إدارة مشروعات ورخصة حاسب (CTC)</span><span class="en">Project Mgmt & ICDL (CTC)</span></div>
+            <div class="item">• <span class="ar">إدارة أعمال مصغر (الأكاديمية الدولية)</span><span class="en">Mini-MBA (Int. Academy)</span></div>
+            <div class="item">• <span class="ar">قواعد البيانات (It Shark)</span><span class="en">Database (It Shark)</span></div>
         </div>
     </div>
 </div>
