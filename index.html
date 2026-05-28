@@ -6,10 +6,13 @@
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; line-height: 1.6; }
         .controls { text-align: center; margin-bottom: 20px; }
         .btn { padding: 10px 20px; cursor: pointer; background: #2c3e50; border: none; color: white; border-radius: 4px; font-weight: bold; }
-        .cv-card { max-width: 900px; margin: auto; background: white; display: flex; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .cv-card { max-width: 900px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
         .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 30px; }
         .main-content { flex: 1; padding: 30px; }
-        h2 { color: #c5a059; margin-top: 20px; border-bottom: 2px solid #c5a059; }
+        .name { font-size: 1.8em; color: #2c3e50; font-weight: bold; margin-bottom: 10px; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
+        h2 { color: #c5a059; font-size: 1.2em; margin-top: 20px; border-bottom: 2px solid #c5a059; }
+        .job-title { font-weight: bold; color: #2c3e50; display: block; margin-top: 15px; }
+        .job-desc { font-size: 0.85em; color: #333; }
     </style>
 </head>
 <body>
@@ -22,38 +25,39 @@
     <div class="sidebar">
         <h2 id="t1">معلومات الاتصال</h2>
         <p id="t2">الهاتف: 01010169726<br>البريد: foshbeso@gmail.com</p>
-        <h2 id="t3">المهارات التقنية</h2>
-        <p id="t4">Python, Django, Flutter, Hardware & System Admin</p>
+        <h2 id="t3">التعليم</h2>
+        <p id="t4">ثانوية فنية نظام 3 سنوات (إلكترونيات) - 2010</p>
+        <h2 id="t5">المهارات التقنية</h2>
+        <p id="t6">Python, Django, Flask, Flutter, Hardware, SSD, BIOS</p>
     </div>
     <div class="main-content">
-        <h1 id="name">فؤاد عباس فؤاد</h1>
-        <p id="sum">مختص تسويق ومبيعات بخلفية تقنية في تطوير البرمجيات.</p>
-        <h2 id="t5">الخبرات المهنية</h2>
-        <p id="t6">خبير مبيعات وتسويق خارجي في شركة طيبة للتجارة.</p>
+        <h1 class="name" id="name">فؤاد عباس فؤاد</h1>
+        <p id="sum">مختص تسويق ومبيعات بخلفية تقنية في تطوير البرمجيات، أمتلك مهارات قوية في حل المشكلات التقنية.</p>
+        <h2 id="t7">الخبرات المهنية</h2>
+        <span class="job-title" id="t8">External Sales & Marketing Officer - طيبة للتجارة</span>
+        <p class="job-desc" id="t9">• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء.</p>
+        <h2 id="t10">المشاريع التقنية</h2>
+        <p class="job-desc" id="t11">• نظام Jarvis: مساعد ذكي بالتحكم الصوتي.<br>• منصة التجارة الإلكترونية: تطبيق لبيع الأثاث.</p>
     </div>
 </div>
 
 <script>
     const translations = {
         "ar": {
-            "t1": "معلومات الاتصال",
-            "t2": "الهاتف: 01010169726<br>البريد: foshbeso@gmail.com",
-            "t3": "المهارات التقنية",
-            "t4": "Python, Django, Flutter, Hardware & System Admin",
-            "name": "فؤاد عباس فؤاد",
-            "sum": "مختص تسويق ومبيعات بخلفية تقنية في تطوير البرمجيات.",
-            "t5": "الخبرات المهنية",
-            "t6": "خبير مبيعات وتسويق خارجي في شركة طيبة للتجارة."
+            "t1": "معلومات الاتصال", "t2": "الهاتف: 01010169726<br>البريد: foshbeso@gmail.com",
+            "t3": "التعليم", "t4": "ثانوية فنية نظام 3 سنوات (إلكترونيات) - 2010",
+            "t5": "المهارات التقنية", "t6": "Python, Django, Flask, Flutter, Hardware, SSD, BIOS",
+            "name": "فؤاد عباس فؤاد", "sum": "مختص تسويق ومبيعات بخلفية تقنية في تطوير البرمجيات، أمتلك مهارات قوية في حل المشكلات التقنية.",
+            "t7": "الخبرات المهنية", "t8": "External Sales & Marketing Officer - طيبة للتجارة", "t9": "• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء.",
+            "t10": "المشاريع التقنية", "t11": "• نظام Jarvis: مساعد ذكي بالتحكم الصوتي.<br>• منصة التجارة الإلكترونية: تطبيق لبيع الأثاث."
         },
         "en": {
-            "t1": "Contact Information",
-            "t2": "Phone: 01010169726<br>Email: foshbeso@gmail.com",
-            "t3": "Technical Skills",
-            "t4": "Python, Django, Flutter, Hardware & System Admin",
-            "name": "Fouad Abbas Fouad",
-            "sum": "Marketing and sales specialist with a technical background in software development.",
-            "t5": "Professional Experience",
-            "t6": "External Sales and Marketing Officer at Taiba Trading."
+            "t1": "Contact Information", "t2": "Phone: 01010169726<br>Email: foshbeso@gmail.com",
+            "t3": "Education", "t4": "3-year Technical Diploma (Electronics) - 2010",
+            "t5": "Technical Skills", "t6": "Python, Django, Flask, Flutter, Hardware, SSD, BIOS",
+            "name": "Fouad Abbas Fouad", "sum": "Marketing and sales specialist with a technical background in software development.",
+            "t7": "Professional Experience", "t8": "External Sales & Marketing Officer - Taiba Trading", "t9": "• Achieved significant growth in market share through customer needs analysis.",
+            "t10": "Technical Projects", "t11": "• Jarvis System: AI voice-controlled assistant.<br>• E-commerce platform: Furniture selling application."
         }
     };
 
