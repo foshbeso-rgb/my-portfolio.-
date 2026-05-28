@@ -3,86 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        /* (احتفظ بنفس التنسيق السابق الذي يعمل معك جيداً) */
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; line-height: 1.6; }
         .controls { text-align: center; margin-bottom: 20px; }
         .btn { padding: 10px 20px; cursor: pointer; background: #2c3e50; border: none; color: white; border-radius: 4px; font-weight: bold; margin: 5px; }
-        .cv-card { max-width: 950px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; overflow: hidden; min-height: 800px; }
-        
+        .cv-card { max-width: 950px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
         .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 40px; }
-        .sidebar h2 { color: #c5a059; font-size: 1.2em; border-bottom: 2px solid #c5a059; padding-bottom: 8px; margin-top: 30px; }
-        .sidebar p, .sidebar li { font-size: 0.9em; margin-bottom: 10px; }
-
         .main-content { flex: 1; padding: 40px; }
-        .name { font-size: 2.2em; color: #2c3e50; font-weight: bold; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
-        .summary { font-size: 0.95em; color: #555; margin-bottom: 25px; font-style: italic; }
-        h2 { color: #c5a059; font-size: 1.3em; margin-top: 25px; }
-        .job-title { font-weight: bold; color: #2c3e50; display: block; margin-top: 15px; }
-        .job-date { font-size: 0.85em; color: #777; margin-bottom: 5px; }
-        .job-desc { font-size: 0.9em; color: #333; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
 <div class="controls">
-    <button class="btn" onclick="toggleLang()">تبديل اللغة / Switch Language</button>
-    <button class="btn" onclick="window.print()">طباعة / تحميل PDF</button>
+    <button class="btn" onclick="toggleLang()">Switch Language / تبديل اللغة</button>
 </div>
 
 <div class="cv-card">
     <div class="sidebar">
-        <h2 id="contact-title">معلومات الاتصال والبيانات</h2>
-        <p>الهاتف: 01010169726<br>البريد: foshbeso@gmail.com<br>العنوان: دار السلام، القاهرة</p>
-        <p>مصري | غير متزوج | إعفاء نهائي من الخدمة العسكرية</p>
-
-        <h2 id="edu-title">التعليم والتدريب</h2>
-        <p><b>ثانوية فنية نظام 3 سنوات</b> (تخصص إلكترونيات) - 2010</p>
-        <p><b>تدريبات:</b> Oracle DB, CTC (إدارة مشروعات), It Shark (قواعد بيانات)</p>
-
-        <h2 id="skills-title">المهارات واللغات</h2>
-        <ul>
-            <li>برمجيات: Python, Django, Flask, Flutter</li>
-            <li>إدارة أنظمة: Hardware, SSD, BIOS</li>
-            <li>إدخال بيانات وسكرتارية (MS Office)</li>
-            <li>اللغات: العربية (الأم)، الإنجليزية (جيد)</li>
-            <li>مهارات شخصية: حل المشكلات، العمل تحت ضغط</li>
-        </ul>
+        <h2 id="s1">معلومات الاتصال</h2>
+        <p id="s2">الهاتف: 01010169726<br>البريد: foshbeso@gmail.com</p>
     </div>
-
     <div class="main-content">
-        <h1 class="name">فؤاد عباس فؤاد</h1>
-        <p class="summary">مختص في التسويق والمبيعات بخلفية تقنية في تطوير البرمجيات، أمتلك مهارات قوية في حل المشكلات التقنية وتطوير الأنظمة، أسعى لتوظيف خبراتي المتنوعة للمساهمة في نجاح المؤسسات الطموحة.</p>
-        
-        <h2 id="exp-title">الخبرات المهنية</h2>
-        <span class="job-title">External Sales & Marketing Officer - طيبة للتجارة</span>
-        <span class="job-date">2015 - نوفمبر 2020</span>
-        <p class="job-desc">• حققت نمواً ملحوظاً في حصة الشركة السوقية من خلال تحليل احتياجات العملاء وبناء علاقات استراتيجية قوية.</p>
-
-        <span class="job-title">Marketing Specialist - It Academy</span>
-        <span class="job-date">2017 - مايو 2018</span>
-        <p class="job-desc">• طورت حملات تسويقية رقمية مبتكرة ساهمت في تعزيز التواجد التنافسي للمؤسسة.</p>
-
-        <span class="job-title">أدوار وظيفية وداعمة للعمليات:</span>
-        <p class="job-desc">• مساعد طباخ (الشيف سرحان): تميزت بالسرعة والدقة في العمل الجماعي تحت ضغط بيئة الفنادق (2017-2019).<br>
-        • تسويق وخدمة عملاء (الأكاديمية الدولية): تحسين تجربة المستفيدين (2016).<br>
-        • كاتب فورمان (النيل للغاز): التوثيق التقني والرقابة على سير العمليات الفنية (2014-2015).</p>
-
-        <h2 id="projects-title">المشاريع التقنية</h2>
-        <p class="job-desc">
-            • <b>نظام "Jarvis" الذكي:</b> تصميم وبرمجة مساعد صوتي ونظام أمان تقني متطور باستخدام Python.<br>
-            • <b>منصة التجارة الإلكترونية:</b> بناء تطبيق متكامل لبيع الأثاث يدعم واجهة مستخدم احترافية.<br>
-            • <b>محفظة الأعمال (GitHub CV):</b> تطوير ونشر سيرة ذاتية تقنية تفاعلية تعكس مهارات التطوير البرمجي.
-        </p>
+        <h1 id="name">فؤاد عباس فؤاد</h1>
+        <p id="sum">مختص في التسويق والمبيعات بخلفية تقنية في تطوير البرمجيات.</p>
     </div>
 </div>
 
 <script>
+    const translations = {
+        "ar": {
+            "s1": "معلومات الاتصال",
+            "s2": "الهاتف: 01010169726<br>البريد: foshbeso@gmail.com",
+            "name": "فؤاد عباس فؤاد",
+            "sum": "مختص في التسويق والمبيعات بخلفية تقنية في تطوير البرمجيات."
+        },
+        "en": {
+            "s1": "Contact Information",
+            "s2": "Phone: 01010169726<br>Email: foshbeso@gmail.com",
+            "name": "Fouad Abbas Fouad",
+            "sum": "Marketing and sales specialist with a technical background in software development."
+        }
+    };
+
     function toggleLang() {
         const html = document.getElementById('cv-html');
-        html.dir = (html.dir === "rtl") ? "ltr" : "rtl";
-        html.lang = (html.lang === "ar") ? "en" : "ar";
-        alert("تنبيه: تم تغيير اتجاه الصفحة. لترجمة المحتوى النصي بالكامل، ستحتاج لإضافة نصوص الترجمة داخل كود الجافاسكريبت.");
+        const lang = (html.lang === "ar") ? "en" : "ar";
+        
+        html.lang = lang;
+        html.dir = (lang === "ar") ? "rtl" : "ltr";
+
+        // تحديث كل عنصر بناءً على الـ ID الخاص به
+        for (let key in translations[lang]) {
+            document.getElementById(key).innerHTML = translations[lang][key];
+        }
     }
 </script>
-
 </body>
 </html>
