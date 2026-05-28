@@ -3,72 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; padding: 20px; background-color: #f9f9f9; }
-        .cv-container { width: 900px; background: white; border: 1px solid #ddd; padding: 40px; }
-        .lang-btns { text-align: center; margin-bottom: 20px; }
-        .header { text-align: center; margin-bottom: 30px; }
-        .header h1 { margin: 0; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        h2 { color: #c5a059; font-size: 1.2em; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        .item { margin-bottom: 20px; font-size: 0.9em; line-height: 1.5; }
-        .job { margin-bottom: 15px; }
-        .job b { color: #333; }
-        .desc { font-size: 0.85em; color: #666; margin-top: 2px; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f4f4f4; padding: 40px; }
+        .cv-container { max-width: 900px; margin: auto; background: white; border-radius: 15px; padding: 50px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-right: 12px solid #c5a059; }
+        .header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 30px; margin-bottom: 30px; }
+        .header h1 { color: #2c3e50; font-size: 2.5em; margin-bottom: 10px; }
+        .contact { color: #7f8c8d; font-size: 1.1em; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        h2 { color: #c5a059; border-bottom: 2px solid #c5a059; padding-bottom: 10px; font-size: 1.4em; text-transform: uppercase; }
+        .job { margin-bottom: 25px; }
+        .job-title { font-weight: bold; color: #2c3e50; font-size: 1.1em; }
+        .achievements { font-size: 0.9em; color: #555; margin-top: 5px; list-style: circle; padding-right: 20px; }
+        .item { margin-bottom: 20px; }
     </style>
 </head>
 <body>
 
 <div class="cv-container">
-    <div class="lang-btns">
-        <button>العربية</button> <button>English</button>
-    </div>
-
     <div class="header">
         <h1>فؤاد عباس فؤاد</h1>
-        <p>foshbeso@gmail.com | 01010169726</p>
+        <div class="contact">foshbeso@gmail.com | 01010169726</div>
     </div>
 
     <div class="grid">
-        <!-- الجهة اليمنى: الخبرات والتعليم -->
+        <!-- جهة الخبرات -->
         <div>
             <h2>الخبرات المهنية</h2>
-            <div class="item">
-                <div class="job"><b>External Sales & Marketing Officer:</b> طيبة للتجارة (2015-2020)<br>
-                <div class="desc">تطوير استراتيجيات البيع الخارجي وتحليل متطلبات السوق.</div></div>
-                
-                <div class="job"><b>Marketing Specialist:</b> It Academy (2017-2018)<br>
-                <div class="desc">إدارة الحملات التسويقية وتعزيز تواجد العلامة التجارية.</div></div>
-
-                <div class="job"><b>مساعد طباخ:</b> الشيف سرحان (2017-2019)</div>
-                <div class="job"><b>تسويق وخدمة عملاء:</b> الأكاديمية الدولية (2016)</div>
-                <div class="job"><b>مبيعات خارجية:</b> طيبة للسمعيات (2016)</div>
-                <div class="job"><b>كاتب فورمان:</b> النيل للغاز (2014-2015)</div>
+            <div class="job">
+                <div class="job-title">External Sales & Marketing Officer - طيبة للتجارة</div>
+                <div style="font-size: 0.85em; color: #999;">2015 - 2020</div>
+                <ul class="achievements">
+                    <li>إدارة استراتيجيات المبيعات الخارجية وتحقيق نمو في الحصة السوقية.</li>
+                    <li>بناء وتطوير علاقات تجارية طويلة الأمد مع عملاء استراتيجيين.</li>
+                </ul>
             </div>
-
-            <h2>التعليم</h2>
-            <div class="item">
-                • دبلوم صناعي - إلكترونيات (2010)<br>
-                • ثانوية فنية نظام 3 سنوات
+            <div class="job">
+                <div class="job-title">Marketing Specialist - It Academy</div>
+                <div style="font-size: 0.85em; color: #999;">2017 - 2018</div>
+                <ul class="achievements">
+                    <li>إدارة الحملات الرقمية وتحليل أداء المحتوى لزيادة التفاعل.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <div class="job-title">كاتب فورمان - النيل للغاز</div>
+                <div style="font-size: 0.85em; color: #999;">2014 - 2015</div>
+                <ul class="achievements">
+                    <li>ضبط دقة البيانات التقنية والتوثيق الميداني للعمليات.</li>
+                </ul>
             </div>
         </div>
 
-        <!-- الجهة اليسرى: التدريبات والمهارات -->
+        <!-- جهة المهارات والشهادات -->
         <div>
-            <h2>التدريبات والشهادات</h2>
+            <h2>المهارات التقنية</h2>
             <div class="item">
-                • Oracle DB Administration<br>
-                • Three-year industrial professional diploma<br>
-                • CTC (إدارة مشروعات)<br>
-                • It Shark (قواعد بيانات)<br>
-                • Mini-MBA | مراسل (أخبار العالم)
+                • <b>تطوير البرمجيات:</b> Flutter, Python, Django, SQL.<br>
+                • <b>الخلفية التقنية:</b> صيانة أنظمة، إدارة قواعد بيانات، تنظيم خوادم.
             </div>
 
-            <h2>المهارات واللغات</h2>
+            <h2>التدريبات والشهادات</h2>
             <div class="item">
-                • <b>المهارات التقنية:</b> Flutter, Python, Django, SQL<br>
-                • <b>مهارات حياتية:</b> إدخال بيانات، سكرتارية، علاقات عامة، MS Office (ممتاز)<br>
-                • <b>اللغات:</b> الإنجليزية (جيد)<br>
-                • <b>إضافي:</b> رخصة دراجات نارية، متاح للعمل خارج القاهرة
+                • Oracle DB Administration & It Shark (Databases).<br>
+                • CTC (إدارة مشروعات) | Mini-MBA (صحافة).<br>
+                • دبلوم صناعي - إلكترونيات (2010).
+            </div>
+
+            <h2>المهارات الشخصية</h2>
+            <div class="item">
+                • السكرتارية التنفيذية والعلاقات العامة (PR).<br>
+                • إتقان حزمة MS Office بشكل متقدم.<br>
+                • رخصة دراجات نارية | مرونة كاملة في التنقل للعمل.
             </div>
         </div>
     </div>
