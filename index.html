@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #C5A059; --dark: #050505; }
-        body { background: var(--dark); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
         .cv-container { max-width: 800px; margin: auto; }
         .card { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #333; margin-bottom: 20px; }
         h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; display: flex; align-items: center; gap: 10px; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .skill-group { margin-bottom: 15px; }
-        .skill-tag { display: inline-block; background: #222; padding: 6px 12px; border-radius: 5px; margin: 4px; font-size: 13px; border-right: 3px solid var(--gold); }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .job-item { margin-bottom: 15px; border-right: 3px solid var(--gold); padding-right: 15px; }
+        .job-item b { color: var(--gold); }
     </style>
 </head>
 <body>
@@ -20,59 +20,46 @@
 <div class="cv-container">
     <div style="text-align: center; margin-bottom: 30px;">
         <h1 style="color: var(--gold); margin: 0;">فؤاد عباس فؤاد</h1>
-        <p>محترف عمليات فندقية | مطور برمجيات Full-Stack</p>
+        <p>محترف عمليات فندقية | إدارة مشروعات | تقنية إلكترونيات</p>
     </div>
 
     <div class="card">
         <h3><i class="fas fa-phone-alt"></i> بيانات الاتصال</h3>
-        <div class="contact-grid">
-            <div><i class="fas fa-envelope" style="color: var(--gold);"></i> <b>Email:</b> fouad.abbas@example.com</div>
-            <div><i class="fas fa-phone" style="color: var(--gold);"></i> <b>Phone:</b> 010xxxxxxxx</div>
+        <div class="info-grid">
+            <div><i class="fas fa-phone"></i> 01010169726</div>
+            <div><i class="fas fa-envelope"></i> foshbeso@gmail.com</div>
+            <div><i class="fas fa-map-marker-alt"></i> القاهرة، دار السلام</div>
         </div>
     </div>
 
     <div class="card">
         <h3><i class="fas fa-user"></i> البيانات الشخصية</h3>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-            <div><b>الاسم بالكامل:</b> فؤاد عباس فؤاد</div>
-            <div><b>تاريخ الميلاد:</b> 10 نوفمبر 1991</div>
-            <div><b>مقر العمل:</b> شرم الشيخ</div>
-            <div><b>المهنة:</b> Four Seasons Resort</div>
-            <div><b>التعليم الجامعي:</b> MIS - Al-Jazira Institute</div>
-            <div><b>التعليم الفني:</b> دبلوم صناعي - Radwaniya</div>
+        <div class="info-grid">
+            <div><b>العمر:</b> 35 عام</div>
+            <div><b>الحالة الاجتماعية:</b> غير متزوج</div>
+            <div><b>الجنسية:</b> مصري</div>
+            <div><b>الخدمة العسكرية:</b> إعفاء نهائي</div>
+            <div><b>التنقل:</b> متاح للعمل داخل وخارج مصر</div>
         </div>
     </div>
 
     <div class="card">
-        <h3><i class="fas fa-tools"></i> المهارات والخبرات</h3>
-        <div class="skill-group">
-            <h4>تطوير البرمجيات</h4>
-            <span class="skill-tag">Flutter & Dart</span>
-            <span class="skill-tag">Python (Django/Flask)</span>
-            <span class="skill-tag">Full-Stack Development</span>
-        </div>
-        <div class="skill-group">
-            <h4>نظم وتشغيل</h4>
-            <span class="skill-tag">System Administration</span>
-            <span class="skill-tag">Hardware Maintenance</span>
-            <span class="skill-tag">BIOS & SSD Config</span>
-        </div>
-        <div class="skill-group">
-            <h4>اللغات</h4>
-            <span class="skill-tag">العربية (الأم)</span>
-            <span class="skill-tag">الإنجليزية (احترافي)</span>
-            <span class="skill-tag">الصينية (أساسيات)</span>
-        </div>
+        <h3><i class="fas fa-briefcase"></i> خبرات العمل</h3>
+        <div class="job-item"><b>كاتب فورمان -</b> النيل للغاز (1.5 سنة)</div>
+        <div class="job-item"><b>مساعد طباخ -</b> الشيف سرحان (2 سنة)</div>
+        <div class="job-item"><b>تسويق وخدمة عملاء -</b> الأكاديمية الدولية (سنة)</div>
+        <div class="job-item"><b>Sales Out door -</b> طيبة للسمعيات (2 سنة)</div>
     </div>
 
     <div class="card">
-        <h3><i class="fas fa-project-diagram"></i> المشاريع والإنجازات</h3>
-        <div style="padding-right: 15px; border-right: 3px solid var(--gold); margin-bottom: 10px;">
-            <b>COMMANDER FOUAD (Jarvis):</b> نظام أمني ومساعد صوتي ذكي يعمل بـ Python.
-        </div>
-        <div style="padding-right: 15px; border-right: 3px solid var(--gold);">
-            <b>المتجر الإلكتروني:</b> منصة مخصصة لعرض وتصنيع الصوفا.
-        </div>
+        <h3><i class="fas fa-graduation-cap"></i> التعليم والتدريبات</h3>
+        <p><b>التعليم:</b> دبلوم صناعي 3 سنوات (إلكترونيات) - 2010</p>
+        <ul>
+            <li>إدارة مشروعات ورخصة دولية للحاسب (CTC)</li>
+            <li>إدارة أعمال مصغر (الأكاديمية الدولية - 2016)</li>
+            <li>قواعد البيانات (It shark - 2017)</li>
+            <li>مراسل تحت التمرين (أخبار العالم - 2013)</li>
+        </ul>
     </div>
 </div>
 
