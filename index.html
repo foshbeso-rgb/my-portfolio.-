@@ -2,19 +2,21 @@
 <html lang="ar" id="html-root" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --gold: #C5A059; --dark: #2c3e50; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; padding: 30px; color: #333; }
-        .page { max-width: 850px; margin: auto; background: white; padding: 40px; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .lang-btn { text-align: center; margin-bottom: 20px; }
-        button { padding: 8px 15px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 4px; font-weight: bold; }
-        h1 { color: var(--dark); text-align: center; margin-bottom: 5px; }
-        .personal-info { text-align: center; margin-bottom: 25px; color: #555; }
-        h2 { color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 5px; margin-top: 25px; text-transform: uppercase; font-size: 18px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .item { margin-bottom: 12px; font-size: 14px; }
-        .tag { display: inline-block; background: #f0f0f0; padding: 4px 10px; margin: 3px; border-radius: 4px; font-size: 12px; border: 1px solid #ddd; }
+        :root { --accent: #C5A059; --dark: #2c3e50; --bg: #f4f4f4; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); padding: 40px; color: #333; }
+        .page { max-width: 900px; margin: auto; background: white; padding: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 5px solid var(--accent); }
+        .lang-btn { text-align: center; margin-bottom: 30px; }
+        button { padding: 8px 20px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 20px; transition: 0.3s; }
+        button:hover { background: var(--accent); }
+        .header { text-align: center; margin-bottom: 40px; }
+        h1 { font-size: 32px; color: var(--dark); margin: 0; }
+        h2 { color: var(--accent); font-size: 20px; margin-top: 30px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .item { margin-bottom: 15px; }
+        .title { font-weight: bold; color: var(--dark); display: block; }
+        .tag { display: inline-block; background: #f8f8f8; padding: 4px 10px; margin: 3px; border-radius: 4px; font-size: 12px; border: 1px solid #ddd; }
         [lang="ar"] .en { display: none; } [lang="en"] .ar { display: none; }
     </style>
 </head>
@@ -22,54 +24,44 @@
 <div class="page">
     <div class="lang-btn"><button onclick="switchLang('ar')">العربية</button> <button onclick="switchLang('en')">English</button></div>
     
-    <h1><span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span></h1>
-    <p class="personal-info">
-        <span class="ar">35 عاماً - ذكر - غير متزوج | المنطقة: دار السلام - القاهرة</span>
-        <span class="en">35 Years - Male - Single | Location: Dar El Salam - Cairo</span>
-    </p>
+    <div class="header">
+        <h1><span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span></h1>
+        <p><span class="ar">35 عاماً | دار السلام، القاهرة | إعفاء نهائي</span><span class="en">35 Years | Dar El Salam, Cairo | Final Exemption</span></p>
+    </div>
 
     <div class="grid">
-        <!-- العمود الأيمن -->
         <div>
-            <h2><span class="ar">بيانات الاتصال</span><span class="en">Contact Details</span></h2>
-            <div class="item"><b><span class="ar">رقم المحمول:</span><span class="en">Phone:</span></b> 01010169726</div>
-            <div class="item"><b><span class="ar">البريد الإلكتروني:</span><span class="en">Email:</span></b> foshbeso@gmail.com</div>
-            <div class="item"><b><span class="ar">الرقم الإضافي:</span><span class="en">Alt Phone:</span></b> 01010169726</div>
+            <h2><i class="fas fa-address-card"></i> <span class="ar">بيانات الاتصال</span><span class="en">Contact</span></h2>
+            <div class="item">01010169726 | foshbeso@gmail.com</div>
+            
+            <h2><i class="fas fa-briefcase"></i> <span class="ar">الخبرات المهنية</span><span class="en">Experience</span></h2>
+            <div class="item"><span class="title">كاتب فورمان - النيل للغاز</span> 2014-2015</div>
+            <div class="item"><span class="title">مساعد طباخ - الشيف سرحان</span> 2017-2019</div>
+            <div class="item"><span class="title">تسويق وخدمة عملاء - الأكاديمية الدولية</span> 2016</div>
+            <div class="item"><span class="title">مبيعات خارجية - طيبة للسمعيات</span> 2016</div>
+            <div class="item"><span class="title">تسويق إلكتروني - الأكاديمية الدولية</span> 2016</div>
 
-            <h2><span class="ar">الراتب والمجالات</span><span class="en">Salary & Fields</span></h2>
-            <div class="item"><b><span class="ar">الحد الأدنى للراتب:</span><span class="en">Min Salary:</span></b> 5000 EGP</div>
-            <div class="tag">إدخال بيانات</div><div class="tag">أعمال المكتب</div><div class="tag">سكرتارية واستقبال</div>
-            <div class="tag">إدارة مكاتب</div><div class="tag">إدارة أعمال</div><div class="tag">علاقات عامة</div>
-
-            <h2><span class="ar">المهارات</span><span class="en">Skills</span></h2>
-            <div class="item">• <span class="ar">رخصة القيادة: لا يوجد</span><span class="en">Driving License: None</span></div>
-            <div class="item">• <span class="ar">سائق دراجات نارية</span><span class="en">Motorcycle Driver</span></div>
-            <div class="item">• <span class="ar">اللغة الإنجليزية: جيد</span><span class="en">English: Good</span></div>
-            <div class="item">• <span class="ar">MS Office: ممتاز</span><span class="en">MS Office: Excellent</span></div>
-            <div class="item">• <span class="ar">الحاسب الآلي: ممتاز</span><span class="en">Computer: Excellent</span></div>
+            <h2><i class="fas fa-graduation-cap"></i> <span class="ar">التعليم</span><span class="en">Education</span></h2>
+            <div class="item"><span class="title">دبلوم صناعي - إلكترونيات (2010)</span></div>
         </div>
 
-        <!-- العمود الأيسر -->
         <div>
-            <h2><span class="ar">الخبرات السابقة</span><span class="en">Experience</span></h2>
-            <div class="item"><b><span class="ar">مساعد طباخ (الشيف سرحان)</span><span class="en">Assistant Chef - Chef Sarhan</span></b><br>(سنتين - 2019)</div>
-            <div class="item"><b><span class="ar">تسويق وخدمة عملاء - الأكاديمية الدولية</span><span class="en">Marketing & CS - Int. Academy</span></b><br>(< 1 سنة - 2016)</div>
-            <div class="item"><b><span class="ar">Seles out door - طيبة للسمعيات</span><span class="en">Outdoor Sales - Taiba Audio</span></b><br>(سنتين - 2016)</div>
-            <div class="item"><b><span class="ar">تسويق إلكتروني وإعلانات - الأكاديمية الدولية</span><span class="en">Digital Marketing - Int. Academy</span></b><br>(< 1 سنة - 2016)</div>
-            <div class="item"><b><span class="ar">كاتب فورمان - النيل للغاز</span><span class="en">Foreman Clerk - Nile Gas</span></b><br>(سنة ونصف)</div>
+            <h2><i class="fas fa-tools"></i> <span class="ar">المهارات والتقنيات</span><span class="en">Skills</span></h2>
+            <div class="item"><span class="title">التقنية:</span> Full-Stack (Flutter, Python, Django), Oracle DB</div>
+            <div class="item"><span class="title">المكتب:</span> MS Office (Expert), Data Entry</div>
+            <div class="item"><span class="title">شخصية:</span> تواصل، قيادة، حل مشكلات</div>
+            <div class="item">
+                <span class="tag">إدارة أعمال</span><span class="tag">سكرتارية</span><span class="tag">علاقات عامة</span>
+            </div>
 
-            <h2><span class="ar">التعليم</span><span class="en">Education</span></h2>
-            <div class="item"><b><span class="ar">ثانوية فنية (دبلوم صناعي - إلكترونيات)</span><span class="en">Industrial Diploma - Electronics</span></b><br>(2010)</div>
+            <h2><i class="fas fa-book-reader"></i> <span class="ar">التدريبات</span><span class="en">Training</span></h2>
+            <div class="item">• إدارة مشروعات / رخصة حاسب (CTC)</div>
+            <div class="item">• إدارة أعمال مصغر (الأكاديمية الدولية)</div>
+            <div class="item">• قواعد البيانات (It Shark)</div>
+            <div class="item">• مراسل تحت التمرين (أخبار العالم)</div>
 
-            <h2><span class="ar">التدريبات</span><span class="en">Training</span></h2>
-            <div class="item">• <span class="ar">إدارة مشروعات / رخصة دولية للحاسب - CTC</span> (2012)</div>
-            <div class="item">• <span class="ar">إدارة أعمال مصغر - الأكاديمية الدولية</span> (2016)</div>
-            <div class="item">• <span class="ar">مراسل تحت التمرين - أخبار العالم</span> (2013)</div>
-            <div class="item">• <span class="ar">قواعد البيانات - It Shark</span> (2017)</div>
-
-            <h2><span class="ar">إمكانية الانتقال</span><span class="en">Mobility</span></h2>
-            <div class="item">• <span class="ar">يمكنه العمل خارج مصر.</span><span class="en">Can work abroad.</span></div>
-            <div class="item">• <span class="ar">يمكنه العمل داخل محافظات مصر في حالة توفير سكن.</span><span class="en">Can work in Egypt if housing is provided.</span></div>
+            <h2><i class="fas fa-car"></i> <span class="ar">إمكانية الانتقال</span><span class="en">Mobility</span></h2>
+            <div class="item"><span class="ar">متاح للعمل داخل وخارج مصر.</span><span class="en">Available for travel.</span></div>
         </div>
     </div>
 </div>
