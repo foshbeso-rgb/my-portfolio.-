@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMMANDER FOUAD - SINAI SUPREME OS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --gold: #D4AF37; --bg: #000; --card: #0f0f0f; --success: #2ed573; --danger: #ff4757; }
+        body { background: var(--bg); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding-bottom: 80px; }
+        
+        .hero { padding: 50px 20px; text-align: center; border-bottom: 3px solid var(--gold); background: #050505; }
+        .hero h1 { margin: 0; font-size: 24px; color: var(--gold); letter-spacing: 2px; }
+        
+        .nav-scroller { position: sticky; top: 0; z-index: 1000; background: rgba(0,0,0,0.98); display: flex; overflow-x: auto; padding: 15px; gap: 12px; border-bottom: 1px solid #333; }
+        .nav-btn { background: #111; color: #777; border: 1px solid #333; padding: 12px 25px; border-radius: 8px; white-space: nowrap; font-size: 11px; font-weight: bold; cursor: pointer; }
+        .nav-btn.active { background: var(--gold); color: #000; border-color: var(--gold); }
+
+        .container { padding: 15px; max-width: 1000px; margin: auto; }
+        .section { display: none; animation: fadeIn 0.5s ease; }
+        .section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .map-frame { width: 100%; height: 400px; border-radius: 15px; border: 1px solid var(--gold); margin-bottom: 25px; }
+        
+        .category-title { color: var(--gold); border-right: 4px solid var(--gold); padding-right: 10px; margin: 25px 0 15px; font-size: 18px; }
+        
+        .menu-table { width: 100%; background: var(--card); border-radius: 12px; border-collapse: collapse; overflow: hidden; margin-bottom: 20px; border: 1px solid #222; }
+        .menu-table th { background: #1a1a1a; padding: 12px; color: var(--gold); text-align: right; font-size: 13px; }
+        .menu-table td { padding: 10px 12px; border-bottom: 1px solid #1a1a1a; font-size: 12px; }
+        .price { color: var(--success); font-weight: bold; text-align: left; }
+
+        .warning-box { background: rgba(255, 71, 87, 0.1); border-right: 4px solid var(--danger); padding: 15px; border-radius: 10px; font-size: 12px; line-height: 1.6; margin: 15px 0; }
+
+        .dock { position: fixed; bottom: 0; width: 100%; background: #000; padding: 12px; border-top: 1px solid #333; display: flex; gap: 10px; }
+        .btn-wa { flex: 1; background: var(--gold); color: #000; text-align: center; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 900; }
+    </style>
+</head>
+<body onload="startCommanderVoice()">
+
+<div class="hero">
+    <h1>SINAI COMMANDER SYSTEM v10.0</h1>
+    <p style="color:#444; font-size: 11px;">DATABASE PREPARED BY FOUAD ABBAS</p>
+</div>
+
+<nav class="nav-scroller">
+    <button class="nav-btn active" onclick="tab(event, 'maps')">خريطة سيناء الحية</button>
+    <button class="nav-btn" onclick="tab(event, 'sharm_menu')">منيو مطاعم شرم</button>
+    <button class="nav-btn" onclick="tab(event, 'tor_taba')">الطور وطابا ونويبع</button>
+    <button class="nav-btn" onclick="tab(event, 'trips_full')">منيو الرحلات الكامل</button>
+</nav>
+
+<div class="container">
+
+    <div id="maps" class="section active">
+        <h2 class="category-title">الخريطة التفاعلية الشاملة</h2>
+        <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d445347.1687126131!2d33.85695842838383!3d28.530324707172016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shotels%20and%20restaurants%20in%20south%20sinai!5e0!3m2!1sen!2seg!4v1714421000000!5m2!1sen!2seg" allowfullscreen="" loading="lazy"></iframe>
+        <div class="warning-box"><b>ملاحظة للقائد:</b> الخريطة دي بتكشف كل المحلات المجاورة للجيست في أي مكان في جنوب سيناء بمجرد ما يفتح الـ GPS.</div>
+    </div>
+
+    <div id="sharm_menu" class="section">
+        <h2 class="category-title">منيو مطعم البرنس (حي النور) - مشويات</h2>
+        <table class="menu-table">
+            <thead><tr><th>الصنف</th><th>السعر</th></tr></thead>
+            <tbody>
+                <tr><td>كيلو كفتة ضاني بلدي</td><td class="price">550 EGP</td></tr>
+                <tr><td>كيلو ريش ضاني</td><td class="price">750 EGP</td></tr>
+                <tr><td>وجبة ربع فرخة (صدر/ورك) + أرز + سلطات</td><td class="price">120 EGP</td></tr>
+                <tr><td>وجبة نص فرخة + أرز + سلطات</td><td class="price">190 EGP</td></tr>
+                <tr><td>طاجن عكاوي بالبصل</td><td class="price">350 EGP</td></tr>
+            </tbody>
+        </table>
+
+        <h2 class="category-title">منيو مطعم فارس (السوق القديم) - مأكولات بحرية</h2>
+        <table class="menu-table">
+            <thead><tr><th>الصنف</th><th>السعر</th></tr></thead>
+            <tbody>
+                <tr><td>شوربة فارس (فواكه بحر مخلي)</td><td class="price">180 EGP</td></tr>
+                <tr><td>كيلو سمك دنيس / قاروص (مشوي/سنجاري)</td><td class="price">550 EGP</td></tr>
+                <tr><td>كيلو جمبري (وسط)</td><td class="price">850 EGP</td></tr>
+                <tr><td>وجبة فارس ميكس (سمك+جمبري+سبيط+أرز)</td><td class="price">450 EGP</td></tr>
+            </tbody>
+        </table>
+
+        <h2 class="category-title">منيو جاد (الهضبة) - فطائر وبيتزا</h2>
+        <table class="menu-table">
+            <thead><tr><th>الصنف</th><th>السعر</th></tr></thead>
+            <tbody>
+                <tr><td>فطيرة مشلتت سادة (كبير)</td><td class="price">150 EGP</td></tr>
+                <tr><td>فطيرة بيتزا إيطالي (ميكس جبن)</td><td class="price">180 EGP</td></tr>
+                <tr><td>ساندوتش شاورما (كبير)</td><td class="price">90 EGP</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="tor_taba" class="section">
+        <h2 class="category-title">مدينة الطور (العاصمة)</h2>
+        <table class="menu-table">
+            <thead><tr><th>الخدمة / المحل</th><th>السعر</th></tr></thead>
+            <tbody>
+                <tr><td>حمام موسى (دخول الفرد)</td><td class="price">50 EGP</td></tr>
+                <tr><td>كيلو سمك من حلقة السمك (طازج)</td><td class="price">200-250 EGP</td></tr>
+                <tr><td>مطعم زيزينيا (وجبة غذاء كاملة)</td><td class="price">150 EGP</td></tr>
+            </tbody>
+        </table>
+
+        <h2 class="category-title">طابا ونويبع</h2>
+        <table class="menu-table">
+            <thead><tr><th>المكان</th><th>الخدمة</th><th>السعر</th></tr></thead>
+            <tbody>
+                <tr><td>قلعة صلاح الدين (طابا) - تذكرة شاملة</td><td class="price">300 EGP</td></tr>
+                <tr><td>ليلة في كامب (نويبع) - شامل الفطار</td><td class="price">500 EGP</td></tr>
+                <tr><td>عشاء بدوي في "وشواشي"</td><td class="price">350 EGP</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="trips_full" class="section">
+        <h2 class="category-title">منيو الرحلات (أسعار المينا والجبل)</h2>
+        <table class="menu-table">
+            <thead><tr><th>الرحلة</th><th>التفاصيل</th><th>السعر</th></tr></thead>
+            <tbody>
+                <tr><td>سفاري بيتش باجي (موتوسيكل)</td><td>ساعة ونصف + شاي بدوي</td><td class="price">500 EGP</td></tr>
+                <tr><td>رحلة اليخت (رأس محمد)</td><td>يوم كامل + غداء + مشروبات</td><td class="price">1000 EGP</td></tr>
+                <tr><td>عرض الدولفين (نبق)</td><td>ساعة عرض</td><td class="price">450 EGP</td></tr>
+                <tr><td>غواصة (Submarine)</td><td>مشاهدة الشعب المرجانية</td><td class="price">550 EGP</td></tr>
+                <tr><td>البراشوت (Parachute)</td><td>طيران فوق خليج نعمة</td><td class="price">650 EGP</td></tr>
+            </tbody>
+        </table>
+        <div class="warning-box">⚠️ <b>تحذير القائد:</b> الأسعار دي هي أسعار "التنفيذ" الحقيقية. لو المكتب طلب أكتر من كده بكتير، يبقى بيستغل الجيست.</div>
+    </div>
+
+</div>
+
+<div class="dock">
+    <a href="https://wa.me/201XXXXXXXXX" class="btn-wa">تحدث مع القائد فؤاد (دعم فوري)</a>
+</div>
+
+<script>
+    function tab(evt, name) {
+        var i, x, btn;
+        x = document.getElementsByClassName("section");
+        for (i = 0; i < x.length; i++) { x[i].style.display = "none"; }
+        btn = document.getElementsByClassName("nav-btn");
+        for (i = 0; i < btn.length; i++) { btn[i].className = btn[i].className.replace(" active", ""); }
+        document.getElementById(name).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    function startCommanderVoice() {
+        const msg = new SpeechSynthesisUtterance();
+        msg.text = "Hello. I am Commander Fouad. Welcome to my Sinai Database. I have prepared every menu and price for you to ensure you have the best experience without being overcharged. Feel free to explore.";
+        msg.lang = 'en-US';
+        msg.rate = 0.85;
+        msg.pitch = 0.5; // صوت رجالي عميق وواثق
+        window.speechSynthesis.speak(msg);
+    }
+</script>
+
+</body>
+</html>
