@@ -1,68 +1,67 @@
 <!DOCTYPE html>
-<html lang="ar" id="html-root" dir="rtl">
+<html lang="ar" dir="rtl" id="main-html">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
+    <title>السيرة الذاتية - فؤاد عباس فؤاد</title>
     <style>
-        :root { --accent: #C5A059; --dark: #2c3e50; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 20px; color: #333; }
-        .page { max-width: 950px; margin: auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        .lang-btn { text-align: center; margin-bottom: 20px; }
-        button { padding: 10px 20px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 5px; }
-        h1, h2 { color: var(--dark); }
-        h2 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 5px; margin-top: 25px; font-size: 1.2em; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .item { margin-bottom: 12px; }
-        [lang="ar"] .en { display: none; }
-        [lang="en"] .ar { display: none; }
+        :root { --accent: #C5A059; --dark: #1a1a1a; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 40px; color: #333; }
+        .page { max-width: 900px; margin: auto; background: white; padding: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; }
+        .lang-switch { text-align: center; margin-bottom: 30px; }
+        button { padding: 10px 25px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 4px; font-weight: bold; }
+        .header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; margin-bottom: 30px; }
+        .container { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        h2 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 5px; margin-top: 30px; font-size: 1.3em; }
+        .item { margin-bottom: 15px; }
         [lang="en"] { direction: ltr; text-align: left; }
+        [lang="ar"] .en-text, [lang="en"] .ar-text { display: none; }
     </style>
 </head>
 <body lang="ar">
 <div class="page">
-    <div class="lang-btn">
-        <button onclick="switchLang('ar')">العربية</button>
-        <button onclick="switchLang('en')">English</button>
+    <div class="lang-switch">
+        <button onclick="setLang('ar')">العربية</button>
+        <button onclick="setLang('en')">English</button>
     </div>
 
-    <div style="text-align:center; border-bottom: 2px solid #eee; padding-bottom: 20px;">
-        <h1><span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span></h1>
+    <div class="header">
+        <h1><span class="ar-text">فؤاد عباس فؤاد</span><span class="en-text">Fouad Abbas Fouad</span></h1>
         <p>01010169726 | foshbeso@gmail.com</p>
     </div>
 
-    <div class="grid">
-        <!-- الجانب الأيمن: الخبرات والتعليم -->
-        <div>
-            <h2><span class="ar">الخبرات العملية</span><span class="en">Experience</span></h2>
-            <div class="item"><b><span class="ar">كاتب فورمان - النيل للغاز</span><span class="en">Foreman Clerk - Nile Gas</span></b> (2014-2015)</div>
-            <div class="item"><b><span class="ar">مساعد طباخ - الشيف سرحان</span><span class="en">Assistant Chef - Chef Sarhan</span></b> (2017-2019)</div>
-            <div class="item"><b><span class="ar">تسويق وخدمة عملاء - الأكاديمية الدولية</span><span class="en">Marketing & CS - Int. Academy</span></b> (2016)</div>
-            <div class="item"><b><span class="ar">مبيعات خارجية - طيبة للسمعيات</span><span class="en">Outdoor Sales - Taiba Audio</span></b> (2016)</div>
-            <div class="item"><b><span class="ar">تسويق إلكتروني - الأكاديمية الدولية</span><span class="en">Digital Marketing - Int. Academy</span></b> (2016)</div>
-            
-            <h2><span class="ar">التعليم والتدريب</span><span class="en">Education & Training</span></h2>
-            <div class="item"><b><span class="ar">دبلوم صناعي - إلكترونيات (2010)</span><span class="en">Industrial Diploma - Electronics (2010)</span></b></div>
-            <div class="item">CTC (Project Mgmt) | It Shark (DB) | Mini-MBA | <span class="ar">مراسل (أخبار العالم)</span><span class="en">Journalist Trainee (Akhbar El Alam)</span></div>
+    <div class="container">
+        <!-- الجانب الأيمن -->
+        <div class="col">
+            <h2><span class="ar-text">الخبرات المهنية</span><span class="en-text">Experience</span></h2>
+            <div class="item"><b><span class="ar-text">كاتب فورمان - النيل للغاز</span><span class="en-text">Foreman Clerk - Nile Gas</span></b> (2014-2015)</div>
+            <div class="item"><b><span class="ar-text">مساعد طباخ - الشيف سرحان</span><span class="en-text">Assistant Chef - Chef Sarhan</span></b> (2017-2019)</div>
+            <div class="item"><b><span class="ar-text">تسويق وخدمة عملاء - الأكاديمية الدولية</span><span class="en-text">Marketing & CS - International Academy</span></b> (2016)</div>
+            <div class="item"><b><span class="ar-text">مبيعات خارجية - طيبة للسمعيات</span><span class="en-text">Outdoor Sales - Taiba Audio</span></b> (2016)</div>
+            <div class="item"><b><span class="ar-text">تسويق إلكتروني - الأكاديمية الدولية</span><span class="en-text">Digital Marketing - International Academy</span></b> (2016)</div>
+
+            <h2><span class="ar-text">التعليم والتدريب</span><span class="en-text">Education & Training</span></h2>
+            <div class="item"><b><span class="ar-text">دبلوم صناعي - إلكترونيات (2010)</span><span class="en">Industrial Diploma - Electronics (2010)</span></b></div>
+            <div class="item">CTC (Project Mgmt) | It Shark (DB) | Mini-MBA | <span class="ar-text">مراسل (أخبار العالم)</span><span class="en-text">Journalist (Akhbar El Alam)</span></div>
         </div>
 
-        <!-- الجانب الأيسر: المهارات والمشاريع -->
-        <div>
-            <h2><span class="ar">المهارات التقنية (برمجة)</span><span class="en">Technical Skills (Programming)</span></h2>
+        <!-- الجانب الأيسر -->
+        <div class="col">
+            <h2><span class="ar-text">المهارات التقنية</span><span class="en-text">Technical Skills</span></h2>
             <div class="item"><b>Full-Stack:</b> Flutter, Python, Django, Flask</div>
             <div class="item"><b>Database:</b> Oracle DB, SQL</div>
             <div class="item"><b>Systems:</b> MS Office (Expert), Data Entry</div>
-            
-            <h2><span class="ar">المشاريع</span><span class="en">Projects</span></h2>
-            <div class="item"><b>Jarvis:</b> <span class="ar">مساعد صوتي ذكي.</span><span class="en">AI Voice Assistant.</span></div>
-            <div class="item"><b>E-commerce:</b> <span class="ar">منصة تجارة إلكترونية.</span><span class="en">Full-stack platform.</span></div>
+
+            <h2><span class="ar-text">المشاريع</span><span class="en">Projects</span></h2>
+            <div class="item"><b>Jarvis:</b> <span class="ar-text">مساعد صوتي ذكي.</span><span class="en">AI Voice Assistant.</span></div>
+            <div class="item"><b>E-commerce:</b> <span class="ar-text">منصة تجارة إلكترونية متكاملة.</span><span class="en">Full-stack E-commerce Platform.</span></div>
         </div>
     </div>
 </div>
 
 <script>
-    function switchLang(lang) {
-        document.body.setAttribute('lang', lang);
-        document.getElementById('html-root').setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    function setLang(lang) {
+        document.body.lang = lang;
+        document.getElementById('main-html').dir = (lang === 'ar') ? 'rtl' : 'ltr';
     }
 </script>
 </body>
