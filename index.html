@@ -2,17 +2,20 @@
 <html lang="ar" id="html-root" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
+    <title>السيرة الذاتية الاحترافية | فؤاد عباس فؤاد</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --gold: #C5A059; --dark: #050505; }
-        body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
-        .cv-container { max-width: 800px; margin: auto; }
-        .lang-switcher { text-align: center; margin-bottom: 20px; }
-        button { background: var(--gold); border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-weight: bold; margin: 5px; }
-        .card { background: #111; padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 15px; }
-        h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 8px; display: flex; align-items: center; gap: 10px; }
-        /* التحكم في إظهار اللغات */
+        :root { --gold: #C5A059; --dark: #050505; --light: #ffffff; }
+        body { background: var(--dark); color: var(--light); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 30px; }
+        .cv-container { max-width: 800px; margin: auto; border: 1px solid #333; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .lang-switcher { text-align: center; margin-bottom: 30px; }
+        button { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 8px 20px; cursor: pointer; border-radius: 20px; font-weight: bold; margin: 5px; transition: 0.3s; }
+        button:hover { background: var(--gold); color: var(--dark); }
+        h1 { color: var(--gold); text-align: center; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        .section { margin-bottom: 30px; }
+        h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; display: flex; align-items: center; gap: 15px; font-size: 20px; }
+        .content { margin-top: 15px; padding-right: 10px; border-right: 3px solid var(--gold); }
+        .item { margin-bottom: 10px; font-size: 16px; }
         [lang="ar"] .en { display: none; }
         [lang="en"] .ar { display: none; }
     </style>
@@ -25,24 +28,34 @@
         <button onclick="switchLang('en')">English</button>
     </div>
 
-    <h1 style="color: var(--gold); text-align: center;">فؤاد عباس فؤاد</h1>
+    <h1>فؤاد عباس فؤاد</h1>
 
-    <div class="card">
-        <h3><i class="fas fa-phone"></i> <span class="ar">بيانات الاتصال</span><span class="en">Contact</span></h3>
-        <p>01140248506</p>
-        <p>foshbeso@gmail.com</p>
+    <!-- Contact Section -->
+    <div class="section">
+        <h3><i class="fas fa-phone"></i> <span class="ar">بيانات الاتصال</span><span class="en">Contact Details</span></h3>
+        <div class="content">
+            <div class="item"><i class="fas fa-mobile-alt"></i> 01140248506</div>
+            <div class="item"><i class="fas fa-envelope"></i> foshbeso@gmail.com</div>
+        </div>
     </div>
 
-    <div class="card">
-        <h3><i class="fas fa-briefcase"></i> <span class="ar">الخبرات</span><span class="en">Experience</span></h3>
-        <p><span class="ar">كاتب في النيل للغاز (2014-2015)</span><span class="en">Clerk at Nile Gas (2014-2015)</span></p>
-        <p><span class="ar">مساعد طباخ</span><span class="en">Assistant Chef</span></p>
+    <!-- Experience Section -->
+    <div class="section">
+        <h3><i class="fas fa-briefcase"></i> <span class="ar">الخبرات العملية</span><span class="en">Work Experience</span></h3>
+        <div class="content">
+            <div class="item"><b><span class="ar">كاتب في النيل للغاز</span><span class="en">Clerk at Nile Gas</span></b> (2014-2015)</div>
+            <div class="item"><b><span class="ar">مساعد طباخ</span><span class="en">Assistant Chef</span></b></div>
+        </div>
     </div>
 
-    <div class="card">
-        <h3><i class="fas fa-tools"></i> <span class="ar">المهارات</span><span class="en">Skills</span></h3>
-        <p>Full-Stack Development</p>
-        <p>Oracle DB Administration</p>
+    <!-- Skills Section -->
+    <div class="section">
+        <h3><i class="fas fa-tools"></i> <span class="ar">المهارات التقنية</span><span class="en">Technical Skills</span></h3>
+        <div class="content">
+            <div class="item">• Full-Stack Development</div>
+            <div class="item">• Oracle DB Administration</div>
+            <div class="item">• Flutter & Python</div>
+        </div>
     </div>
 </div>
 
