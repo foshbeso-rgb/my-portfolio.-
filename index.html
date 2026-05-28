@@ -8,12 +8,13 @@
         body { font-family: 'Segoe UI', sans-serif; background: #f9f9f9; padding: 30px; color: #333; }
         .page { max-width: 850px; margin: auto; background: white; padding: 40px; border: 1px solid #ddd; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .lang-btn { text-align: center; margin-bottom: 20px; }
-        button { padding: 8px 15px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 4px; }
-        h1 { color: var(--dark); text-align: center; }
+        button { padding: 8px 15px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 4px; font-weight: bold; }
+        h1 { color: var(--dark); text-align: center; margin-bottom: 5px; }
+        .personal-info { text-align: center; margin-bottom: 25px; color: #555; }
         h2 { color: var(--gold); border-bottom: 2px solid var(--gold); padding-bottom: 5px; margin-top: 25px; text-transform: uppercase; font-size: 18px; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .item { margin-bottom: 10px; font-size: 14px; }
-        .tag { display: inline-block; background: #eee; padding: 3px 8px; margin: 2px; border-radius: 3px; font-size: 12px; }
+        .item { margin-bottom: 12px; font-size: 14px; }
+        .tag { display: inline-block; background: #f0f0f0; padding: 4px 10px; margin: 3px; border-radius: 4px; font-size: 12px; border: 1px solid #ddd; }
         [lang="ar"] .en { display: none; } [lang="en"] .ar { display: none; }
     </style>
 </head>
@@ -22,12 +23,13 @@
     <div class="lang-btn"><button onclick="switchLang('ar')">العربية</button> <button onclick="switchLang('en')">English</button></div>
     
     <h1><span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span></h1>
-    <p style="text-align: center;">
+    <p class="personal-info">
         <span class="ar">35 عاماً - ذكر - غير متزوج | المنطقة: دار السلام - القاهرة</span>
         <span class="en">35 Years - Male - Single | Location: Dar El Salam - Cairo</span>
     </p>
 
     <div class="grid">
+        <!-- العمود الأيمن -->
         <div>
             <h2><span class="ar">بيانات الاتصال</span><span class="en">Contact Details</span></h2>
             <div class="item"><b><span class="ar">رقم المحمول:</span><span class="en">Phone:</span></b> 01010169726</div>
@@ -47,16 +49,17 @@
             <div class="item">• <span class="ar">الحاسب الآلي: ممتاز</span><span class="en">Computer: Excellent</span></div>
         </div>
 
+        <!-- العمود الأيسر -->
         <div>
             <h2><span class="ar">الخبرات السابقة</span><span class="en">Experience</span></h2>
-            <div class="item"><b><span class="ar">مساعد طباخ (الشيف سرحان)</span><span class="en">Assistant Chef - Chef Sarhan</span></b> (سنتين - 2019)</div>
-            <div class="item"><b><span class="ar">تسويق وخدمة عملاء - الأكاديمية الدولية</span><span class="en">Marketing & CS - Int. Academy</span></b> (< 1 سنة - 2016)</div>
-            <div class="item"><b><span class="ar">Seles out door - طيبة للسمعيات</span><span class="en">Outdoor Sales - Taiba Audio</span></b> (سنتين - 2016)</div>
-            <div class="item"><b><span class="ar">تسويق إلكتروني وإعلانات - الأكاديمية الدولية</span><span class="en">Digital Marketing - Int. Academy</span></b> (< 1 سنة - 2016)</div>
-            <div class="item"><b><span class="ar">كاتب فورمان - النيل للغاز</span><span class="en">Foreman Clerk - Nile Gas</span></b> (سنة ونصف)</div>
+            <div class="item"><b><span class="ar">مساعد طباخ (الشيف سرحان)</span><span class="en">Assistant Chef - Chef Sarhan</span></b><br>(سنتين - 2019)</div>
+            <div class="item"><b><span class="ar">تسويق وخدمة عملاء - الأكاديمية الدولية</span><span class="en">Marketing & CS - Int. Academy</span></b><br>(< 1 سنة - 2016)</div>
+            <div class="item"><b><span class="ar">Seles out door - طيبة للسمعيات</span><span class="en">Outdoor Sales - Taiba Audio</span></b><br>(سنتين - 2016)</div>
+            <div class="item"><b><span class="ar">تسويق إلكتروني وإعلانات - الأكاديمية الدولية</span><span class="en">Digital Marketing - Int. Academy</span></b><br>(< 1 سنة - 2016)</div>
+            <div class="item"><b><span class="ar">كاتب فورمان - النيل للغاز</span><span class="en">Foreman Clerk - Nile Gas</span></b><br>(سنة ونصف)</div>
 
             <h2><span class="ar">التعليم</span><span class="en">Education</span></h2>
-            <div class="item"><b><span class="ar">ثانوية فنية (دبلوم صناعي - إلكترونيات)</span><span class="en">Industrial Diploma - Electronics</span></b> (2010)</div>
+            <div class="item"><b><span class="ar">ثانوية فنية (دبلوم صناعي - إلكترونيات)</span><span class="en">Industrial Diploma - Electronics</span></b><br>(2010)</div>
 
             <h2><span class="ar">التدريبات</span><span class="en">Training</span></h2>
             <div class="item">• <span class="ar">إدارة مشروعات / رخصة دولية للحاسب - CTC</span> (2012)</div>
@@ -65,8 +68,8 @@
             <div class="item">• <span class="ar">قواعد البيانات - It Shark</span> (2017)</div>
 
             <h2><span class="ar">إمكانية الانتقال</span><span class="en">Mobility</span></h2>
-            <div class="item"><span class="ar">يمكنه العمل خارج مصر.</span><span class="en">Can work abroad.</span></div>
-            <div class="item"><span class="ar">يمكنه العمل داخل محافظات مصر في حالة توفير سكن.</span><span class="en">Can work in Egypt if housing is provided.</span></div>
+            <div class="item">• <span class="ar">يمكنه العمل خارج مصر.</span><span class="en">Can work abroad.</span></div>
+            <div class="item">• <span class="ar">يمكنه العمل داخل محافظات مصر في حالة توفير سكن.</span><span class="en">Can work in Egypt if housing is provided.</span></div>
         </div>
     </div>
 </div>
