@@ -3,32 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        /* التنسيقات السابقة كما هي، أضفنا لها تنسيق الأزرار */
+        /* التنسيق الجمالي */
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; }
         .controls { text-align: center; margin-bottom: 20px; }
-        .btn { padding: 10px 20px; cursor: pointer; background: #c5a059; border: none; color: white; border-radius: 4px; }
-        /* ... باقي التنسيقات ... */
+        .btn { padding: 10px 20px; cursor: pointer; background: #2c3e50; border: none; color: white; border-radius: 4px; font-weight: bold; }
+        .cv-card { max-width: 900px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
+        .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 30px; }
+        .main-content { flex: 1; padding: 30px; }
+        /* أضف باقي التنسيقات هنا كما في الأكواد السابقة */
     </style>
 </head>
 <body>
 
 <div class="controls">
-    <button class="btn" onclick="toggleLang()">Switch to English / تغيير للغة العربية</button>
-    <button class="btn" onclick="window.print()">Download PDF / تحميل نسخة</button>
+    <button class="btn" onclick="toggleLang()">Switch Language / تبديل اللغة</button>
 </div>
 
-<!-- محتوى الـ CV هنا (بنفس الهيكل السابق) -->
+<div class="cv-card">
+    <div class="sidebar">
+        <h2 id="t1">معلومات الاتصال</h2>
+        <p id="t2">الهاتف: 01010169726</p>
+        <!-- ضع باقي العناصر مع إعطائها id فريد لكل نص -->
+    </div>
+    <div class="main-content">
+        <h1 class="name" id="name">فؤاد عباس فؤاد</h1>
+        <p class="summary" id="sum">مختص في التسويق والمبيعات بخلفية تقنية...</p>
+    </div>
+</div>
 
 <script>
+    const translations = {
+        "ar": {
+            "t1": "معلومات الاتصال",
+            "name": "فؤاد عباس فؤاد",
+            "sum": "مختص في التسويق والمبيعات بخلفية تقنية..."
+        },
+        "en": {
+            "t1": "Contact Information",
+            "name": "Fouad Abbas Fouad",
+            "sum": "Marketing and Sales professional with a technical background in software development..."
+        }
+    };
+
     function toggleLang() {
         const html = document.getElementById('cv-html');
-        if (html.dir === "rtl") {
-            html.dir = "ltr";
-            html.lang = "en";
-            // هنا يمكنك إضافة منطق استبدال النصوص بالعربية إلى الإنجليزية
-            alert("This will switch content to English (requires full translation content)");
-        } else {
-            html.dir = "rtl";
-            html.lang = "ar";
+        const lang = html.lang === "ar" ? "en" : "ar";
+        
+        html.lang = lang;
+        html.dir = (lang === "ar") ? "rtl" : "ltr";
+
+        // تحديث النصوص
+        for (let id in translations[lang]) {
+            document.getElementById(id).innerText = translations[lang][id];
         }
     }
 </script>
