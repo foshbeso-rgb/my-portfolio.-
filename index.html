@@ -2,18 +2,17 @@
 <html lang="ar" dir="rtl" id="html-root">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
+    <title>السيرة الذاتية - فؤاد عباس فؤاد</title>
     <style>
         :root { --accent: #2c3e50; --gold: #c5a059; }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f0f2f5; color: #333; padding: 20px; }
         .cv-card { max-width: 900px; margin: auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border-top: 8px solid var(--gold); }
         .lang-switch { text-align: center; margin-bottom: 25px; }
-        .lang-switch button { padding: 8px 20px; cursor: pointer; border: none; background: var(--accent); color: #fff; border-radius: 5px; margin: 0 5px; font-weight: bold; transition: 0.3s; }
-        .lang-switch button:hover { background: var(--gold); }
-        h1 { color: var(--accent); margin-bottom: 5px; }
+        .lang-switch button { padding: 8px 20px; cursor: pointer; border: none; background: var(--accent); color: #fff; border-radius: 5px; margin: 0 5px; font-weight: bold; }
+        h1 { color: var(--accent); margin-bottom: 5px; text-align: center; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         h2 { color: var(--gold); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; font-size: 1.3em; }
-        .item { margin-bottom: 10px; font-size: 0.95em; }
+        .item { margin-bottom: 15px; line-height: 1.6; font-size: 0.95em; }
     </style>
 </head>
 <body>
@@ -21,26 +20,24 @@
 <div class="cv-card">
     <div class="lang-switch">
         <button onclick="updatePage('ar')">العربية</button>
-        <button onclick="updatePage('en')">English</button>
+        <button onclick="statusUpdate('en')">English</button>
     </div>
 
-    <div style="text-align: center;">
-        <h1 id="name">فؤاد عباس فؤاد</h1>
-        <p id="contact">01010169726 | foshbeso@gmail.com</p>
-    </div>
+    <h1><span id="name">فؤاد عباس فؤاد</span></h1>
+    <p style="text-align: center;" id="contact">01010169726 | foshbeso@gmail.com</p>
 
     <div class="grid">
         <div>
             <h2 id="exp-title">الخبرات المهنية</h2>
             <div id="exp-list" class="item"></div>
-            <h2 id="skills-edu-title">مهارات ودراسات</h2>
-            <div id="skills-edu-list" class="item"></div>
+            <h2 id="edu-title">التعليم</h2>
+            <div id="edu-list" class="item"></div>
         </div>
         <div>
-            <h2 id="life-skills-title">المهارات الحياتية</h2>
-            <div id="life-skills-list" class="item"></div>
-            <h2 id="projects-title">المشاريع واللغات</h2>
-            <div id="projects-list" class="item"></div>
+            <h2 id="certs-title">التدريبات والشهادات</h2>
+            <div id="certs-list" class="item"></div>
+            <h2 id="skills-title">المهارات واللغات</h2>
+            <div id="skills-list" class="item"></div>
         </div>
     </div>
 </div>
@@ -50,24 +47,24 @@ const data = {
     ar: { 
         name: "فؤاد عباس فؤاد", 
         exp: "الخبرات المهنية", 
-        expList: "• <b>كاتب فورمان - النيل للغاز</b> (2014-2015)<br>• <b>مساعد طباخ - الشيف سرحان</b> (2017-2019)<br>• <b>تسويق وخدمة عملاء - الأكاديمية الدولية</b> (2016)<br>• <b>مبيعات خارجية - طيبة للسمعيات</b> (2016)", 
-        skillsEdu: "مهارات ودراسات", 
-        skillsEduList: "• <b>تقني:</b> Flutter, Python, Django, Oracle DB<br>• <b>دراسي:</b> دبلوم صناعي (إلكترونيات)<br>• <b>تدريبات:</b> CTC (إدارة مشروعات) | It Shark (DB)", 
-        lifeSkills: "المهارات الحياتية", 
-        lifeSkillsList: "• إدخال بيانات | أعمال مكتب | سكرتارية واستقبال<br>• علاقات عامة | MS Office (ممتاز)<br>• رخصة قيادة: دراجات نارية<br>• متاح للعمل خارج القاهرة", 
-        projects: "المشاريع واللغات", 
-        projectsList: "• <b>المشاريع:</b> Jarvis (مساعد صوتي)، منصة E-commerce<br>• <b>اللغات:</b> العربية (الأم)، الإنجليزية (جيد)" 
+        expList: "• <b>External Sales & Marketing Officer</b> - طيبة للتجارة (2015-2020)<br>• <b>Marketing Specialist</b> - It Academy (2017-2018)<br>• <b>كاتب فورمان</b> - النيل للغاز (2014-2015)", 
+        edu: "التعليم", 
+        eduList: "• دبلوم صناعي - إلكترونيات (2010)", 
+        certs: "التدريبات والشهادات", 
+        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (إدارة مشروعات)<br>• It Shark (قواعد بيانات)", 
+        skills: "المهارات واللغات", 
+        skillsList: "• <b>المهارات:</b> Flutter, Python, Django, MS Office (Expert)<br>• <b>اللغات:</b> الإنجليزية (جيد)<br>• <b>متاح للعمل:</b> خارج القاهرة" 
     },
     en: { 
         name: "Fouad Abbas Fouad", 
         exp: "Professional Experience", 
-        expList: "• <b>Foreman Clerk - Nile Gas</b> (2014-2015)<br>• <b>Assistant Chef - Chef Sarhan</b> (2017-2019)<br>• <b>Marketing & CS - Int. Academy</b> (2016)<br>• <b>Outdoor Sales - Taiba Audio</b> (2016)", 
-        skillsEdu: "Technical Skills & Education", 
-        skillsEduList: "• <b>Technical:</b> Flutter, Python, Django, Oracle DB<br>• <b>Education:</b> Industrial Diploma (Electronics)<br>• <b>Training:</b> CTC (Project Mgmt) | It Shark (DB)", 
-        lifeSkills: "Life & Soft Skills", 
-        lifeSkillsList: "• Data Entry | Office Admin | Reception<br>• Public Relations | MS Office (Expert)<br>• License: Motorcycle<br>• Willing to relocate", 
-        projects: "Projects & Languages", 
-        projectsList: "• <b>Projects:</b> Jarvis (Voice Assistant), E-commerce Platform<br>• <b>Languages:</b> Arabic (Native), English (Good)" 
+        expList: "• <b>External Sales & Marketing Officer</b> - Taiba Trading (2015-2020)<br>• <b>Marketing Specialist</b> - It Academy (2017-2018)<br>• <b>Foreman Clerk</b> - Nile Gas (2014-2015)", 
+        edu: "Education", 
+        eduList: "• Industrial Diploma - Electronics (2010)", 
+        certs: "Training & Certificates", 
+        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (Project Management)<br>• It Shark (Databases)", 
+        skills: "Skills & Languages", 
+        skillsList: "• <b>Skills:</b> Flutter, Python, Django, MS Office (Expert)<br>• <b>Languages:</b> English (Good)<br>• <b>Relocation:</b> Willing to relocate" 
     }
 };
 
@@ -77,12 +74,12 @@ function updatePage(lang) {
     document.getElementById('name').innerHTML = data[lang].name;
     document.getElementById('exp-title').innerHTML = data[lang].exp;
     document.getElementById('exp-list').innerHTML = data[lang].expList;
-    document.getElementById('skills-edu-title').innerHTML = data[lang].skillsEdu;
-    document.getElementById('skills-edu-list').innerHTML = data[lang].skillsEduList;
-    document.getElementById('life-skills-title').innerHTML = data[lang].lifeSkills;
-    document.getElementById('life-skills-list').innerHTML = data[lang].lifeSkillsList;
-    document.getElementById('projects-title').innerHTML = data[lang].projects;
-    document.getElementById('projects-list').innerHTML = data[lang].projectsList;
+    document.getElementById('edu-title').innerHTML = data[lang].edu;
+    document.getElementById('edu-list').innerHTML = data[lang].eduList;
+    document.getElementById('certs-title').innerHTML = data[lang].certs;
+    document.getElementById('certs-list').innerHTML = data[lang].certsList;
+    document.getElementById('skills-title').innerHTML = data[lang].skills;
+    document.getElementById('skills-list').innerHTML = data[lang].skillsList;
 }
 updatePage('ar');
 </script>
