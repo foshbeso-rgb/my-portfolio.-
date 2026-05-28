@@ -11,6 +11,8 @@
         .card { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #333; margin-bottom: 20px; }
         h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; display: flex; align-items: center; gap: 10px; }
         .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .lang-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        .lang-table th, .lang-table td { border: 1px solid #333; padding: 8px; text-align: center; }
         .skill-tag { display: inline-block; background: #222; padding: 6px 12px; border-radius: 5px; margin: 4px; font-size: 13px; border-right: 3px solid var(--gold); }
         .job-item { margin-bottom: 10px; padding-right: 10px; border-right: 3px solid var(--gold); }
     </style>
@@ -25,54 +27,39 @@
 
     <!-- 1. بيانات الاتصال -->
     <div class="card">
-        <h3><i class="fas fa-phone-alt"></i> بيانات الاتصال</h3>
+        <h3><i class="fas fa-phone-alt"></i> بيانات الاتصال | Contact Details</h3>
         <div class="info-grid">
             <div><i class="fas fa-envelope"></i> foshbeso@gmail.com</div>
             <div><i class="fas fa-mobile-alt"></i> 01140248506</div>
-            <div><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</div>
+            <div><i class="fas fa-map-marker-alt"></i> القاهرة، مصر | Cairo, Egypt</div>
         </div>
     </div>
 
-    <!-- 2. البيانات الشخصية -->
+    <!-- 2. اللغات | Languages -->
     <div class="card">
-        <h3><i class="fas fa-user"></i> البيانات الشخصية</h3>
-        <div class="info-grid">
-            <div><b>تاريخ الميلاد:</b> 10 نوفمبر 1991</div>
-            <div><b>الجنسية:</b> مصري</div>
-            <div><b>الحالة الاجتماعية:</b> أعزب</div>
-            <div><b>الخدمة العسكرية:</b> إعفاء نهائي</div>
-        </div>
+        <h3><i class="fas fa-language"></i> اللغات | Languages</h3>
+        <table class="lang-table">
+            <tr><th>اللغة | Language</th><th>المستوى | Level</th></tr>
+            <tr><td>العربية | Arabic</td><td>اللغة الأم | Native</td></tr>
+            <tr><td>الإنجليزية | English</td><td>متوسط (خبرة +10 سنوات) | Intermediate (+10 Years Exp)[cite: 1]</td></tr>
+        </table>
     </div>
 
     <!-- 3. التعليم والشهادات -->
     <div class="card">
-        <h3><i class="fas fa-graduation-cap"></i> التعليم والشهادات</h3>
-        <div class="job-item"><b>Oracle DB Administration:</b> شهادة احترافية (2016)</div>
-        <div class="job-item"><b>ICDL:</b> الرخصة الدولية لقيادة الحاسب الآلي</div>
+        <h3><i class="fas fa-graduation-cap"></i> التعليم والشهادات | Education</h3>
+        <div class="job-item"><b>Oracle DB Administration:</b> شهادة احترافية (2016)[cite: 1]</div>
+        <div class="job-item"><b>ICDL:</b> الرخصة الدولية لقيادة الحاسب الآلي[cite: 1]</div>
     </div>
 
-    <!-- 4. الخبرات العملية -->
+    <!-- 4. المهارات والخبرات -->
     <div class="card">
-        <h3><i class="fas fa-briefcase"></i> خبرات العمل</h3>
-        <div class="job-item"><b>كاتب فورمان:</b> شركة النيل للغاز (2014 - 2015)</div>
-        <div class="job-item"><b>خبرات إضافية:</b> تسويق، خدمة عملاء، وسكرتارية (أكثر من 3 سنوات خبرة تراكمية)</div>
-    </div>
-
-    <!-- 5. المهارات التقنية -->
-    <div class="card">
-        <h3><i class="fas fa-tools"></i> المهارات التقنية</h3>
+        <h3><i class="fas fa-tools"></i> المهارات والخبرات | Skills & Experience</h3>
         <div class="skill-tag">Full-Stack Development</div>
         <div class="skill-tag">Oracle Database</div>
         <div class="skill-tag">Flutter & Python</div>
-        <div class="skill-tag">Microsoft Office / Data Entry</div>
-        <div class="skill-tag">System Administration</div>
-    </div>
-
-    <!-- 6. المشاريع البرمجية -->
-    <div class="card">
-        <h3><i class="fas fa-project-diagram"></i> المشاريع البرمجية</h3>
-        <div class="job-item"><b>COMMANDER FOUAD:</b> مساعد صوتي ونظام أمني ذكي.</div>
-        <div class="job-item"><b>المتجر الإلكتروني:</b> منصة مخصصة لعرض وتصنيع الصوفا.</div>
+        <div class="skill-tag">السكرتارية والإدارة | Secretarial & Admin</div>
+        <div class="job-item" style="margin-top:10px;"><b>خبرة العمل:</b> كاتب في شركة النيل للغاز (2014-2015)[cite: 1]</div>
     </div>
 </div>
 
