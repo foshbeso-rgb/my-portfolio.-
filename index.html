@@ -3,43 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        :root { --gold: #C5A059; --bg: #0a0a0a; --text: #e0e0e0; }
-        body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; padding: 40px; }
-        .container { max-width: 900px; margin: auto; background: #111; padding: 50px; border: 1px solid #222; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
-        .header { text-align: center; margin-bottom: 40px; }
-        .lang-btns { text-align: center; margin-bottom: 30px; }
-        button { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 5px 15px; cursor: pointer; margin: 0 5px; border-radius: 4px; }
-        h2 { color: var(--gold); border-bottom: 1px solid var(--gold); padding-bottom: 10px; margin-top: 30px; text-transform: uppercase; }
-        .flex { display: flex; justify-content: space-between; margin-bottom: 10px; }
-        .item-title { font-weight: bold; color: #fff; }
-        [lang="ar"] .en { display: none; }
-        [lang="en"] .ar { display: none; }
+        :root { --main-color: #2c3e50; --accent: #c5a059; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f4f4; padding: 20px; }
+        .page { max-width: 800px; margin: auto; background: white; color: #333; padding: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .header { border-bottom: 2px solid var(--accent); padding-bottom: 20px; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; }
+        h2 { color: var(--main-color); font-size: 18px; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid #ccc; }
+        .item { margin-bottom: 15px; }
+        .date { font-weight: bold; color: var(--accent); display: block; font-size: 0.9em; }
+        .lang-btn { text-align: center; margin-bottom: 20px; }
+        button { padding: 10px 20px; cursor: pointer; background: var(--main-color); color: white; border: none; border-radius: 5px; }
+        [lang="ar"] .en { display: none; } [lang="en"] .ar { display: none; }
     </style>
 </head>
 <body lang="ar">
-<div class="container">
-    <div class="lang-btns">
-        <button onclick="switchLang('ar')">العربية</button>
-        <button onclick="switchLang('en')">English</button>
-    </div>
-
+<div class="page">
+    <div class="lang-btn"><button onclick="switchLang('ar')">العربية</button> <button onclick="switchLang('en')">English</button></div>
+    
     <div class="header">
-        <h1 style="color:var(--gold)">
-            <span class="ar">فؤاد عباس فؤاد</span>
-            <span class="en">Fouad Abbas Fouad</span>
+        <h1 style="color: var(--main-color); margin: 0;">
+            <span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span>
         </h1>
+        <p><span class="ar">سكرتارية | تكنولوجيا المعلومات | إدارة</span><span class="en">Secretariat | IT | Management</span></p>
     </div>
 
-    <h2><span class="ar">بيانات الاتصال</span><span class="en">Contact</span></h2>
-    <div class="flex"><span>Phone: 01140248506</span> <span>Email: foshbeso@gmail.com</span></div>
-
-    <h2><span class="ar">الخبرات العملية</span><span class="en">Experience</span></h2>
-    <div class="flex"><span class="item-title"><span class="ar">كاتب - النيل للغاز</span><span class="en">Clerk - Nile Gas</span></span> <span>2014 - 2015</span></div>
-    <div class="flex"><span class="item-title"><span class="ar">مساعد طباخ</span><span class="en">Assistant Chef</span></span> <span>2017 - 2019</span></div>
-    <div class="flex"><span class="item-title"><span class="ar">تسويق وخدمة عملاء</span><span class="en">Marketing & CS</span></span> <span>2016</span></div>
-
-    <h2><span class="ar">المهارات التقنية</span><span class="en">Technical Skills</span></h2>
-    <p>Full-Stack Development | Oracle DB Administration | Flutter & Python | Microsoft Office | System Admin</p>
+    <div class="grid">
+        <div class="sidebar">
+            <h2><span class="ar">اتصل</span><span class="en">Contact</span></h2>
+            <p>01140248506<br>foshbeso@gmail.com</p>
+            <h2><span class="ar">التعليم</span><span class="en">Education</span></h2>
+            <p><b><span class="ar">بكالوريوس نظم معلومات إدارية</span><span class="en">Bachelor of MIS</span></b><br>الجزيرة أكاديمي (2015)</p>
+        </div>
+        
+        <div class="main">
+            <h2><span class="ar">الخبرة العملية</span><span class="en">Experience</span></h2>
+            <div class="item">
+                <span class="date">2014 - 2015</span>
+                <b><span class="ar">كاتب - شركة النيل للغاز</span><span class="en">Clerk - Nile Gas</span></b>
+                <p><span class="ar">عمل إداري متخصص في توزيع الغاز الطبيعي.</span><span class="en">Administrative work specialized in natural gas distribution.</span></p>
+            </div>
+            
+            <h2><span class="ar">المهارات</span><span class="en">Skills</span></h2>
+            <p>Full-Stack (Flutter/Python), Oracle DB, ICDL, Customer Service, Office Management.</p>
+        </div>
+    </div>
 </div>
 
 <script>
