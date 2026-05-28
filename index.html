@@ -2,90 +2,83 @@
 <html lang="ar" dir="rtl" id="html-root">
 <head>
     <meta charset="UTF-8">
-    <title>CV | Fouad Abbas</title>
+    <title>السيرة الذاتية - فؤاد عباس فؤاد</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
-        :root { --main: #2d3436; --gold: #b38b59; --bg: #f8f9fa; }
-        body { font-family: 'Cairo', sans-serif; background: var(--bg); color: var(--main); padding: 40px; }
-        .page { max-width: 950px; margin: auto; background: white; padding: 60px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px; }
-        .lang-btns button { border: 1px solid var(--gold); background: transparent; padding: 8px 15px; cursor: pointer; border-radius: 20px; transition: 0.3s; }
-        .lang-btns button:hover { background: var(--gold); color: white; }
-        .main-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px; }
-        .section-title { color: var(--gold); font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; border-bottom: 2px solid var(--gold); display: inline-block; }
-        .card { background: #fdfdfd; padding: 20px; border-right: 4px solid var(--gold); margin-bottom: 20px; transition: 0.3s; }
-        .card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        body { font-family: sans-serif; background: #f4f4f4; padding: 20px; }
+        .page { max-width: 800px; margin: auto; background: white; padding: 40px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px; }
+        .lang-switch { text-align: center; margin-bottom: 20px; }
+        button { padding: 8px 15px; cursor: pointer; }
+        .content { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        h1, h2 { color: #8b6508; }
+        .item { margin-bottom: 10px; line-height: 1.5; }
     </style>
 </head>
 <body>
 <div class="page">
-    <div class="header">
-        <div>
-            <h1 id="name">فؤاد عباس فؤاد</h1>
-            <p>foshbeso@gmail.com | 01010169726</p>
-        </div>
-        <div class="lang-btns">
-            <button onclick="changeLang('ar')">العربية</button>
-            <button onclick="changeLang('en')">English</button>
-        </div>
+    <div class="lang-switch">
+        <button onclick="updatePage('ar')">العربية</button>
+        <button onclick="updatePage('en')">English</button>
     </div>
-
-    <div class="main-grid">
+    <div style="text-align: center;">
+        <h1 id="name">فؤاد عباس فؤاد</h1>
+        <p>foshbeso@gmail.com | 01010169726</p>
+    </div>
+    <div class="content">
         <div>
-            <h2 class="section-title" id="exp-title">الخبرات المهنية</h2>
-            <div id="exp-list"></div>
-            <h2 class="section-title" id="edu-title">التعليم</h2>
-            <div id="edu-list"></div>
+            <h2 id="certs-title">التدريبات والشهادات</h2>
+            <div id="certs-list" class="item"></div>
+            <h2 id="skills-title">المهارات واللغات</h2>
+            <div id="skills-list" class="item"></div>
         </div>
         <div>
-            <h2 class="section-title" id="certs-title">التدريبات</h2>
-            <div id="certs-list"></div>
-            <h2 class="section-title" id="skills-title">المهارات واللغات</h2>
-            <div id="skills-list"></div>
+            <h2 id="exp-title">الخبرات المهنية</h2>
+            <div id="exp-list" class="item"></div>
+            <h2 id="edu-title">التعليم</h2>
+            <div id="edu-list" class="item"></div>
         </div>
     </div>
 </div>
 
 <script>
 const data = {
-    ar: { 
-        name: "فؤاد عباس فؤاد", 
-        exp: "الخبرات المهنية", 
-        expList: "<div class='card'><b>External Sales & Marketing Officer</b><br>طيبة للتجارة (2015-2020)</div><div class='card'><b>Marketing Specialist</b><br>It Academy (2017-2018)</div><div class='card'><b>كاتب فورمان</b><br>النيل للغاز (2014-2015)</div>",
-        edu: "التعليم", 
-        eduList: "<div class='card'>دبلوم صناعي - إلكترونيات (2010)</div>", 
-        certs: "التدريبات والشهادات", 
-        certsList: "<div class='card'>Oracle DB Administration</div><div class='card'>CTC (إدارة مشروعات)</div><div class='card'>It Shark (قواعد بيانات)</div>", 
-        skills: "المهارات واللغات", 
-        skillsList: "<div class='card'><b>المهارات:</b> Flutter, Python, Django<br><b>اللغات:</b> الإنجليزية (جيد)<br><b>إضافي:</b> رخصة دراجات نارية</div>" 
+    ar: {
+        name: "فؤاد عباس فؤاد",
+        certs: "التدريبات والشهادات",
+        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (إدارة مشروعات)<br>• It Shark (قواعد بيانات)<br>• Mini-MBA | مراسل (أخبار العالم)",
+        skills: "المهارات واللغات",
+        skillsList: "• المهارات التقنية: Flutter, Python, Django, SQL<br>• مهارات حياتية: إدخال بيانات، سكرتارية، علاقات عامة، MS Office (ممتاز)<br>• اللغات: الإنجليزية (جيد)<br>• إضافي: رخصة دراجات نارية، متاح للعمل خارج القاهرة",
+        exp: "الخبرات المهنية",
+        expList: "• External Sales & Marketing Officer - طيبة للتجارة (2015-2020)<br>• Marketing Specialist - It Academy (2017-2018)<br>• مساعد طباخ - الشيف سرحان (2017-2019)<br>• تسويق وخدمة عملاء - الأكاديمية الدولية (2016)<br>• مبيعات خارجية - طيبة للسمعيات (2016)<br>• كاتب فورمان - النيل للغاز (2014-2015)",
+        edu: "التعليم",
+        eduList: "• دبلوم صناعي - إلكترونيات (2010)<br>• ثانوية فنية نظام 3 سنوات"
     },
-    en: { 
-        name: "Fouad Abbas Fouad", 
-        exp: "Professional Experience", 
-        expList: "<div class='card'><b>External Sales & Marketing Officer</b><br>Taiba Trading (2015-2020)</div><div class='card'><b>Marketing Specialist</b><br>It Academy (2017-2018)</div><div class='card'><b>Foreman Clerk</b><br>Nile Gas (2014-2015)</div>",
-        edu: "Education", 
-        eduList: "<div class='card'>Industrial Diploma - Electronics (2010)</div>", 
-        certs: "Training & Certificates", 
-        certsList: "<div class='card'>Oracle DB Administration</div><div class='card'>CTC (Project Management)</div><div class='card'>It Shark (Databases)</div>", 
-        skills: "Skills & Languages", 
-        skillsList: "<div class='card'><b>Skills:</b> Flutter, Python, Django<br><b>Languages:</b> English (Good)<br><b>Extras:</b> Motorcycle License</div>" 
+    en: {
+        name: "Fouad Abbas Fouad",
+        certs: "Training & Certificates",
+        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (Project Management)<br>• It Shark (Databases)<br>• Mini-MBA | Journalist (Akhbar El Alam)",
+        skills: "Skills & Languages",
+        skillsList: "• Technical Skills: Flutter, Python, Django, SQL<br>• Soft Skills: Data Entry, Secretary, PR, MS Office (Expert)<br>• Languages: English (Good)<br>• Relocation: Willing to relocate, Motorcycle License",
+        exp: "Professional Experience",
+        expList: "• External Sales & Marketing Officer - Taiba Trading (2015-2020)<br>• Marketing Specialist - It Academy (2017-2018)<br>• Assistant Chef - Chef Sarhan (2017-2019)<br>• Marketing & CS - Int. Academy (2016)<br>• Outdoor Sales - Taiba Audio (2016)<br>• Foreman Clerk - Nile Gas (2014-2015)",
+        edu: "Education",
+        eduList: "• Industrial Diploma - Electronics (2010)<br>• 3-Year Technical High School"
     }
 };
 
-function changeLang(lang) {
+function updatePage(lang) {
     document.getElementById('html-root').lang = lang;
     document.getElementById('html-root').dir = (lang === 'ar') ? 'rtl' : 'ltr';
     document.getElementById('name').innerText = data[lang].name;
-    document.getElementById('exp-title').innerText = data[lang].exp;
-    document.getElementById('exp-list').innerHTML = data[lang].expList;
-    document.getElementById('edu-title').innerText = data[lang].edu;
-    document.getElementById('edu-list').innerHTML = data[lang].eduList;
     document.getElementById('certs-title').innerText = data[lang].certs;
     document.getElementById('certs-list').innerHTML = data[lang].certsList;
     document.getElementById('skills-title').innerText = data[lang].skills;
     document.getElementById('skills-list').innerHTML = data[lang].skillsList;
+    document.getElementById('exp-title').innerText = data[lang].exp;
+    document.getElementById('exp-list').innerHTML = data[lang].expList;
+    document.getElementById('edu-title').innerText = data[lang].edu;
+    document.getElementById('edu-list').innerHTML = data[lang].eduList;
 }
-changeLang('ar');
+updatePage('ar');
 </script>
 </body>
 </html>
