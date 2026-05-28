@@ -2,20 +2,18 @@
 <html lang="ar" id="html-root" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية الاحترافية | فؤاد عباس فؤاد</title>
+    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #C5A059; --dark: #050505; --light: #ffffff; }
         body { background: var(--dark); color: var(--light); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 30px; }
-        .cv-container { max-width: 800px; margin: auto; border: 1px solid #333; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .cv-container { max-width: 800px; margin: auto; border: 1px solid #333; padding: 40px; border-radius: 20px; }
         .lang-switcher { text-align: center; margin-bottom: 30px; }
-        button { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 8px 20px; cursor: pointer; border-radius: 20px; font-weight: bold; margin: 5px; transition: 0.3s; }
-        button:hover { background: var(--gold); color: var(--dark); }
-        h1 { color: var(--gold); text-align: center; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
-        .section { margin-bottom: 30px; }
-        h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; display: flex; align-items: center; gap: 15px; font-size: 20px; }
-        .content { margin-top: 15px; padding-right: 10px; border-right: 3px solid var(--gold); }
-        .item { margin-bottom: 10px; font-size: 16px; }
+        button { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 8px 20px; cursor: pointer; border-radius: 20px; font-weight: bold; margin: 5px; }
+        h1 { color: var(--gold); text-align: center; }
+        .section { margin-bottom: 25px; }
+        h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .item { margin-bottom: 8px; }
         [lang="ar"] .en { display: none; }
         [lang="en"] .ar { display: none; }
     </style>
@@ -28,34 +26,29 @@
         <button onclick="switchLang('en')">English</button>
     </div>
 
-    <h1>فؤاد عباس فؤاد</h1>
+    <h1>
+        <span class="ar">فؤاد عباس فؤاد</span>
+        <span class="en">Fouad Abbas Fouad</span>
+    </h1>
 
-    <!-- Contact Section -->
     <div class="section">
-        <h3><i class="fas fa-phone"></i> <span class="ar">بيانات الاتصال</span><span class="en">Contact Details</span></h3>
-        <div class="content">
-            <div class="item"><i class="fas fa-mobile-alt"></i> 01140248506</div>
-            <div class="item"><i class="fas fa-envelope"></i> foshbeso@gmail.com</div>
-        </div>
+        <h3><span class="ar">بيانات الاتصال</span><span class="en">Contact Details</span></h3>
+        <p>01140248506 | foshbeso@gmail.com</p>
     </div>
 
-    <!-- Experience Section -->
     <div class="section">
-        <h3><i class="fas fa-briefcase"></i> <span class="ar">الخبرات العملية</span><span class="en">Work Experience</span></h3>
-        <div class="content">
-            <div class="item"><b><span class="ar">كاتب في النيل للغاز</span><span class="en">Clerk at Nile Gas</span></b> (2014-2015)</div>
-            <div class="item"><b><span class="ar">مساعد طباخ</span><span class="en">Assistant Chef</span></b></div>
-        </div>
+        <h3><span class="ar">الخبرات العملية</span><span class="en">Work Experience</span></h3>
+        <div class="item">• <span class="ar">كاتب - النيل للغاز (2014-2015)</span><span class="en">Clerk - Nile Gas (2014-2015)</span></div>
+        <div class="item">• <span class="ar">مساعد طباخ - الشيف سرحان (سنتين)</span><span class="en">Assistant Chef - Chef Sarhan (2 Years)</span></div>
+        <div class="item">• <span class="ar">تسويق وخدمة عملاء - الأكاديمية الدولية</span><span class="en">Marketing & CS - International Academy</span></div>
+        <div class="item">• <span class="ar">Sales Outdoor - طيبة للسمعيات</span><span class="en">Sales Outdoor - Taiba Audio</span></div>
     </div>
 
-    <!-- Skills Section -->
     <div class="section">
-        <h3><i class="fas fa-tools"></i> <span class="ar">المهارات التقنية</span><span class="en">Technical Skills</span></h3>
-        <div class="content">
-            <div class="item">• Full-Stack Development</div>
-            <div class="item">• Oracle DB Administration</div>
-            <div class="item">• Flutter & Python</div>
-        </div>
+        <h3><span class="ar">المهارات والتدريبات</span><span class="en">Skills & Training</span></h3>
+        <div class="item">• Oracle DB Administration / ICDL</div>
+        <div class="item">• Full-Stack (Flutter, Python, Django)</div>
+        <div class="item">• <span class="ar">إدارة مشروعات - قواعد بيانات</span><span class="en">Project Management - Databases</span></div>
     </div>
 </div>
 
