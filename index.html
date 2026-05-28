@@ -10,10 +10,8 @@
         .cv-container { max-width: 800px; margin: auto; }
         .card { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #333; margin-bottom: 20px; }
         h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; display: flex; align-items: center; gap: 10px; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; background: #1a1a1a; padding: 15px; border-radius: 10px; }
-        .skill-section { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .skill-group h4 { color: #aaa; margin: 0 0 10px 0; font-size: 14px; text-transform: uppercase; border-bottom: 1px solid #222; padding-bottom: 5px; }
-        .skill-tag { display: block; background: #222; padding: 6px 12px; border-radius: 5px; margin-bottom: 5px; font-size: 13px; border-right: 3px solid var(--gold); }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .skill-item { background: #222; padding: 10px; border-radius: 5px; margin-bottom: 8px; border-right: 4px solid var(--gold); }
     </style>
 </head>
 <body>
@@ -24,56 +22,41 @@
         <p>محترف عمليات فندقية | مطور برمجيات Full-Stack</p>
     </div>
 
-    <!-- بيانات الاتصال -->
-    <div class="card">
-        <h3><i class="fas fa-address-book"></i> بيانات الاتصال</h3>
-        <div class="contact-grid">
-            <div><i class="fas fa-envelope"></i> البريد الإلكتروني: [أضف بريدك هنا]</div>
-            <div><i class="fas fa-phone"></i> رقم الهاتف: [أضف رقمك هنا]</div>
-            <div><i class="fab fa-github"></i> GitHub: [أضف رابط حسابك]</div>
-            <div><i class="fas fa-map-marker-alt"></i> الموقع: شرم الشيخ، مصر</div>
-        </div>
-    </div>
-
     <!-- البيانات الشخصية -->
     <div class="card">
         <h3><i class="fas fa-user"></i> البيانات الشخصية</h3>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
             <div><b>الاسم:</b> فؤاد عباس فؤاد</div>
+            <div><b>مقر العمل:</b> شرم الشيخ</div>
             <div><b>المهنة:</b> Four Seasons Resort</div>
-            <div><b>تاريخ الميلاد:</b> 10 نوفمبر 1991</div>
             <div><b>التعليم:</b> MIS - Al-Jazira Higher Institute</div>
         </div>
     </div>
 
-    <!-- المهارات المقسمة -->
+    <!-- المهارات والخبرات -->
     <div class="card">
         <h3><i class="fas fa-tools"></i> المهارات والخبرات</h3>
-        <div class="skill-section">
-            <div class="skill-group">
+        <div class="skills-grid">
+            <div>
                 <h4>تطوير البرمجيات</h4>
-                <span class="skill-tag">Flutter & Dart</span>
-                <span class="skill-tag">Python (Django/Flask)</span>
-                <span class="skill-tag">Full-Stack Development</span>
+                <div class="skill-item">Flutter & Dart</div>
+                <div class="skill-item">Python (Django/Flask)</div>
+                <div class="skill-item">Full-Stack Development</div>
             </div>
-            <div class="skill-group">
+            <div>
                 <h4>نظم وتشغيل</h4>
-                <span class="skill-tag">System Administration</span>
-                <span class="skill-tag">Hardware Maintenance</span>
-                <span class="skill-tag">BIOS & SSD Config</span>
-            </div>
-            <div class="skill-group">
-                <h4>إدارة ومشروعات</h4>
-                <span class="skill-tag">Project Management</span>
-                <span class="skill-tag">دراسات الجدوى</span>
-            </div>
-            <div class="skill-group">
-                <h4>اللغات</h4>
-                <span class="skill-tag">العربية (الأم)</span>
-                <span class="skill-tag">الإنجليزية (احترافي)</span>
-                <span class="skill-tag">الصينية (أساسيات)</span>
+                <div class="skill-item">System Administration</div>
+                <div class="skill-item">Hardware Maintenance</div>
+                <div class="skill-item">BIOS & SSD Config</div>
             </div>
         </div>
+    </div>
+
+    <!-- المشاريع -->
+    <div class="card">
+        <h3><i class="fas fa-project-diagram"></i> المشاريع والإنجازات</h3>
+        <div class="skill-item"><b>COMMANDER FOUAD (Jarvis):</b> نظام أمني ومساعد صوتي ذكي يعمل بـ Python.</div>
+        <div class="skill-item"><b>المتجر الإلكتروني:</b> منصة مخصصة لعرض وتصنيع الصوفا.</div>
     </div>
 </div>
 
