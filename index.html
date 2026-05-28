@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #C5A059; --dark: #050505; }
-        body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; transition: 0.3s; }
+        body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
         .cv-container { max-width: 800px; margin: auto; }
-        .lang-switcher { text-align: left; margin-bottom: 20px; }
-        button { background: var(--gold); border: none; padding: 8px 15px; cursor: pointer; border-radius: 5px; font-weight: bold; }
+        .lang-switcher { text-align: center; margin-bottom: 20px; }
+        button { background: var(--gold); border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-weight: bold; margin: 5px; }
         .card { background: #111; padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 15px; }
-        h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 8px; }
-        
-        /* إخفاء العناصر بناءً على اللغة */
+        h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        /* التحكم في إظهار اللغات */
         [lang="ar"] .en { display: none; }
         [lang="en"] .ar { display: none; }
     </style>
@@ -26,27 +25,24 @@
         <button onclick="switchLang('en')">English</button>
     </div>
 
-    <div style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: var(--gold);">فؤاد عباس فؤاد</h1>
-    </div>
+    <h1 style="color: var(--gold); text-align: center;">فؤاد عباس فؤاد</h1>
 
     <div class="card">
-        <h3><i class="fas fa-phone"></i> <span class="ar">بيانات الاتصال</span><span class="en">Contact Details</span></h3>
+        <h3><i class="fas fa-phone"></i> <span class="ar">بيانات الاتصال</span><span class="en">Contact</span></h3>
         <p>01140248506</p>
         <p>foshbeso@gmail.com</p>
     </div>
 
     <div class="card">
-        <h3><i class="fas fa-briefcase"></i> <span class="ar">الخبرات العملية</span><span class="en">Work Experience</span></h3>
-        <p><span class="ar">كاتب في النيل للغاز</span><span class="en">Clerk at Nile Gas</span></p>
+        <h3><i class="fas fa-briefcase"></i> <span class="ar">الخبرات</span><span class="en">Experience</span></h3>
+        <p><span class="ar">كاتب في النيل للغاز (2014-2015)</span><span class="en">Clerk at Nile Gas (2014-2015)</span></p>
         <p><span class="ar">مساعد طباخ</span><span class="en">Assistant Chef</span></p>
     </div>
 
     <div class="card">
         <h3><i class="fas fa-tools"></i> <span class="ar">المهارات</span><span class="en">Skills</span></h3>
         <p>Full-Stack Development</p>
-        <p>Flutter & Python</p>
-        <p>Oracle Database</p>
+        <p>Oracle DB Administration</p>
     </div>
 </div>
 
@@ -56,6 +52,5 @@
         document.getElementById('html-root').setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
     }
 </script>
-
 </body>
 </html>
