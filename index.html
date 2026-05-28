@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        /* التنسيقات ثابتة كما هي */
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; line-height: 1.6; }
         .controls { text-align: center; margin-bottom: 20px; }
         .btn { padding: 10px 20px; cursor: pointer; background: #2c3e50; border: none; color: white; border-radius: 4px; font-weight: bold; }
-        .cv-card { max-width: 900px; margin: auto; background: white; display: flex; overflow: hidden; }
+        .cv-card { max-width: 900px; margin: auto; background: white; display: flex; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .sidebar { background: #2c3e50; color: #fff; width: 350px; padding: 30px; }
         .main-content { flex: 1; padding: 30px; }
+        h2 { color: #c5a059; margin-top: 20px; border-bottom: 2px solid #c5a059; }
     </style>
 </head>
 <body>
@@ -22,10 +22,14 @@
     <div class="sidebar">
         <h2 id="t1">معلومات الاتصال</h2>
         <p id="t2">الهاتف: 01010169726<br>البريد: foshbeso@gmail.com</p>
+        <h2 id="t3">المهارات التقنية</h2>
+        <p id="t4">Python, Django, Flutter, Hardware & System Admin</p>
     </div>
     <div class="main-content">
         <h1 id="name">فؤاد عباس فؤاد</h1>
-        <p id="sum">مختص في التسويق والمبيعات بخلفية تقنية.</p>
+        <p id="sum">مختص تسويق ومبيعات بخلفية تقنية في تطوير البرمجيات.</p>
+        <h2 id="t5">الخبرات المهنية</h2>
+        <p id="t6">خبير مبيعات وتسويق خارجي في شركة طيبة للتجارة.</p>
     </div>
 </div>
 
@@ -34,25 +38,30 @@
         "ar": {
             "t1": "معلومات الاتصال",
             "t2": "الهاتف: 01010169726<br>البريد: foshbeso@gmail.com",
+            "t3": "المهارات التقنية",
+            "t4": "Python, Django, Flutter, Hardware & System Admin",
             "name": "فؤاد عباس فؤاد",
-            "sum": "مختص في التسويق والمبيعات بخلفية تقنية."
+            "sum": "مختص تسويق ومبيعات بخلفية تقنية في تطوير البرمجيات.",
+            "t5": "الخبرات المهنية",
+            "t6": "خبير مبيعات وتسويق خارجي في شركة طيبة للتجارة."
         },
         "en": {
             "t1": "Contact Information",
             "t2": "Phone: 01010169726<br>Email: foshbeso@gmail.com",
+            "t3": "Technical Skills",
+            "t4": "Python, Django, Flutter, Hardware & System Admin",
             "name": "Fouad Abbas Fouad",
-            "sum": "Marketing and sales specialist with a technical background."
+            "sum": "Marketing and sales specialist with a technical background in software development.",
+            "t5": "Professional Experience",
+            "t6": "External Sales and Marketing Officer at Taiba Trading."
         }
     };
 
     function toggleLang() {
         const html = document.getElementById('cv-html');
         const lang = (html.lang === "ar") ? "en" : "ar";
-        
         html.lang = lang;
         html.dir = (lang === "ar") ? "rtl" : "ltr";
-
-        // تحديث النصوص مباشرة بدون رسائل تنبيه
         for (let id in translations[lang]) {
             document.getElementById(id).innerHTML = translations[lang][id];
         }
