@@ -2,66 +2,68 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية الاحترافية | فؤاد عباس فؤاد</title>
+    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #C5A059; --dark: #050505; }
-        body { background: var(--dark); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
+        body { background: var(--dark); color: white; font-family: 'Arial', sans-serif; margin: 0; padding: 20px; }
         .container { max-width: 800px; margin: auto; }
-        .card { background: #111; padding: 25px; border-radius: 15px; border: 1px solid var(--gold); margin-bottom: 20px; }
-        h1, h2, h3 { color: var(--gold); }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .skill-tag { display: inline-block; background: #222; padding: 5px 15px; border-radius: 20px; margin: 5px; border: 1px solid #444; }
-        .project { border-right: 4px solid var(--gold); padding-right: 15px; margin-bottom: 20px; }
+        .card { background: #111; padding: 30px; border-radius: 20px; border: 1px solid var(--gold); margin-bottom: 25px; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: var(--gold); margin: 0; font-size: 32px; }
+        h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .info-item { margin-bottom: 15px; }
+        .info-item b { color: #888; display: block; font-size: 12px; text-transform: uppercase; }
+        .skill-list { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag { background: #222; padding: 8px 15px; border-radius: 50px; border: 1px solid #444; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="card" style="text-align: center;">
+    <div class="header">
         <h1>فؤاد عباس فؤاد</h1>
         <p>محترف عمليات فندقية | مطور برمجيات Full-Stack</p>
     </div>
 
-    <!-- البيانات الشخصية -->
+    <!-- البيانات الشخصية الكاملة -->
     <div class="card">
-        <h3><i class="fas fa-user"></i> الملف الشخصي</h3>
-        <div class="grid">
-            <div><b>تاريخ الميلاد:</b> 10 نوفمبر 1991[cite: 1]</div>
-            <div><b>مقر العمل:</b> شرم الشيخ (من القاهرة)[cite: 1]</div>
-            <div><b>العمل الحالي:</b> Four Seasons Resort[cite: 1]</div>
-            <div><b>المؤهل الدراسي:</b> MIS - Al-Jazira Higher Institute[cite: 1]</div>
-            <div><b>التعليم الفني:</b> دبلوم صناعي - Radwaniya[cite: 1]</div>
+        <h3><i class="fas fa-user"></i> البيانات الشخصية</h3>
+        <div class="info-grid">
+            <div class="info-item"><b>الاسم بالكامل</b> فؤاد عباس فؤاد[cite: 1]</div>
+            <div class="info-item"><b>تاريخ الميلاد</b> 10 نوفمبر 1991[cite: 1]</div>
+            <div class="info-item"><b>مقر العمل الحالي</b> شرم الشيخ (مقيم لظروف العمل)[cite: 1]</div>
+            <div class="info-item"><b>المدينة الأصلية</b> القاهرة[cite: 1]</div>
+            <div class="info-item"><b>المهنة الحالية</b> Four Seasons Resort[cite: 1]</div>
+            <div class="info-item"><b>التعليم الجامعي</b> MIS - Al-Jazira Higher Institute[cite: 1]</div>
+            <div class="info-item"><b>التعليم التقني</b> دبلوم صناعي - Radwaniya[cite: 1]</div>
         </div>
     </div>
 
     <!-- المهارات -->
     <div class="card">
         <h3><i class="fas fa-code"></i> المهارات التقنية</h3>
-        <div class="skill-tag">Full-Stack Development</div>
-        <div class="skill-tag">Flutter & Dart</div>
-        <div class="skill-tag">Python (Django/Flask)</div>
-        <div class="skill-tag">System Administration</div>
-        <div class="skill-tag">Hardware & SSD Maintenance</div>
-        <div class="skill-tag">BIOS Configuration</div>
-        <div class="skill-tag">Project Management</div>
+        <div class="skill-list">
+            <span class="skill-tag">Full-Stack Development</span>
+            <span class="skill-tag">Flutter & Dart</span>
+            <span class="skill-tag">Python (Django/Flask)</span>
+            <span class="skill-tag">System Administration</span>
+            <span class="skill-tag">Hardware Maintenance</span>
+            <span class="skill-tag">SSD & BIOS Config</span>
+            <span class="skill-tag">Project Management</span>
+        </div>
     </div>
 
     <!-- المشاريع -->
     <div class="card">
         <h3><i class="fas fa-project-diagram"></i> المشاريع والإنجازات</h3>
-        <div class="project">
-            <b>COMMANDER FOUAD (Jarvis):</b> نظام أمني ومساعد صوتي ذكي يعمل بـ Python مع معالجة الأوامر.
-        </div>
-        <div class="project">
-            <b>متجر الصوفا الإلكتروني:</b> منصة مخصصة لعرض وتصنيع الصوفا المخصصة[cite: 1].
-        </div>
-        <div class="project">
-            <b>السيرة الذاتية الرقمية:</b> موقع شخصي مبرمج بـ HTML/CSS ومستضاف على GitHub Pages[cite: 1].
-        </div>
-        <div class="project">
-            <b>دراسة جدوى الإلكترونيات:</b> تم قبولها في معرض أعمال بتاريخ 2 مارس 2026[cite: 1].
-        </div>
+        <ul>
+            <li><b>COMMANDER FOUAD (Jarvis):</b> نظام أمني ومساعد صوتي ذكي يعمل بـ Python[cite: 1, 2].</li>
+            <li><b>متجر الصوفا الإلكتروني:</b> منصة مخصصة لعرض وتصنيع الصوفا المخصصة[cite: 1].</li>
+            <li><b>السيرة الذاتية الرقمية:</b> موقع شخصي مبرمج بـ HTML/CSS ومستضاف على GitHub[cite: 1].</li>
+            <li><b>دراسة الجدوى:</b> مشروع إلكترونيات تم اعتماده لمعرض أعمال في 2 مارس 2026[cite: 1].</li>
+        </ul>
     </div>
 </div>
 
