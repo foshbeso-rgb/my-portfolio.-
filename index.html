@@ -2,33 +2,33 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
+    <title>السيرة الذاتية الاحترافية | فؤاد عباس فؤاد</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #C5A059; --dark: #050505; }
         body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
         .cv-container { max-width: 800px; margin: auto; }
-        .card { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #333; margin-bottom: 20px; }
+        .card { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #333; margin-bottom: 20px; transition: 0.3s; }
+        .card:hover { border-color: var(--gold); }
         h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; display: flex; align-items: center; gap: 10px; }
         .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .job-item { margin-bottom: 15px; border-right: 3px solid var(--gold); padding-right: 15px; }
-        .job-item b { color: var(--gold); }
+        .skill-tag { display: inline-block; background: #222; padding: 6px 12px; border-radius: 5px; margin: 4px; font-size: 13px; border-right: 3px solid var(--gold); }
+        .project-item { margin-bottom: 15px; border-right: 4px solid var(--gold); padding-right: 15px; }
     </style>
 </head>
 <body>
 
 <div class="cv-container">
     <div style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: var(--gold); margin: 0;">فؤاد عباس فؤاد</h1>
-        <p>محترف عمليات فندقية | إدارة مشروعات | تقنية إلكترونيات</p>
+        <h1 style="color: var(--gold); margin: 0; font-size: 32px;">فؤاد عباس فؤاد</h1>
+        <p>محترف عمليات فندقية | مطور برمجيات Full-Stack</p>
     </div>
 
     <div class="card">
         <h3><i class="fas fa-phone-alt"></i> بيانات الاتصال</h3>
         <div class="info-grid">
-            <div><i class="fas fa-phone"></i> 01010169726</div>
             <div><i class="fas fa-envelope"></i> foshbeso@gmail.com</div>
-            <div><i class="fas fa-map-marker-alt"></i> القاهرة، دار السلام</div>
+            <div><i class="fas fa-mobile-alt"></i> 01010169726</div>
         </div>
     </div>
 
@@ -36,30 +36,42 @@
         <h3><i class="fas fa-user"></i> البيانات الشخصية</h3>
         <div class="info-grid">
             <div><b>العمر:</b> 35 عام</div>
-            <div><b>الحالة الاجتماعية:</b> غير متزوج</div>
+            <div><b>المنطقة:</b> دار السلام - القاهرة</div>
             <div><b>الجنسية:</b> مصري</div>
             <div><b>الخدمة العسكرية:</b> إعفاء نهائي</div>
-            <div><b>التنقل:</b> متاح للعمل داخل وخارج مصر</div>
+            <div><b>التنقل:</b> متاح داخل وخارج مصر</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3><i class="fas fa-tools"></i> المهارات والتدريبات</h3>
+        <div>
+            <span class="skill-tag">Flutter & Dart</span>
+            <span class="skill-tag">Python (Django/Flask)</span>
+            <span class="skill-tag">System Administration</span>
+            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">إدارة أعمال مصغر</span>
+            <span class="skill-tag">قواعد البيانات (It shark)</span>
         </div>
     </div>
 
     <div class="card">
         <h3><i class="fas fa-briefcase"></i> خبرات العمل</h3>
-        <div class="job-item"><b>كاتب فورمان -</b> النيل للغاز (1.5 سنة)</div>
-        <div class="job-item"><b>مساعد طباخ -</b> الشيف سرحان (2 سنة)</div>
-        <div class="job-item"><b>تسويق وخدمة عملاء -</b> الأكاديمية الدولية (سنة)</div>
-        <div class="job-item"><b>Sales Out door -</b> طيبة للسمعيات (2 سنة)</div>
+        <div class="project-item"><b>كاتب فورمان -</b> النيل للغاز (1.5 سنة)</div>
+        <div class="project-item"><b>مساعد طباخ -</b> الشيف سرحان (2 سنة)</div>
+        <div class="project-item"><b>تسويق وخدمة عملاء -</b> الأكاديمية الدولية (سنة)</div>
+        <div class="project-item"><b>Sales Out door -</b> طيبة للسمعيات (2 سنة)</div>
     </div>
 
     <div class="card">
-        <h3><i class="fas fa-graduation-cap"></i> التعليم والتدريبات</h3>
-        <p><b>التعليم:</b> دبلوم صناعي 3 سنوات (إلكترونيات) - 2010</p>
-        <ul>
-            <li>إدارة مشروعات ورخصة دولية للحاسب (CTC)</li>
-            <li>إدارة أعمال مصغر (الأكاديمية الدولية - 2016)</li>
-            <li>قواعد البيانات (It shark - 2017)</li>
-            <li>مراسل تحت التمرين (أخبار العالم - 2013)</li>
-        </ul>
+        <h3><i class="fas fa-graduation-cap"></i> التعليم</h3>
+        <p><b>دبلوم صناعي (إلكترونيات)</b> - ثانوية فنية نظام 3 سنوات، عام 2010.</p>
+    </div>
+
+    <div class="card">
+        <h3><i class="fas fa-project-diagram"></i> المشاريع التقنية</h3>
+        <div class="project-item"><b>COMMANDER FOUAD (Jarvis):</b> مساعد صوتي ونظام أمني ذكي بلغة Python.</div>
+        <div class="project-item"><b>المتجر الإلكتروني:</b> منصة مخصصة لعرض وتصنيع الصوفا.</div>
     </div>
 </div>
 
