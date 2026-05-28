@@ -4,57 +4,67 @@
     <meta charset="UTF-8">
     <style>
         body { font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4; padding: 20px; }
-        .cv-card { max-width: 800px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; overflow: hidden; min-height: 500px; }
+        .cv-card { max-width: 900px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); display: flex; overflow: hidden; }
         
-        /* الجانب الأيسر (البيانات والمهارات - لون غامق) */
-        .sidebar { background: #2c3e50; color: #fff; width: 300px; padding: 30px; }
-        .sidebar h2 { color: #c5a059; font-size: 1.1em; border-bottom: 2px solid #c5a059; padding-bottom: 5px; margin-top: 0; }
-        .sidebar p, .sidebar li { font-size: 0.9em; color: #fff; margin-bottom: 10px; }
+        .sidebar { background: #2c3e50; color: #fff; width: 320px; padding: 30px; }
+        .sidebar h2 { color: #c5a059; font-size: 1.1em; border-bottom: 2px solid #c5a059; padding-bottom: 5px; }
+        .sidebar p, .sidebar li { font-size: 0.85em; color: #fff; margin-bottom: 8px; }
 
-        /* الجانب الأيمن (الخبرات والتعليم - لون أبيض) */
         .main-content { flex: 1; padding: 30px; }
-        .name { font-size: 1.8em; color: #2c3e50; font-weight: bold; margin-bottom: 30px; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
+        .name { font-size: 1.8em; color: #2c3e50; font-weight: bold; margin-bottom: 20px; border-bottom: 3px solid #c5a059; padding-bottom: 10px; }
         h2 { color: #c5a059; font-size: 1.2em; margin-top: 20px; }
-        .job-title { font-weight: bold; color: #2c3e50; display: block; }
-        .job-date { font-size: 0.85em; color: #777; margin-bottom: 10px; display: block; }
+        .job-title { font-weight: bold; color: #2c3e50; }
+        .job-date { font-size: 0.85em; color: #777; margin-bottom: 5px; display: block; }
     </style>
 </head>
 <body>
 
 <div class="cv-card">
-    <!-- الجانب الأيسر -->
     <div class="sidebar">
         <h2>معلومات الاتصال</h2>
-        <p><b>البريد:</b> foshbeso@gmail.com</p>
-        <p><b>الهاتف:</b> 01010169726</p>
+        <p>foshbeso@gmail.com | 01010169726</p>
         
-        <h2>المهارات</h2>
+        <h2>المهارات التقنية</h2>
         <ul>
-            <li>MS Office (ممتاز)</li>
-            <li>إدخال بيانات وسكرتارية</li>
-            <li>اللغات: الإنجليزية (جيد)</li>
-            <li>سائق دراجات نارية</li>
+            <li>Full-Stack Development: Python, Flask, Django</li>
+            <li>Mobile Development: Flutter</li>
+            <li>Database: SQL, Oracle DB Administration</li>
+            <li>System Admin: Hardware, BIOS, SSD Optimization</li>
         </ul>
-        <div style="margin-top: 20px; font-size: 0.85em; color: #bdc3c7;">
-            مصري | غير متزوج | إعفاء نهائي
-        </div>
+
+        <h2>المهارات الشخصية (Soft Skills)</h2>
+        <ul>
+            <li>القدرة على حل المشكلات التقنية المعقدة</li>
+            <li>إدارة الوقت والعمل تحت ضغط في بيئة الضيافة</li>
+            <li>التعلم الذاتي المستمر وتطوير الأنظمة</li>
+            <li>مهارات التواصل الفعال والعمل الجماعي</li>
+        </ul>
+        <p style="margin-top: 20px; font-size: 0.8em; color: #bdc3c7;">مصري | غير متزوج | إعفاء نهائي</p>
     </div>
 
-    <!-- الجانب الأيمن -->
     <div class="main-content">
         <h1 class="name">فؤاد عباس فؤاد</h1>
         
         <h2>الخبرات المهنية</h2>
-        <div class="job-title">External Sales & Marketing Officer - طيبة للتجارة</div>
+        <span class="job-title">External Sales & Marketing Officer - طيبة للتجارة</span>
         <span class="job-date">2015 - نوفمبر 2020</span>
         
-        <div class="job-title">Marketing Specialist - It Academy</div>
+        <span class="job-title">Marketing Specialist - It Academy</span>
         <span class="job-date">2017 - مايو 2018</span>
-        <p style="font-size: 0.9em;">تحليل اتجاهات السوق وتطوير استراتيجيات التواجد الرقمي.</p>
+        <p style="font-size: 0.85em;">تحليل اتجاهات السوق وتطوير استراتيجيات التواجد الرقمي.</p>
+
+        <h2>المشاريع التقنية</h2>
+        <p style="font-size: 0.85em;">
+            • <b>نظام Jarvis:</b> تطوير مساعد ذكي يعمل بالتحكم الصوتي ونظام أمني متكامل باستخدام Python.<br>
+            • <b>منصة تجارة إلكترونية:</b> تصميم وتطوير تطبيق cross-platform لبيع الأثاث المخصص.<br>
+            • <b>محفظة رقمية (Digital CV):</b> تطوير ونشر سيرة ذاتية تفاعلية مستضافة على GitHub Pages.
+        </p>
 
         <h2>التعليم والتدريب</h2>
-        <p style="font-size: 0.9em;">• Oracle DB Administration (2017)<br>
-        • ثانوية فنية نظام 3 سنوات (2010)</p>
+        <p style="font-size: 0.85em;">
+            • دبلوم فني صناعي (2010)<br>
+            • تدريبات: Oracle DB, CTC (إدارة مشروعات), It Shark (قواعد بيانات)
+        </p>
     </div>
 </div>
 
