@@ -12,7 +12,7 @@
         h1 { color: var(--accent); margin-bottom: 5px; text-align: center; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
         h2 { color: var(--gold); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; font-size: 1.3em; }
-        .item { margin-bottom: 15px; line-height: 1.6; font-size: 0.95em; }
+        .item { margin-bottom: 10px; line-height: 1.6; font-size: 0.95em; }
     </style>
 </head>
 <body>
@@ -20,7 +20,7 @@
 <div class="cv-card">
     <div class="lang-switch">
         <button onclick="updatePage('ar')">العربية</button>
-        <button onclick="statusUpdate('en')">English</button>
+        <button onclick="updatePage('en')">English</button>
     </div>
 
     <h1><span id="name">فؤاد عباس فؤاد</span></h1>
@@ -47,24 +47,24 @@ const data = {
     ar: { 
         name: "فؤاد عباس فؤاد", 
         exp: "الخبرات المهنية", 
-        expList: "• <b>External Sales & Marketing Officer</b> - طيبة للتجارة (2015-2020)<br>• <b>Marketing Specialist</b> - It Academy (2017-2018)<br>• <b>كاتب فورمان</b> - النيل للغاز (2014-2015)", 
+        expList: "• <b>External Sales & Marketing Officer</b> - طيبة للتجارة (2015-2020)<br>• <b>Marketing Specialist</b> - It Academy (2017-2018)<br>• <b>مساعد طباخ</b> - الشيف سرحان (2017-2019)<br>• <b>تسويق وخدمة عملاء</b> - الأكاديمية الدولية (2016)<br>• <b>مبيعات خارجية</b> - طيبة للسمعيات (2016)<br>• <b>كاتب فورمان</b> - النيل للغاز (2014-2015)", 
         edu: "التعليم", 
-        eduList: "• دبلوم صناعي - إلكترونيات (2010)", 
+        eduList: "• دبلوم صناعي - إلكترونيات (2010)<br>• ثانوية فنية نظام 3 سنوات", 
         certs: "التدريبات والشهادات", 
-        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (إدارة مشروعات)<br>• It Shark (قواعد بيانات)", 
+        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (إدارة مشروعات)<br>• It Shark (قواعد بيانات)<br>• Mini-MBA | مراسل (أخبار العالم)", 
         skills: "المهارات واللغات", 
-        skillsList: "• <b>المهارات:</b> Flutter, Python, Django, MS Office (Expert)<br>• <b>اللغات:</b> الإنجليزية (جيد)<br>• <b>متاح للعمل:</b> خارج القاهرة" 
+        skillsList: "• <b>المهارات التقنية:</b> Flutter, Python, Django, SQL<br>• <b>مهارات حياتية:</b> إدخال بيانات، سكرتارية، علاقات عامة، MS Office (ممتاز)<br>• <b>اللغات:</b> الإنجليزية (جيد)<br>• <b>إضافي:</b> رخصة دراجات نارية، متاح للعمل خارج القاهرة" 
     },
     en: { 
         name: "Fouad Abbas Fouad", 
         exp: "Professional Experience", 
-        expList: "• <b>External Sales & Marketing Officer</b> - Taiba Trading (2015-2020)<br>• <b>Marketing Specialist</b> - It Academy (2017-2018)<br>• <b>Foreman Clerk</b> - Nile Gas (2014-2015)", 
+        expList: "• <b>External Sales & Marketing Officer</b> - Taiba Trading (2015-2020)<br>• <b>Marketing Specialist</b> - It Academy (2017-2018)<br>• <b>Assistant Chef</b> - Chef Sarhan (2017-2019)<br>• <b>Marketing & CS</b> - Int. Academy (2016)<br>• <b>Outdoor Sales</b> - Taiba Audio (2016)<br>• <b>Foreman Clerk</b> - Nile Gas (2014-2015)", 
         edu: "Education", 
-        eduList: "• Industrial Diploma - Electronics (2010)", 
+        eduList: "• Industrial Diploma - Electronics (2010)<br>• 3-Year Technical High School", 
         certs: "Training & Certificates", 
-        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (Project Management)<br>• It Shark (Databases)", 
+        certsList: "• Oracle DB Administration<br>• Three-year industrial professional diploma<br>• CTC (Project Management)<br>• It Shark (Databases)<br>• Mini-MBA | Journalist (Akhbar El Alam)", 
         skills: "Skills & Languages", 
-        skillsList: "• <b>Skills:</b> Flutter, Python, Django, MS Office (Expert)<br>• <b>Languages:</b> English (Good)<br>• <b>Relocation:</b> Willing to relocate" 
+        skillsList: "• <b>Technical:</b> Flutter, Python, Django, SQL<br>• <b>Soft Skills:</b> Data Entry, Admin, PR, MS Office (Expert)<br>• <b>Languages:</b> English (Good)<br>• <b>Relocation:</b> Willing to relocate, Motorcycle License" 
     }
 };
 
