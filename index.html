@@ -4,59 +4,48 @@
     <meta charset="UTF-8">
     <title>السيرة الذاتية الاحترافية | فؤاد عباس فؤاد</title>
     <style>
-        :root { --accent: #C5A059; --dark: #1a1a1a; --text: #444; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #e9e9e9; padding: 20px; color: var(--text); }
-        .page { max-width: 950px; margin: auto; background: white; padding: 50px; border-radius: 10px; box-shadow: 0 5px 25px rgba(0,0,0,0.15); border-left: 10px solid var(--accent); }
+        :root { --accent: #C5A059; --dark: #1a1a1a; --text: #333; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 20px; color: var(--text); }
+        .page { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .lang-btn { text-align: center; margin-bottom: 20px; }
-        button { padding: 10px 20px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 5px; margin: 0 5px; }
-        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--accent); padding-bottom: 20px; }
-        h1 { color: var(--dark); margin: 0; }
-        h2 { color: var(--accent); font-size: 1.3em; margin-top: 30px; text-transform: uppercase; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-        .item { margin-bottom: 12px; }
-        .tech-box { background: #fdfdfd; border: 1px solid #ddd; padding: 15px; border-radius: 8px; }
-        .skill-bar { height: 8px; background: #ddd; border-radius: 4px; margin-top: 5px; }
-        .skill-fill { height: 100%; background: var(--accent); border-radius: 4px; }
-        [lang="ar"] .en { display: none; } [lang="en"] .ar { display: none; }
+        button { padding: 10px 20px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 5px; }
+        h1, h2 { color: var(--dark); }
+        h2 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 5px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .item { margin-bottom: 15px; }
+        /* التحكم في إظهار اللغات */
+        [lang="ar"] .en { display: none; }
+        [lang="en"] .ar { display: none; }
     </style>
 </head>
 <body lang="ar">
 <div class="page">
-    <div class="lang-btn"><button onclick="switchLang('ar')">العربية</button> <button onclick="switchLang('en')">English</button></div>
-    
-    <div class="header">
+    <div class="lang-btn">
+        <button onclick="switchLang('ar')">العربية</button>
+        <button onclick="switchLang('en')">English</button>
+    </div>
+
+    <div style="text-align:center">
         <h1><span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span></h1>
         <p>01010169726 | foshbeso@gmail.com</p>
     </div>
 
     <div class="grid">
         <div>
-            <h2><span class="ar">الخبرات المهنية</span><span class="en">Professional Experience</span></h2>
-            <div class="item"><b>كاتب فورمان - النيل للغاز</b> (2014-2015)</div>
-            <div class="item"><b>مساعد طباخ - الشيف سرحان</b> (2017-2019)</div>
-            <div class="item"><b>تسويق وخدمة عملاء - الأكاديمية الدولية</b> (2016)</div>
-            <div class="item"><b>مبيعات خارجية - طيبة للسمعيات</b> (2016)</div>
-            <div class="item"><b>تسويق إلكتروني - الأكاديمية الدولية</b> (2016)</div>
-
-            <h2><span class="ar">التعليم والتدريب</span><span class="en">Education & Training</span></h2>
-            <div class="item"><b>دبلوم صناعي - إلكترونيات (2010)</b></div>
-            <div class="item">إدارة مشروعات / رخصة حاسب (CTC) | قواعد بيانات (It Shark)</div>
-            <div class="item">إدارة أعمال مصغر (الأكاديمية الدولية) | مراسل (أخبار العالم)</div>
+            <h2><span class="ar">الخبرات والمشاريع</span><span class="en">Experience & Projects</span></h2>
+            <div class="item"><b><span class="ar">كاتب فورمان - النيل للغاز</span><span class="en">Foreman Clerk - Nile Gas</span></b></div>
+            <div class="item"><b><span class="ar">مشروع "Jarvis"</span><span class="en">"Jarvis" Project</span></b><br><span class="ar">مساعد صوتي ذكي بنظام Python.</span><span class="en">Python-based voice assistant.</span></div>
+            <div class="item"><b><span class="ar">منصة تجارة إلكترونية</span><span class="en">E-commerce Platform</span></b><br><span class="ar">تطوير منصة متكاملة للبيع والشراء.</span><span class="en">Full-stack e-commerce system.</span></div>
         </div>
-
         <div>
-            <h2><span class="ar">الخبرات البرمجية والتقنية</span><span class="en">Tech & Programming Skills</span></h2>
-            <div class="tech-box">
-                <div class="item"><b>Full-Stack Development:</b> Flutter, Python, Django, Flask</div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
-                <div class="item" style="margin-top:10px;"><b>Database Admin:</b> Oracle DB, SQL</div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
-                <div class="item" style="margin-top:10px;"><b>Office & Systems:</b> MS Office (Expert), Data Entry</div>
-                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
-            </div>
-
-            <h2><span class="ar">معلومات إضافية</span><span class="en">Additional Information</span></h2>
-            <p>اللغة: العربية (أم)، الإنجليزية (جيد) | رخصة قيادة دراجات نارية | إمكانية السفر.</p>
+            <h2><span class="ar">المهارات التقنية</span><span class="en">Technical Skills</span></h2>
+            <div class="item"><b>Full-Stack:</b> Flutter, Python, Django, Flask</div>
+            <div class="item"><b>Database:</b> Oracle DB, SQL</div>
+            <div class="item"><b>Systems:</b> MS Office (Expert), Data Entry</div>
+            
+            <h2><span class="ar">التعليم والتدريب</span><span class="en">Education & Training</span></h2>
+            <div class="item"><b><span class="ar">دبلوم صناعي - إلكترونيات (2010)</span><span class="en">Electronics Diploma (2010)</span></b></div>
+            <div class="item">CTC (Project Mgmt) | It Shark (Database) | Mini-MBA</div>
         </div>
     </div>
 </div>
