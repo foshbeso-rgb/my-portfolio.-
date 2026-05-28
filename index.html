@@ -2,20 +2,23 @@
 <html lang="ar" id="html-root" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>السيرة الذاتية الاحترافية | فؤاد عباس فؤاد</title>
+    <title>السيرة الذاتية | فؤاد عباس فؤاد</title>
     <style>
-        :root { --accent: #C5A059; --dark: #1a1a1a; --text: #333; }
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 20px; color: var(--text); }
+        :root { --accent: #c5a059; --dark: #2c3e50; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f4f4; padding: 20px; color: #333; }
         .page { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .lang-btn { text-align: center; margin-bottom: 20px; }
         button { padding: 10px 20px; cursor: pointer; background: var(--dark); color: white; border: none; border-radius: 5px; }
-        h1, h2 { color: var(--dark); }
-        h2 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 5px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-        .item { margin-bottom: 15px; }
-        /* التحكم في إظهار اللغات */
+        
+        .section { margin-bottom: 30px; }
+        .title { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 5px; margin-bottom: 15px; font-weight: bold; }
+        .flex-container { display: flex; justify-content: space-between; gap: 40px; }
+        .col { flex: 1; }
+        
+        /* معالجة اللغة */
         [lang="ar"] .en { display: none; }
         [lang="en"] .ar { display: none; }
+        [lang="en"] { direction: ltr; text-align: left; }
     </style>
 </head>
 <body lang="ar">
@@ -25,27 +28,40 @@
         <button onclick="switchLang('en')">English</button>
     </div>
 
-    <div style="text-align:center">
+    <div style="text-align: center; margin-bottom: 30px;">
         <h1><span class="ar">فؤاد عباس فؤاد</span><span class="en">Fouad Abbas Fouad</span></h1>
         <p>01010169726 | foshbeso@gmail.com</p>
     </div>
 
-    <div class="grid">
-        <div>
-            <h2><span class="ar">الخبرات والمشاريع</span><span class="en">Experience & Projects</span></h2>
-            <div class="item"><b><span class="ar">كاتب فورمان - النيل للغاز</span><span class="en">Foreman Clerk - Nile Gas</span></b></div>
-            <div class="item"><b><span class="ar">مشروع "Jarvis"</span><span class="en">"Jarvis" Project</span></b><br><span class="ar">مساعد صوتي ذكي بنظام Python.</span><span class="en">Python-based voice assistant.</span></div>
-            <div class="item"><b><span class="ar">منصة تجارة إلكترونية</span><span class="en">E-commerce Platform</span></b><br><span class="ar">تطوير منصة متكاملة للبيع والشراء.</span><span class="en">Full-stack e-commerce system.</span></div>
-        </div>
-        <div>
-            <h2><span class="ar">المهارات التقنية</span><span class="en">Technical Skills</span></h2>
-            <div class="item"><b>Full-Stack:</b> Flutter, Python, Django, Flask</div>
-            <div class="item"><b>Database:</b> Oracle DB, SQL</div>
-            <div class="item"><b>Systems:</b> MS Office (Expert), Data Entry</div>
+    <div class="flex-container">
+        <div class="col">
+            <div class="section">
+                <div class="title"><span class="ar">الخبرة العملية</span><span class="en">Professional Experience</span></div>
+                <p><b><span class="ar">كاتب فورمان - النيل للغاز</span><span class="en">Foreman Clerk - Nile Gas</span></b> (2014-2015)</p>
+                <p><b><span class="ar">مساعد طباخ - الشيف سرحان</span><span class="en">Assistant Chef - Chef Sarhan</span></b> (2017-2019)</p>
+                <p><b><span class="ar">تسويق وخدمة عملاء - الأكاديمية الدولية</span><span class="en">Marketing & CS - Int. Academy</span></b> (2016)</p>
+            </div>
             
-            <h2><span class="ar">التعليم والتدريب</span><span class="en">Education & Training</span></h2>
-            <div class="item"><b><span class="ar">دبلوم صناعي - إلكترونيات (2010)</span><span class="en">Electronics Diploma (2010)</span></b></div>
-            <div class="item">CTC (Project Mgmt) | It Shark (Database) | Mini-MBA</div>
+            <div class="section">
+                <div class="title"><span class="ar">التعليم والتدريب</span><span class="en">Education & Training</span></div>
+                <p><b><span class="ar">دبلوم إلكترونيات (2010)</span><span class="en">Electronics Diploma (2010)</span></b></p>
+                <p>CTC (Project Mgmt) | It Shark (DB) | Mini-MBA</p>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="section">
+                <div class="title"><span class="ar">المهارات التقنية (برمجة)</span><span class="en">Technical Skills (Programming)</span></div>
+                <p><b>Full-Stack:</b> Flutter, Python, Django, Flask</p>
+                <p><b>Database:</b> Oracle DB, SQL</p>
+                <p><b>Systems:</b> MS Office (Expert), Data Entry</p>
+            </div>
+
+            <div class="section">
+                <div class="title"><span class="ar">المشاريع</span><span class="en">Projects</span></div>
+                <p><b>Jarvis:</b> <span class="ar">مساعد صوتي ذكي.</span><span class="en">Smart voice assistant.</span></p>
+                <p><b>E-commerce:</b> <span class="ar">منصة تجارة إلكترونية.</span><span class="en">Full-stack web platform.</span></p>
+            </div>
         </div>
     </div>
 </div>
