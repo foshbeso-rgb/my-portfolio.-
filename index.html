@@ -6,65 +6,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --gold: #C5A059; --dark: #050505; }
-        body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
+        body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
         .cv-container { max-width: 800px; margin: auto; }
-        .card { background: #111; padding: 25px; border-radius: 15px; border: 1px solid #333; margin-bottom: 20px; }
-        h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; display: flex; align-items: center; gap: 10px; }
-        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .skill-tag { display: inline-block; background: #222; padding: 6px 12px; border-radius: 5px; margin: 4px; font-size: 13px; border-right: 3px solid var(--gold); }
-        .job-item { margin-bottom: 10px; padding-right: 10px; border-right: 3px solid var(--gold); }
+        .card { background: #111; padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 15px; }
+        h3 { color: var(--gold); border-bottom: 1px solid #333; padding-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .edit-area { color: #ccc; font-size: 14px; }
     </style>
 </head>
 <body>
 
 <div class="cv-container">
-    <div style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: var(--gold); margin: 0; font-size: 32px;">فؤاد عباس فؤاد</h1>
-        <p>نظم معلومات إدارية | مطور برمجيات | إداري</p>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h1 style="color: var(--gold);">فؤاد عباس فؤاد | Fouad Abbas Fouad</h1>
     </div>
 
-    <!-- 1. بيانات الاتصال -->
+    <!-- بيانات الاتصال -->
     <div class="card">
-        <h3><i class="fas fa-phone-alt"></i> بيانات الاتصال</h3>
-        <div class="info-grid">
-            <div><i class="fas fa-envelope"></i> foshbeso@gmail.com</div>
-            <div><i class="fas fa-mobile-alt"></i> 01140248506</div>
-            <div><i class="fas fa-map-marker-alt"></i> القاهرة، دار السلام</div>
+        <h3><i class="fas fa-phone"></i> بيانات الاتصال | Contact</h3>
+        <div class="edit-area">
+            <div><b>الهاتف | Phone:</b> 01140248506</div>
+            <div><b>البريد | Email:</b> foshbeso@gmail.com</div>
         </div>
     </div>
 
-    <!-- 2. اللغات -->
+    <!-- الخبرات -->
     <div class="card">
-        <h3><i class="fas fa-language"></i> اللغات</h3>
-        <div class="job-item"><b>العربية:</b> اللغة الأم.</div>
-        <div class="job-item"><b>الإنجليزية:</b> مستوى متوسط (مقبول للمراسلات العامة).</div>
+        <h3><i class="fas fa-briefcase"></i> الخبرات | Experience</h3>
+        <div class="edit-area">
+            <div><b>كاتب في النيل للغاز | Clerk at Nile Gas:</b> (2014-2015)</div>
+            <div><b>مساعد طباخ | Assistant Chef:</b> (شهور | 6 Years)</div>
+        </div>
     </div>
 
-    <!-- 3. التعليم والشهادات -->
+    <!-- التعليم -->
     <div class="card">
-        <h3><i class="fas fa-graduation-cap"></i> التعليم والشهادات</h3>
-        <div class="job-item"><b>بكالوريوس نظم معلومات إدارية:</b> الجزيرة أكاديمي (2015)[cite: 1]</div>
-        <div class="job-item"><b>Oracle DB Administration:</b> شهادة (2016)[cite: 1]</div>
-        <div class="job-item"><b>ICDL:</b> الرخصة الدولية لقيادة الحاسب الآلي[cite: 1]</div>
+        <h3><i class="fas fa-graduation-cap"></i> التعليم | Education</h3>
+        <div class="edit-area">
+        </div>
     </div>
 
-    <!-- 4. الخبرات العملية -->
+    <!-- مهارات -->
     <div class="card">
-        <h3><i class="fas fa-briefcase"></i> خبرات العمل</h3>
-        <div class="job-item"><b>كاتب فورمان:</b> شركة النيل للغاز (2014-2015)[cite: 1]</div>
-        <div class="job-item"><b>مساعد طباخ:</b> الشيف سرحان (سنتين)</div>
-        <div class="job-item"><b>تسويق وخدمة عملاء:</b> الأكاديمية الدولية (سنة)</div>
-        <div class="job-item"><b>Sales Outdoor:</b> طيبة للسمعيات (سنتين)</div>
-    </div>
-
-    <!-- 5. المهارات التقنية -->
-    <div class="card">
-        <h3><i class="fas fa-tools"></i> المهارات التقنية</h3>
-        <div class="skill-tag">Full-Stack Development</div>
-        <div class="skill-tag">Flutter & Python</div>
-        <div class="skill-tag">إدخال بيانات</div>
-        <div class="skill-tag">برمجة نظم</div>
-        <div class="skill-tag">إدارة أعمال</div>
+        <h3><i class="fas fa-tools"></i> المهارات | Skills</h3>
+        <div class="edit-area">
+            <div>Full-Stack Development | برمجة المواقع</div>
+            <div>Oracle DB Administration | إدارة قواعد البيانات</div>
+        </div>
     </div>
 </div>
 
